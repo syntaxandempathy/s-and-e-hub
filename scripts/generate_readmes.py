@@ -109,6 +109,7 @@ def render_for_dir(d: pathlib.Path, env: Environment, tmap: Dict) -> str:
     meta = read_meta(d)
     template_name = choose_template(d, tmap)
     tmpl = env.get_template(template_name)
+    print(f"[ROUTE] {d.relative_to(ROOT)} -> {template_name}")
     ctx = {
         "repo_name": ROOT.name,
         "dir_name": d.name,

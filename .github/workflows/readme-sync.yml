@@ -14,13 +14,9 @@ on:
         required: true
         default: "auto"
         type: choice
-        options:
-          - auto
-          - full
-          - stale
-          - target
+        options: [auto, full, stale, target]
       target_dir:
-        description: "Path for mode=target (processed recursively)"
+        description: "Path for mode=target (recursive)"
         required: false
         type: string
       full_rewrite_enabled:
@@ -29,7 +25,7 @@ on:
         default: false
         type: boolean
       dry_run:
-        description: "Preview only (don't write files)"
+        description: "Preview only (no writes)"
         required: false
         default: false
         type: boolean
@@ -52,15 +48,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install Jinja2 PyYAML
       - name: Run sync
-        env:
-          GITHUB_BASE_REF: ${{ github.event.pull_request.base.ref }}
-          GITHUB_SHA: ${{ github.sha }}
         run: |
           python scripts/generate_readmes.py \
             --mode "${{ github.event.inputs.mode || 'auto' }}" \
             --target-dir "${{ github.event.inputs.target_dir || '' }}" \
-            --full-rewrite-enabled "${{ github.event.inputs.full_rewrite_enabled || 'false' }}" \
-            --dry-run "${{ github.event.inputs.dry_run || 'false' }}"
+            --full-rewrite-enabled "${{ github.event.inputs.full_rewrite_enabled && 'true' || 'false' }}" \
+            --dry-run "${{ github.event.inputs.dry_run && 'true' || 'false' }}"
       - name: Commit & push if changed
         run: |
           if [[ -n "$(git status --porcelain README.md **/README.md)" ]]; then
