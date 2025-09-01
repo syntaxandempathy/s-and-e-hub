@@ -1,0 +1,10 @@
+<!-- templates/landing.md.j2 -->
+# {{ repo_name }} — Series Hub
+*Index for articles, assets, and experiments.*
+
+## Articles
+{% for child in children -%}
+- **{{ child.title or child.dir_name }}** → {{ child.link or child.relpath }}/
+{% endfor %}
+
+<sub>Last updated: {{ today }}</sub>

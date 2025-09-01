@@ -1,0 +1,11 @@
+# templates/templates_map.yml
+routing:
+  # Exact path matches take precedence (good for root landing page)
+  ".": "landing.md.j2"
+
+  # Folder name patterns (glob-like; first match wins)
+  "article-*": "article.md.j2"
+  "series-*": "series.md.j2"
+
+  # Fallback if nothing else matches
+  "*": "folder.md.j2"
