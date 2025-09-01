@@ -3,6 +3,7 @@
 _Automatically generated README._
 
 ## Contents
+- file: `README.md` 
 - file: `article.md.j2` 
 - file: `folder.md.j2` 
 - file: `landing.md.j2` 

@@ -1,10 +1,9 @@
 <!-- templates/folder.md.j2 -->
-# scripts
+# archive
 _Automatically generated README._
 
 ## Contents
-- file: `README.md` 
-- file: `generate_readmes.py` 
+- dir: `2024-ai-trials` 
 
 
 <sub>Last updated: 2025-09-01</sub>

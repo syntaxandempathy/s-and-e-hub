@@ -1,10 +1,9 @@
 <!-- templates/folder.md.j2 -->
-# scripts
+# articles
 _Automatically generated README._
 
 ## Contents
-- file: `README.md` 
-- file: `generate_readmes.py` 
+- dir: `0901-count-that-couldnt` 
 
 
 <sub>Last updated: 2025-09-01</sub>
