@@ -21,15 +21,22 @@ def load_templates_map() -> Dict:
 
 def choose_template(dirpath: pathlib.Path, tmap: Dict) -> str:
     routing = (tmap.get("routing") or {})
-    # exact path
+    # compute the path of this directory relative to the repo root
     rel = str(dirpath.relative_to(ROOT)) or "."
+
+    # 1) exact match on relative path (e.g., "." or "articles")
     if rel in routing:
         return routing[rel]
-    # pattern match
+
+    # 2) pattern match: try patterns against the relative path first,
+    #    then against the leaf directory name for backwards compatibility
     for pat, tmpl in routing.items():
-        if pat not in {".", "*"} and fnmatch.fnmatch(dirpath.name, pat):
+        if pat in {".", "*"}:
+            continue
+        if fnmatch.fnmatch(rel, pat) or fnmatch.fnmatch(dirpath.name, pat):
             return tmpl
-    # fallback
+
+    # 3) fallback
     return routing.get("*", "folder.md.j2")
 
 def git_changed_dirs() -> List[pathlib.Path]:

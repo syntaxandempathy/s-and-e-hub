@@ -10,21 +10,29 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "full | stale | target | auto"
+        description: "Choose how to run"
         required: true
         default: "auto"
+        type: choice
+        options:
+          - auto
+          - full
+          - stale
+          - target
       target_dir:
         description: "Path for mode=target (processed recursively)"
         required: false
-        default: ""
+        type: string
       full_rewrite_enabled:
-        description: "Allow full rewrites (safety toggle for mode=full)"
+        description: "Allow full rewrite (safety toggle for mode=full)"
         required: false
-        default: "false"
+        default: false
+        type: boolean
       dry_run:
-        description: "Print what would change, don't write"
+        description: "Preview only (don't write files)"
         required: false
-        default: "false"
+        default: false
+        type: boolean
 
 permissions:
   contents: write
