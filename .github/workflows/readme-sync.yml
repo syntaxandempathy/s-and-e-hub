@@ -28,6 +28,16 @@ on:
         required: false
         default: false
         type: boolean
+      ai_enrich:
+        description: "Run Gemini to (lightly) create/refresh meta.yml where missing"
+        required: false
+        default: false
+        type: boolean
+      ai_max_dirs:
+        description: "Max folders to enrich this run (to cap spend)"
+        required: false
+        default: "3"
+        type: string
 
 permissions:
   contents: write
@@ -47,9 +57,30 @@ jobs:
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
-          pip install Jinja2 PyYAML
+          pip install Jinja2 PyYAML requests
 
-      - name: Run sync
+      # ---------- OPTIONAL: Gemini enrichment (guarded by toggle) ----------
+      - name: Enrich meta.yml with Gemini (optional)
+        if: ${{ github.event.inputs.ai_enrich }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if [[ -z "${GEMINI_API_KEY}" ]]; then
+            echo "GEMINI_API_KEY secret is not set; skipping AI enrich."
+            exit 0
+          fi
+          # Limit how much work we do per run to control cost
+          python scripts/gen_meta_gemini.py \
+            --root "articles" \
+            --only-missing \
+            --max-dirs "${{ github.event.inputs.ai_max_dirs || '3' }}" \
+            --max-files-per-dir "6" \
+            --max-chars-per-file "1200" \
+            --model "gemini-1.5-flash-latest" \
+            --dry-run "false"
+
+      # ---------- README generation (your existing step) ----------
+      - name: Run README sync
         run: |
           python scripts/generate_readmes.py \
             --mode "${{ github.event.inputs.mode || 'auto' }}" \
@@ -60,16 +91,16 @@ jobs:
       - name: Commit & push if changed
         run: |
           set -e
-          # Stage new/modified README.md files (root + nested)
-          git ls-files -o -m --exclude-standard | awk '/(^|\/)README\.md$/' | xargs -r git add
-          # Also include modified tracked README.md files
+          # Stage new/modified README.md & meta.yml files
+          git ls-files -o -m --exclude-standard | awk '/(^|\\/)(README\\.md|meta\\.yml)$/' | xargs -r git add
+          # Also include modified tracked files
           git add -u
 
           if [[ -n "$(git diff --cached --name-only)" ]]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git commit -m "chore(readme): sync via action [skip ci]"
+            git commit -m "chore: meta+readme sync via action [skip ci]"
             git push
           else
-            echo "No README changes to commit."
+            echo "No README/meta changes to commit."
           fi
