@@ -1,11 +1,11 @@
-<!-- templates/article.md.j2 -->
 # {{ title or dir_name }}
 *{{ tagline or "Companion to the article." }}*
 
 ## TL;DR
-- {{ tldr[0] if tldr else "What this is" }}
-- {{ tldr[1] if tldr|length > 1 else "Who it's for" }}
-- {{ tldr[2] if tldr|length > 2 else "What you'll do" }}
+{% set t = tldr | default([]) %}
+- {{ t[0] | default("What this is") }}
+- {{ t[1] | default("Who it's for") }}
+- {{ t[2] | default("What you'll do") }}
 
 ## Quick links
 - **Article:** {{ link or "TBD" }}
@@ -14,11 +14,11 @@
 - **Critique:** {% if has_critiques %}`critiques/`{% else %}—{% endif %}
 
 ## Get started
-1. Open the worksheet or notebook.
-2. Skim the short guide.
-3. Try the demo (optional).
+1) Open the worksheet or notebook.  
+2) Skim the short guide.  
+3) Try the demo (optional).
 
-<details><summary><strong>Background & notes</strong></summary>
+<details><summary><strong>Notes</strong></summary>
 {{ notes or "_Add background…_" }}
 </details>
 

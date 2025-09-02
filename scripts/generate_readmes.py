@@ -1,8 +1,8 @@
 # scripts/generate_readmes.py
 from __future__ import annotations
-import argparse, os, sys, json, time, fnmatch, pathlib, yaml
+import argparse, os, sys, fnmatch, pathlib, yaml
 from datetime import date
-from typing import Dict, List, Tuple
+from typing import Dict, List
 from jinja2 import Environment, FileSystemLoader
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -48,7 +48,6 @@ def git_changed_dirs() -> List[pathlib.Path]:
         base = "HEAD~1"
     diff = subprocess.check_output(["git", "diff", "--name-only", base, "HEAD"]).decode().splitlines()
     dirs = { (ROOT / p).parent for p in diff if p.strip() }
-    # include created empty dirs tracked via .gitkeep or any added file
     return sorted({d for d in dirs if d.exists()})
 
 def iter_dirs(start: pathlib.Path) -> List[pathlib.Path]:
@@ -108,8 +107,15 @@ def newest_mtime_under(d: pathlib.Path) -> float:
 def render_for_dir(d: pathlib.Path, env: Environment, tmap: Dict) -> str:
     meta = read_meta(d)
     template_name = choose_template(d, tmap)
-    tmpl = env.get_template(template_name)
     print(f"[ROUTE] {d.relative_to(ROOT)} -> {template_name}")
+    tmpl = env.get_template(template_name)
+
+    # Safe metadata & feature flags for this directory
+    tldr_list = meta.get("tldr") or []
+    has_notebook = any(x.suffix == ".ipynb" for x in d.rglob("*.ipynb"))
+    has_scripts = (d / "scripts").exists() or any(x.suffix in {".py", ".sh"} for x in d.glob("*"))
+    has_critiques = (d / "critiques").exists() or any("critique" in x.name.lower() for x in d.rglob("*.md"))
+
     ctx = {
         "repo_name": ROOT.name,
         "dir_name": d.name,
@@ -117,11 +123,14 @@ def render_for_dir(d: pathlib.Path, env: Environment, tmap: Dict) -> str:
         "title": meta.get("title"),
         "tagline": meta.get("tagline"),
         "link": meta.get("link"),
-        "tldr": meta.get("tldr"),
+        "tldr": tldr_list,                 # safe list
         "synopsis": meta.get("synopsis"),
         "concepts": meta.get("concepts"),
         "notes": meta.get("notes"),
         "children": detect_children(d),
+        "has_notebook": has_notebook,
+        "has_scripts": has_scripts,
+        "has_critiques": has_critiques,
         "today": date.today().isoformat(),
     }
     return tmpl.render(**ctx).rstrip() + "\n"
@@ -140,12 +149,10 @@ def write_if_needed(d: pathlib.Path, content: str, dry_run: bool) -> bool:
 def collect_dirs_for_mode(mode: str, target_dir: str) -> List[pathlib.Path]:
     if mode == "auto":
         dirs = git_changed_dirs()
-        # also include brand-new empty dirs (tracked via .gitkeep) if present in diff
-        return dirs or [ROOT]  # fallback to root if nothing detected
+        return dirs or [ROOT]
     elif mode == "full":
         return iter_dirs(ROOT)
     elif mode == "stale":
-        # Only dirs where some file is newer than README
         dirs = []
         for d in iter_dirs(ROOT):
             if any(seg in EXCLUDE_DIRS for seg in d.parts):
@@ -182,25 +189,18 @@ def main():
     tmap = load_templates_map()
 
     dirs = collect_dirs_for_mode(args.mode, args.target_dir)
-    # always include ROOT if it has templates mapped explicitly (for landing page)
     if "." in (tmap.get("routing") or {}):
-        if ROOT not in dirs:
-            dirs.insert(0, ROOT)
+        root_dir = ROOT
+        if root_dir not in dirs:
+            dirs.insert(0, root_dir)
 
     wrote_any = False
     for d in dirs:
-        # Ignore known infra dirs
         if any(seg in EXCLUDE_DIRS for seg in d.parts):
             continue
-        # Treat dirs that only contain .gitkeep as "new" — still write README
         content = render_for_dir(d, env, tmap)
         changed = write_if_needed(d, content, dry_run=(args.dry_run == "true"))
         wrote_any = wrote_any or changed
-
-    if args.mode == "stale":
-        print(f"Stale check processed {len(dirs)} directories.")
-    elif args.mode == "target":
-        print(f"Target processed: {args.target_dir}")
 
     if not wrote_any:
         print("No README changes were necessary.")

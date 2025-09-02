@@ -1,11 +1,10 @@
-<!-- templates/series.md.j2 -->
 # {{ dir_title or dir_name }} — Series
-{{ synopsis or "_Series overview goes here._" }}
 
 ## Entries
-{% for child in children -%}
-- {{ loop.index }}. **{{ child.title or child.dir_name }}** — {{ child.tldr or "…" }}  
-  `{{ child.relpath }}/` {% if child.has_notebook %}· Notebook{% endif %} {% if child.has_scripts %}· Scripts{% endif %}
+{% for child in children if child.type == 'dir' -%}
+- **{{ child.title or child.dir_name }}**
+  - TL;DR: {{ child.tldr or "…" }}
+  - Path: `{{ child.relpath }}/`
 {% endfor %}
 
 <details><summary><strong>Concepts</strong></summary>
