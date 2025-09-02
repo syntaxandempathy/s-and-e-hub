@@ -1,16 +1,19 @@
-<!-- templates/series.md.j2 -->
 # articles — Series
-_Series overview goes here._
 
 ## Entries
-- 1. **0901-count-that-couldnt** — …  
-  `0901-count-that-couldnt/`  
-- 2. **** — …  
-  `README.md/`  
+- **09##-algorithmic-theatre**
+  - TL;DR: …
+  - Path: `09##-algorithmic-theatre/`
+- **0901-count-that-couldnt**
+  - TL;DR: …
+  - Path: `0901-count-that-couldnt/`
+- **TBD-proto-colab**
+  - TL;DR: …
+  - Path: `TBD-proto-colab/`
 
 
 <details><summary><strong>Concepts</strong></summary>
 _Add key ideas…_
 </details>
 
-<sub>Last updated: 2025-09-01</sub>
+<sub>Last updated: 2025-09-02</sub>

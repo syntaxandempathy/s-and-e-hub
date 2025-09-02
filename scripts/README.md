@@ -4,6 +4,7 @@ _Automatically generated README._
 
 ## Contents
 - file: `README.md` 
+- file: `gen_meta_gemini.py` 
 - file: `generate_readmes.py` 
 
 
