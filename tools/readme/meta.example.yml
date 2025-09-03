@@ -1,0 +1,17 @@
+title: Example Project
+tagline: A simple demonstration of README front matter
+tldr:
+  - First bullet highlight
+  - Second quick fact
+  - Third short takeaway
+link: https://example.com/project
+synopsis: |
+  This project demonstrates the structure of a `meta.yml` file used by the
+  README sync action. It provides a title, a short tagline, a few TL;DR bullet
+  points, a synopsis, and a reference link.
+tags:
+  - demo
+  - example
+  - readme
+audience: Developers and maintainers
+updated: 2025-09-03
