@@ -6,18 +6,18 @@ tldr:
 - Lessons learned about planning and realistic AI capabilities.
 link: null
 synopsis: This five-part series documents the author's attempts to create a tool for
-  measuring human contributions to AI-generated text.  The first part details the
-  initial, ultimately unsuccessful, effort, highlighting the challenges of scaling
-  a simple JSON-based approach and the unexpected complexities encountered when integrating
+  measuring human contributions to AI-generated text. The first part details the initial,
+  ultimately unsuccessful, effort, highlighting the challenges of scaling a simple
+  JSON-based approach and the unexpected complexities encountered when integrating
   AI and Python. It serves as a cautionary tale about the importance of careful planning
-  and understanding the limitations of AI.
+  and realistic expectations when using AI for complex tasks.
 tags:
 - AI
 - writing
-- tool building
+- programming
 - Python
 - JSON
+- productivity
 - failure
-- case study
-audience: Developers, writers, anyone interested in AI-assisted writing
+audience: Developers, writers, anyone interested in AI tools and their limitations.
 updated: 2025-09-03

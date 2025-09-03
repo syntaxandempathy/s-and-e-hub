@@ -6,16 +6,18 @@ tldr:
 - Rebuilds the missing "compare" step in the article creation process.
 - Implements parallel manual tracking for enhanced efficiency.
 link: null
-synopsis: This guide details the creation of a new Python script, '0606-ai-writing-analyzer.py',
-  designed to analyze text changes between article versions.  It addresses previous
-  limitations by providing actual computational analysis of content similarity and
-  other key metrics across different article stages.  The guide also introduces a
-  parallel manual tracking method to improve efficiency.
+synopsis: This guide details the development and implementation of a new Python script,
+  '0606-ai-writing-analyzer.py', designed to analyze textual changes between different
+  versions of an article.  It overcomes previous limitations by providing a computational
+  analysis of content similarity and other key metrics across various stages of the
+  writing process (Draft, Refined, Edited, Final).  Furthermore, the guide introduces
+  a parallel manual tracking method to streamline and improve the overall efficiency
+  of article analysis.
 tags:
 - Python
 - Article Analysis
 - Text Comparison
-- Software Development
-- Workflow Improvement
-audience: Developers, technical writers, researchers
+- Manual Tracking
+- AI
+audience: Developers, Writers, Editors
 updated: 2025-09-03

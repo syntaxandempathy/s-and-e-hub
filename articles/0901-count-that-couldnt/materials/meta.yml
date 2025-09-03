@@ -1,22 +1,18 @@
-title: 'AI-Assisted Document Version Comparison: A Case Study'
-tagline: Leveraging AI for efficient document version analysis and metrics generation.
+title: AI-Powered Document Version Analysis
+tagline: Quantifying the evolution of documents through automated metrics and visualizations.
 tldr:
-- Used AI to generate Python scripts for comparing document versions.
-- Encountered challenges with debugging and context issues in AI-generated code.
-- Successfully generated metrics (word, sentence, paragraph retention) and visualizations.
-link: ''
-synopsis: This case study documents the process of using AI to create Python scripts
-  for comparing and analyzing different versions of a document.  It details the challenges
-  encountered, including debugging AI-generated code and handling context issues,
-  and ultimately showcases the successful generation of insightful metrics and visualizations
-  charting the evolution of the document across revisions.
-tags:
-- AI
-- Python
-- Document Analysis
-- Version Control
-- Metrics
-- Data Visualization
-- ChatGPT
-audience: Developers, Data Analysts, Technical Writers
+- Generated Python scripts using AI to compare multiple document versions.
+- Calculated metrics like word retention, sentence similarity, and TF-IDF cosine similarity.
+- Visualized the results to understand the impact of each editing stage.
+link: https://chatgpt.com/c/68b5d04b-cac4-832c-8397-1a8707980df7
+synopsis: This project demonstrates the use of AI to automate the analysis of document
+  revisions.  A Python script, largely generated with AI assistance, calculates various
+  metrics (word retention, sentence and paragraph retention, and cosine similarity
+  using TF-IDF) to quantify the changes between different versions of a document.
+  The results provide insights into the editing process and the impact of each revision
+  stage.  The analysis is complemented by visualizations (charts, not included in
+  this data set).
+tags: AI, Python, Document Analysis, Version Control, Metrics, Visualization
+audience: Data analysts, writers, editors, anyone interested in document version control
+  and analysis.
 updated: 2025-09-03

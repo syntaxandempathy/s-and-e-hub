@@ -12,16 +12,8 @@ link: null
 synopsis: This series documents the author's journey to create a reliable system for
   tracking human and AI contributions in writing.  Early attempts using Python's computational
   power failed, followed by a surprisingly misleading experience with a simple browser-based
-  tool that provided illusory results. The project ultimately exposes the complexity
-  and challenges involved in creating a transparent and effective solution.
-tags:
-- AI
-- writing
-- analysis
-- transparency
-- ethics
-- Python
-- JavaScript
-- HTML
-audience: Developers, writers, researchers interested in AI ethics and writing processes.
+  interface that lacked actual analysis. The project ultimately explores the complexities
+  of achieving true transparency in AI-assisted writing.
+tags: AI writing, transparency, ethical AI, Python, JavaScript, HTML, analysis
+audience: Writers, researchers, developers interested in AI writing tools
 updated: 2025-09-03

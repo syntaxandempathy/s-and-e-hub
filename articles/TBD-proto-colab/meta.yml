@@ -5,19 +5,19 @@ tldr:
 - Understand the challenges of AI text attribution.
 - Learn techniques for evaluating AI vs. human-written content.
 - Explore Python tools for visualization and analysis.
-link: null
-synopsis: This resource explores the challenges of identifying AI-generated text in
-  the era of advanced LLMs.  It provides a deep dive into the problem of authorship
-  ambiguity, presenting methods and Python-based tools for evaluating the contributions
-  of AI and humans to written content.  The guide includes practical examples and
-  visualizations to aid in understanding and analyzing AI text attribution.
+link: ''
+synopsis: This resource provides a deep dive into the challenges of identifying AI-generated
+  text in the era of advanced LLMs. It presents methods and Python-based tools for
+  evaluating the contributions of AI and humans to written content, including practical
+  examples and visualizations.  The guide addresses the ambiguity of authorship in
+  the age of generative AI.
 tags:
 - AI
 - Natural Language Processing
 - Text Analysis
 - Python
-- Attribution
-- LLMs
 - Generative AI
-audience: Researchers, students, developers, and anyone interested in AI text detection.
+- Attribution
+audience: Researchers, students, and professionals interested in AI, natural language
+  processing, and content analysis.
 updated: 2025-09-03

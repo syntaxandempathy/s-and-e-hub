@@ -1,14 +1,14 @@
-title: 'Interactive Data Visualization Bundle: Charts & Graphs'
-tagline: A collection of insightful charts and graphs for data exploration.
+title: Interactive Data Visualization Bundle
+tagline: Insightful charts and graphs for data exploration.
 tldr:
-- Explore various data visualization techniques.
-- Quickly understand complex datasets.
-- Interactive and user-friendly design.
+- Explore various data visualization techniques
+- Quickly understand complex datasets
+- Interactive and user-friendly design
 link: ''
-synopsis: This bundle offers a curated selection of interactive charts and graphs
-  designed to facilitate data exploration and analysis.  Users can easily visualize
-  and interpret complex datasets, gaining key insights from various perspectives.
-  The visualizations are designed for user-friendliness and intuitive understanding.
+synopsis: This bundle provides a curated selection of interactive charts and graphs
+  to simplify data exploration and analysis.  Users can easily visualize and interpret
+  complex datasets, gaining valuable insights. The visualizations are designed for
+  intuitive understanding and ease of use.
 tags:
 - data visualization
 - charts
@@ -17,4 +17,4 @@ tags:
 - dashboard
 - analysis
 audience: Data analysts, researchers, business professionals
-updated: '2025-09-03'
+updated: 2025-09-03
