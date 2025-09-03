@@ -1,21 +1,11 @@
-title: 'Exporting Charts: A Comprehensive Guide'
-tagline: Master the art of exporting charts from various sources.
-tldr:
-- Learn different export formats (e.g., PNG, SVG, PDF).
-- Optimize chart exports for print and digital use.
-- Troubleshoot common export issues.
-link: ''
-synopsis: This guide provides a thorough overview of exporting charts effectively,
-  covering various software and formats.  It helps you choose the right export method
-  to ensure your charts are visually appealing and easily shareable, regardless of
-  the intended platform.
-tags:
-- Data Visualization
-- Chart Export
-- Software
-- Graphics
-- Export Formats
-- Troubleshooting
-audience: Data analysts, data scientists, report writers, and anyone creating charts
-  for presentations or reports.
+title: charts_export
+synopsis: "title: Exporting Charts: A Comprehensive Guide\ntagline: Master the art\
+  \ of chart exporting.\ntldr:\n  - Learn various export formats (PNG, SVG, PDF).\n\
+  \  - Optimize exports for print and digital.\n  - Troubleshoot common export problems.\n\
+  link: \"\"\nsynopsis: This guide offers a thorough overview of effective chart exporting\
+  \ across different software and formats.  Learn to choose the best export method\
+  \ for visually appealing, easily shareable charts across various platforms.\ntags:\n\
+  \  - Data Visualization\n  - Chart Export\n  - Software\n  - Graphics\n  - Export\
+  \ Formats\n  - Troubleshooting\naudience: Data analysts, data scientists, report\
+  \ writers, and anyone creating charts for presentations or reports.\nupdated: 2025-09-03"
 updated: '2025-09-03'

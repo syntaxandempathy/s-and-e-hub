@@ -1,16 +1,19 @@
-title: Collection of Useful Scripts
+title: Auto-Generated Script Collection
 tagline: A curated set of helpful scripts for everyday tasks.
 tldr:
 - Auto-generated script collection.
-- Contains various useful scripts.
+- Contains various useful scripts for automation.
 - Regularly updated.
 link: ''
-synopsis: This repository contains a collection of useful scripts, automatically generated
-  and regularly updated.  The scripts cover a range of tasks (details to be added
-  as scripts are populated).
+synopsis: This repository provides a growing collection of useful scripts designed
+  to automate common tasks.  The scripts are automatically generated and updated regularly,
+  covering a range of functionalities.  Specific details on included scripts will
+  be added as the collection expands.
 tags:
 - scripts
 - automation
 - tools
+- utilities
+- command-line
 audience: Developers, System Administrators, Power Users
-updated: '2025-09-03'
+updated: 2025-09-03
