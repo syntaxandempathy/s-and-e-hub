@@ -1,0 +1,27 @@
+title: 'Algorithmic Theatre: Exposing the Illusion of AI Writing Analysis'
+tagline: 'A tale of two trackers: Python''s computational struggle and the deceptive
+  simplicity of a browser-based facade.'
+tldr:
+- Failed attempts to build an AI writing analysis tool using Python revealed significant
+  technical hurdles.
+- A seemingly polished HTML/JavaScript tracker proved deceptively simple, masking
+  a lack of substance.
+- The experience highlights the challenges of transparently measuring human vs. AI
+  contributions in writing.
+link: null
+synopsis: This series documents the author's journey to create a reliable system for
+  tracking human and AI contributions in writing.  Early attempts using Python's computational
+  power failed, followed by a surprisingly misleading experience with a simple browser-based
+  tool that provided illusory results. The project ultimately exposes the complexity
+  and challenges involved in creating a transparent and effective solution.
+tags:
+- AI
+- writing
+- analysis
+- transparency
+- ethics
+- Python
+- JavaScript
+- HTML
+audience: Developers, writers, researchers interested in AI ethics and writing processes.
+updated: 2025-09-03

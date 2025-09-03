@@ -1,0 +1,15 @@
+title: articles
+synopsis: "title: The Count That Couldn't: A Cautionary Tale of AI-Assisted Writing\n\
+  tagline:  Building a transparent testing tool for AI-generated content – a five-part\
+  \ series.\ntldr:\n  - Failed initial attempt to build an AI content contribution\
+  \ tracker (45 hours).\n  - Switched from JSON/XML to Python, despite lack of expertise.\n\
+  \  - Lessons learned about planning and realistic expectations with AI.\nlink: \n\
+  synopsis: This article is the first in a five-part series documenting the challenges\
+  \ of creating a tool to measure human contributions to AI-drafted content. The author's\
+  \ initial attempt, using JSON and XML, proved unsustainable, leading to a pivot\
+  \ to Python and highlighting the importance of careful planning and realistic assessment\
+  \ of AI capabilities.  The series shares both successes and failures, emphasizing\
+  \ a human-centered approach to AI collaboration.\ntags: AI, writing, tools, Python,\
+  \ JSON, XML, failure, collaboration, transparency\naudience: Developers, writers,\
+  \ anyone interested in AI-as"
+updated: '2025-09-03'

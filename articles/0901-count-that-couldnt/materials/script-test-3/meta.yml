@@ -1,0 +1,23 @@
+title: Analyzing Article Revisions with Python
+tagline: A quantitative analysis of article revisions using Python scripts and NLP
+  techniques.
+tldr:
+- Measured character, word, and sentence counts across four article stages.
+- Calculated pairwise similarity using TF-IDF and difflib.
+- Analyzed token retention rates between revisions.
+link: null
+synopsis: This project quantitatively analyzes the evolution of an article through
+  four distinct revision stages (Draft, Refined, Edited, Final).  Python scripts were
+  used to calculate metrics such as word counts, sentence counts, and pairwise similarity
+  scores (using TF-IDF and difflib) to understand the changes made during each revision.  Token
+  retention rates provide insight into the overall consistency between versions.
+tags:
+- Python
+- NLP
+- Text Analysis
+- Article Revision
+- Data Analysis
+- Cosine Similarity
+- Difflib
+audience: Data scientists, writers, and anyone interested in quantitative text analysis.
+updated: 2025-09-03
