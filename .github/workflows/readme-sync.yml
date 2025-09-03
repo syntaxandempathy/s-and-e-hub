@@ -3,104 +3,73 @@ name: README Sync
 on:
   push:
     branches: [ main ]
-    paths-ignore:
-      - ".github/workflows/**"
-      - "templates/**"
   workflow_dispatch:
     inputs:
       mode:
-        description: "Choose how to run"
+        description: "Run mode"
         required: true
         default: "auto"
         type: choice
         options: [auto, full, stale, target]
       target_dir:
-        description: "Path for mode=target (recursive)"
+        description: "Directory to process when mode=target (relative to repo root)"
         required: false
-        type: string
-      full_rewrite_enabled:
-        description: "Allow full rewrite (safety toggle for mode=full)"
+        default: ""
+      stale_days:
+        description: "Consider README stale if content newer by this many days"
         required: false
-        default: false
-        type: boolean
+        default: "30"
       dry_run:
-        description: "Preview only (no writes)"
-        required: false
-        default: false
+        description: "Do not write files; just log"
         type: boolean
+        default: false
       ai_enrich:
-        description: "Run Gemini to (lightly) create/refresh meta.yml where missing"
-        required: false
-        default: false
+        description: "Use Gemini to create/update meta.yml"
         type: boolean
-      ai_max_dirs:
-        description: "Max folders to enrich this run (to cap spend)"
-        required: false
-        default: "3"
-        type: string
-
-permissions:
-  contents: write
+        default: false
+      overwrite_meta:
+        description: "Allow overwriting existing meta.yml"
+        type: boolean
+        default: false
 
 jobs:
   sync:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-python@v5
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: '3.11'
 
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
-          pip install Jinja2 PyYAML requests
+          pip install requests pyyaml
 
-      # ---------- OPTIONAL: Gemini enrichment (guarded by toggle) ----------
-      - name: Enrich meta.yml with Gemini (optional)
-        if: ${{ github.event.inputs.ai_enrich }}
+      - name: Run sync
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_BEFORE: ${{ github.event.before }}
+          GITHUB_SHA: ${{ github.sha }}
         run: |
-          if [[ -z "${GEMINI_API_KEY}" ]]; then
-            echo "GEMINI_API_KEY secret is not set; skipping AI enrich."
-            exit 0
-          fi
-          # Limit how much work we do per run to control cost
-          python scripts/gen_meta_gemini.py \
-            --root "articles" \
-            --only-missing \
-            --max-dirs "${{ github.event.inputs.ai_max_dirs || '3' }}" \
-            --max-files-per-dir "6" \
-            --max-chars-per-file "1200" \
-            --model "gemini-1.5-flash-latest" \
-            --dry-run "false"
-
-      # ---------- README generation (your existing step) ----------
-      - name: Run README sync
-        run: |
-          python scripts/generate_readmes.py \
-            --mode "${{ github.event.inputs.mode || 'auto' }}" \
-            --target-dir "${{ github.event.inputs.target_dir || '' }}" \
-            --full-rewrite-enabled "${{ github.event.inputs.full_rewrite_enabled && 'true' || 'false' }}" \
-            --dry-run "${{ github.event.inputs.dry_run && 'true' || 'false' }}"
+          python tools/readme/readme_sync.py             --mode "${{ github.event.inputs.mode || 'auto' }}"             --target-dir "${{ github.event.inputs.target_dir || '' }}"             --stale-days "${{ github.event.inputs.stale_days || '30' }}"             ${{ github.event.inputs.dry_run && '--dry-run' || '' }}             ${{ github.event.inputs.ai_enrich && '--ai-enrich' || '' }}             ${{ github.event.inputs.overwrite_meta && '--overwrite-meta' || '' }}
 
       - name: Commit & push if changed
         run: |
           set -e
-          # Stage new/modified README.md & meta.yml files
-          git ls-files -o -m --exclude-standard | awk '/(^|\\/)(README\\.md|meta\\.yml)$/' | xargs -r git add
-          # Also include modified tracked files
-          git add -u
-
-          if [[ -n "$(git diff --cached --name-only)" ]]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git commit -m "chore: meta+readme sync via action [skip ci]"
-            git push
-          else
-            echo "No README/meta changes to commit."
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
           fi
+          git commit -m "chore(readme-sync): update READMEs and meta"
+          git push
