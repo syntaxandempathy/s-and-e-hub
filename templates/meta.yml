@@ -1,0 +1,18 @@
+title: Project Templates
+tagline: Reusable templates for articles, landing pages, and series.
+tldr:
+- Collection of Jinja2 templates for consistent documentation.
+- Supports articles, series, landing pages, and folders.
+- Auto-generates READMEs and indexes.
+link: null
+synopsis: This project provides a set of Jinja2 templates for creating consistent
+  documentation.  It includes templates for individual articles, series of articles,
+  landing pages, and folders, all with automatically generated READMEs and indexes.
+tags:
+- Jinja2
+- templates
+- documentation
+- markdown
+- README
+audience: Developers, technical writers
+updated: 2025-09-03

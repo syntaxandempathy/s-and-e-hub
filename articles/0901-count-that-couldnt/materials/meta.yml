@@ -1,0 +1,22 @@
+title: 'AI-Assisted Document Version Comparison: A Case Study'
+tagline: Leveraging AI for efficient document version analysis and metrics generation.
+tldr:
+- Used AI to generate Python scripts for comparing document versions.
+- Encountered challenges with debugging and context issues in AI-generated code.
+- Successfully generated metrics (word, sentence, paragraph retention) and visualizations.
+link: ''
+synopsis: This case study documents the process of using AI to create Python scripts
+  for comparing and analyzing different versions of a document.  It details the challenges
+  encountered, including debugging AI-generated code and handling context issues,
+  and ultimately showcases the successful generation of insightful metrics and visualizations
+  charting the evolution of the document across revisions.
+tags:
+- AI
+- Python
+- Document Analysis
+- Version Control
+- Metrics
+- Data Visualization
+- ChatGPT
+audience: Developers, Data Analysts, Technical Writers
+updated: 2025-09-03

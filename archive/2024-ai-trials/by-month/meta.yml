@@ -1,0 +1,26 @@
+title: 'AI Content Creation Trials: A Year-Long Experiment'
+tagline: Tracking the evolution of AI content generation through monthly experiments.
+tldr:
+- Explores the capabilities of various AI models in generating content about global
+  holiday traditions.
+- Documents prompt engineering techniques, challenges, and iterative improvements.
+- Analyzes the impact of factors like prompt complexity, roles, and tone on AI output
+  quality.
+link: null
+synopsis: This project chronicles a year-long experiment using AI to create content
+  about diverse holiday traditions worldwide.  The author tracks the performance of
+  different AI models, documents their interactions, and analyzes the impact of various
+  prompting strategies and techniques on content quality. The experiment explores
+  the influence of prompt complexity,  defined roles for the AI, and tone on the generated
+  text. The findings provide insights into the capabilities and limitations of current
+  AI models in creative content generation.
+tags:
+- AI
+- Content Creation
+- Prompt Engineering
+- Experiment
+- Machine Learning
+- Holiday Traditions
+audience: Data scientists, AI enthusiasts, content creators, anyone interested in
+  AI capabilities.
+updated: 2025-09-03

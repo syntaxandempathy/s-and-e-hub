@@ -1,0 +1,21 @@
+title: 'AI Content Creation Trials: A Year-Long Experiment'
+tagline: Tracking AI's progress in generating holiday tradition articles.
+tldr:
+- Year-long experiment using AI to write about global holiday traditions.
+- Evaluates various AI models' performance and improvement over time.
+- Explores prompt engineering techniques (roles, templates, CoT) to optimize AI output.
+link: null
+synopsis: This project documents a year-long experiment using AI to generate articles
+  about holiday traditions worldwide.  The author tracks the performance of different
+  AI models, explores various prompt engineering techniques like specialized roles
+  and Chain of Thought prompting, and analyzes the evolution of AI content creation
+  capabilities over time.
+tags:
+- AI
+- Content Creation
+- Prompt Engineering
+- Experiment
+- Holiday Traditions
+- Large Language Models
+audience: AI enthusiasts, content creators, researchers interested in AI writing.
+updated: '2025-09-03'

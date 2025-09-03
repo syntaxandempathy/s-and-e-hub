@@ -1,0 +1,22 @@
+title: Analyzing Article Revisions with Python
+tagline: A quantitative analysis of writing process using Python script and ChatGPT.
+tldr:
+- Python script analyzed four article versions (Draft, Refined, Edited, Final).
+- Measured word retention, sequence similarity, and cosine similarity between versions.
+- Results quantified the impact of each editing stage on the article's content.
+link: https://chatgpt.com/c/68b5d04b-cac4-832c-8397-1a8707980df7
+synopsis: This project uses a Python script to analyze four versions of an article
+  (draft, refined, edited, final) to quantify the impact of each revision stage.  The
+  analysis includes metrics such as word retention, sequence similarity, and pairwise
+  cosine similarity using TF-IDF.  The results offer insights into the evolution of
+  the article's content and structure throughout the writing process.
+tags:
+- Python
+- Text Analysis
+- Article Revision
+- Writing Process
+- ChatGPT
+- Data Analysis
+audience: Data scientists, writers, anyone interested in text analysis and writing
+  processes.
+updated: 2025-09-03

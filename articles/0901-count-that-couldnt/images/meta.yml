@@ -1,0 +1,20 @@
+title: Image Folder Analysis
+tagline: Metadata and Excerpts from an Image Directory
+tldr:
+- Contains a `.DS_Store` file (likely macOS metadata).
+- File sizes and excerpts provided.
+- Further analysis needed to determine image content.
+link: ''
+synopsis: This document provides metadata and small excerpts from files within an
+  'images' directory.  The primary file identified is a `.DS_Store` file, which is
+  typically created by macOS to store information about the directory's contents.
+  Excerpts from other files are uninterpretable without further analysis.
+tags:
+- metadata
+- images
+- files
+- analysis
+- macOS
+- .DS_Store
+audience: Developers, Data Analysts
+updated: 2025-09-03

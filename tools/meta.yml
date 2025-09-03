@@ -1,8 +1,14 @@
-title: Tools
-tagline: ''
-tldr: []
-link: ''
-synopsis: ''
-tags: []
-audience: ''
-updated: '2025-09-03'
+title: README Sync Tool
+tagline: Automate README generation and AI enrichment.
+tldr:
+- Automates README generation for consistent structure.
+- Supports multiple generation modes (auto, full, stale, target).
+- Optional AI enrichment using Gemini.
+link: null
+synopsis: This Python-based tool simplifies README file management. It automatically
+  detects changes, generates a consistent README.md, and optionally uses Gemini for
+  AI-powered metadata generation (`meta.yml`).  The tool is designed for easy integration
+  with GitHub Actions.
+tags: Python, GitHub Actions, README, Automation, Gemini, AI
+audience: Developers, GitHub users
+updated: 2025-09-03
