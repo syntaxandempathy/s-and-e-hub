@@ -14,6 +14,7 @@ This Python script simplifies README.md generation by automatically detecting re
 ---
 
 ## Files
+- `gemini_prompt.example.md`
 - `meta.example.yml`
 - `readme_sync.py`
 

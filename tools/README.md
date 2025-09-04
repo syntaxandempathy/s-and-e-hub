@@ -6,6 +6,7 @@
 ## Files
 
 ### readme
+- `readme/gemini_prompt.example.md`
 - `readme/meta.example.yml`
 - `readme/readme_sync.py`
 
