@@ -1,22 +1,5 @@
-# Readme Sync Utility
+# README Sync (Gemini-Direct)
 
-_Single-file README.md generator with optional AI enhancement_
+Automatically generates or refreshes `README.md` files in each directory using Google Gemini. No front matter—Gemini writes the whole README.
 
-
-This Python script simplifies README.md generation by automatically detecting repository changes on push events using GitHub commit SHAs.  It supports selective updates and avoids templating engines for simplicity, offering optional AI-powered metadata enrichment.
-
-
-**TL;DR**
-- Auto-generates consistent README.md files.
-- Detects repository changes via GitHub commit SHAs.
-- Optional AI-powered metadata enrichment using Google Gemini.
-
----
-
-## Files
-- `meta.example.yml`
-- `readme_sync.py`
-
----
-
-_Auto-generated on 2025-09-03_
+See `.github/workflows/readme-sync.yml` for the workflow and `gemini_prompt.example.md` to customize output (copy to `gemini_prompt.md`).

@@ -1,4 +1,4 @@
-name: README Sync
+name: README Sync (Gemini Direct)
 
 on:
   push:
@@ -6,29 +6,17 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "Run mode"
+        description: "Run mode (manual)"
         required: true
-        default: "auto"
+        default: "full"
         type: choice
-        options: [auto, full, stale, target]
+        options: [full, target]
       target_dir:
         description: "Directory to process when mode=target (relative to repo root)"
         required: false
         default: ""
-      stale_days:
-        description: "Consider README stale if content newer by this many days"
-        required: false
-        default: "30"
       dry_run:
         description: "Do not write files; just log"
-        type: boolean
-        default: false
-      ai_enrich:
-        description: "Use Gemini to create/update meta.yml"
-        type: boolean
-        default: false
-      overwrite_meta:
-        description: "Allow overwriting existing meta.yml"
         type: boolean
         default: false
 
@@ -51,15 +39,15 @@ jobs:
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
-          pip install requests pyyaml
+          pip install requests
 
-      - name: Run sync
+      - name: Generate READMEs
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GITHUB_BEFORE: ${{ github.event.before }}
           GITHUB_SHA: ${{ github.sha }}
         run: |
-          python tools/readme/readme_sync.py             --mode "${{ github.event.inputs.mode || 'auto' }}"             --target-dir "${{ github.event.inputs.target_dir || '' }}"             --stale-days "${{ github.event.inputs.stale_days || '30' }}"             ${{ github.event.inputs.dry_run && '--dry-run' || '' }}             ${{ github.event.inputs.ai_enrich && '--ai-enrich' || '' }}             ${{ github.event.inputs.overwrite_meta && '--overwrite-meta' || '' }}
+          python tools/readme/readme_sync.py             --mode "${{ github.event_name == 'workflow_dispatch' && (github.event.inputs.mode || 'full') || 'auto' }}"             --target-dir "${{ github.event.inputs.target_dir || '' }}"             ${{ github.event.inputs.dry_run && '--dry-run' || '' }}
 
       - name: Commit & push if changed
         run: |
@@ -71,5 +59,5 @@ jobs:
             echo "No changes to commit."
             exit 0
           fi
-          git commit -m "chore(readme-sync): update READMEs and meta"
+          git commit -m "chore(readme-sync): regenerate README.md files"
           git push
