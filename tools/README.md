@@ -1,2 +1,2 @@
 bash
-python readme_sync.py --help
+./readme_sync.py --mode full
