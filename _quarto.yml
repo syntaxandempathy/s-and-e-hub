@@ -1,0 +1,37 @@
+project:
+  type: website
+  render:
+    - index.qmd
+    - about.qmd
+    - articles/index.qmd
+    - articles/**.qmd
+
+website:
+  title: "Syntax & Empathy"
+  site-url: ""
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: articles/
+        text: Articles
+      - href: resources/
+        text: Resources
+      - href: about.qmd
+        text: About
+  search: true
+  page-footer:
+    center: |
+      © {date:YYYY} Syntax & Empathy
+
+format:
+  html:
+    theme: 
+      - flatly
+      - styles.scss
+    toc: true
+    smooth-scroll: true
+    code-copy: true
+    anchor-sections: true
+
+metadata-files: []  # keep empty now; can add per-env config later
