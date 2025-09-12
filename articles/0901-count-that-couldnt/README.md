@@ -1,24 +1,22 @@
 # The Count That Couldn't: A Cautionary Tale of AI-Assisted Writing
-_A chronicle of failed attempts to build an AI-powered writing tool, and the lessons learned._
 
-**Overview**
+*A five-part series documenting the challenges of building a tool to track human contributions to AI-generated text.*
 
-This directory contains the source files for a five-part blog post series detailing the challenges of building a tool to track human contributions to AI-generated text.  The project started with simple JSON, but evolved into a more complex (and ultimately unsuccessful) Python-based system.  The articles detail the process, highlighting the unexpected complexities and providing valuable lessons for anyone working with AI for writing and data processing.  The series is intended to be instructive, showcasing failures as much as successes.
+## Overview
+This directory contains the markdown source files for a five-part blog post series. The series details the author's attempts to create a tool that measures the balance between human and AI contributions to written content.  The project started with simple JSON, but quickly evolved into more complex approaches, highlighting the challenges and lessons learned along the way. Each `.md` file represents a part of the series. The `meta.yml` file contains metadata for the entire series.
 
-**Contents**
+## Contents
+- `01-the-count-that-coudnt.md` — Part 1: Early attempts at building a transparent testing tool.
+- `02-the-count-that-coudnt.md` — Part 2: Shifting from JSON/XML to AI-generated Python.
+- `03-the-count-that-coudnt.md` — Part 3:  Analyzing the project's failures and learning from them.
+- `04-the-count-that-coudnt.md` — Part 4:  Finding a new, more successful approach.
+- `05-the-count-that-coudnt.md` — Part 5 (missing):  Final thoughts and conclusions.
+- `meta.yml` — Metadata for the blog post series.
 
-* `draft-article.md`: Initial draft of the first article in the series.
-* `edited-article.md`:  A later edit of the first article.
-* `final-article.md`: The final version of the first article.
-* `meta.yml`: Metadata for the article series (title, description, tags, etc.).
-* `.meta.hash`:  Content hash for the repository.
-* `refined-article.md`:  A refined version of the first article, incorporating feedback.
+
+## Conventions
+Each part of the series is a separate markdown file (`*.md`).  The files are numbered sequentially.
 
 
-**Conventions**
-
-Markdown files (`*.md`) follow a consistent structure: title, TL;DR summary, main content, and concluding remarks. Metadata is stored in a YAML file (`meta.yml`).
-
-**Changelog**
-
-Last updated: 2025-09-04
+---
+Last updated: 2025-09-12

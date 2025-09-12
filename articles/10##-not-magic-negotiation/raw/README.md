@@ -1,18 +1,17 @@
-# raw data and processing scripts
+# raw data and scripts for article generation
 
-*A collection of raw data files and scripts used for data processing.*
+*A collection of raw materials and scripts used in the article creation process.*
 
 ## Overview
-This directory contains the raw data files and associated processing scripts for a data analysis project.  The `00-brief.md` file provides guidance on article creation, while `00-rough.md` contains a detailed report on a Colab-based NLP research system.  The scripts (if any) are designed to clean, transform, and prepare the data for analysis.  This structure facilitates reproducibility and transparency in the research workflow. The files are primarily in markdown format for easy readability and editing.
+This directory contains the raw materials and initial drafts for an article generation project.  It includes a detailed brief outlining the article's objective and process, as well as a rough draft of the article itself. The files are in Markdown format for easy editing and collaboration. This repository serves as a central hub for managing the article's development from initial concept to final publication.  The scripts (if any) would automate parts of this process.
 
 ## Contents
-* `00-brief.md` — Article creation guide with detailed instructions and a structured process.
-* `00-rough.md` — Comprehensive report on a Colab-based NLP research system, detailing its development and challenges.
+* `00-brief.md` — Article creation guide with detailed instructions and objectives.
+* `00-rough.md` — Initial rough draft of the article.
 
 
 ## Conventions
-Files are named with a descriptive prefix followed by a descriptive name.  Markdown files (.md) are used for documentation and data description.
-
+Files are named using a descriptive naming convention.  The numbering scheme (e.g., `00-`) helps with logical ordering of the files related to the article creation.
 
 ---
-Last updated: 2025-09-05
+Last updated: 2025-09-12
