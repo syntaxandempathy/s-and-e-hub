@@ -1,5 +1,0 @@
-routing:
-  ".": "landing.md.j2"
-  "articles": "series.md.j2"
-  "articles/*": "article.md.j2"
-  "*": "folder.md.j2"
