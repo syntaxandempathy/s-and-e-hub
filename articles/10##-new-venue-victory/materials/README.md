@@ -1,24 +1,28 @@
 # Materials for AI vs. Human Writing Analysis
 
-*Supporting documents and analysis artifacts for comparing AI-generated and human-written text.*
+*Supporting documents and analysis artifacts for a comparative study of AI and human writing.*
 
 ## Overview
-This directory contains data, scripts, and analysis results related to a research project comparing AI-generated and human-written text.  The analysis focuses on identifying patterns in writing style, semantic similarity, and modification intensity across different versions of articles.  The Jupyter Notebooks document the data processing and analysis workflows. JSON files store intermediate and final results.  Markdown files contain transcripts and build notes.
+This directory contains data and analysis results from a research project comparing AI-generated and human-written text.  The project focused on analyzing various aspects of writing style, semantic similarity, and modification intensity across different versions of articles.  The Jupyter Notebooks contain Python code for data processing and analysis using Google Colab.  The `.json` files store intermediate and final analysis results.  The `.md` files contain supplementary notes and observations.
 
 ## Contents
-- `ai-vs-human.ipynb` — Primary Jupyter Notebook for AI vs. human writing analysis.
-- `ai-vs-human-v0.1.ipynb`, `ai-vs-human-v0.2.ipynb`, `ai-vs-human-v0.3.ipynb` — Earlier versions of the main analysis notebook.
-- `Claude-Python NLP Research in Colab.md` —  Research notes on using Python and Claude for NLP tasks in Google Colab.
-- `0614-transcript-2.md`, `0614-transcript-3.md` — Transcripts of development sessions.
-- `best-build-notes.md` — Notes on the best-performing build of the analysis pipeline.
-- `markup-languages_checkpoint_steps_1_2.json`, `markup-languages_complete_analysis.json`, `markup-languages_footer_metrics.json` — JSON files containing intermediate and final analysis results for a sample article.
+- `0614-transcript-2.md` — Transcript of the second session documenting the research process.
+- `0614-transcript-3.md` — Transcript of the third session documenting the research process.
+- `Claude-Python NLP Research in Colab.md` — Prompt engineering and code generation utilizing Claude AI and Google Colab.
+- `ai-vs-human-v0.1.ipynb`, `ai-vs-human-v0.2.ipynb`, `ai-vs-human-v0.3.ipynb`, `ai-vs-human.ipynb` — Jupyter Notebooks detailing the evolution of the AI vs. human analysis.
+- `best-build-notes.md` — Notes summarizing the most successful build and process.
+- `markup-languages_checkpoint_steps_1_2.json` — Checkpoint data for steps 1 & 2 of markup languages analysis.
+- `markup-languages_complete_analysis.json` — Complete analysis results for the "markup-languages" article.
+- `markup-languages_footer_metrics.json` — Footer metrics for the "markup-languages" article.
 
 
 ## Quick Start
-The analysis is performed using Jupyter Notebooks.  To reproduce the results, ensure you have the necessary Python libraries installed (refer to the notebooks for details).  Open `ai-vs-human.ipynb` in a Jupyter environment and execute the cells sequentially.
+The Jupyter Notebooks (`ai-vs-human*.ipynb`) are designed to be executed in Google Colab.  Ensure you have a Google account and have mounted your Google Drive to access the necessary data files.  Each notebook contains detailed comments and instructions.
+
 
 ## Conventions
-Jupyter Notebooks are versioned using sequential numbers (v0.1, v0.2, etc.). JSON files follow a naming convention indicating the article and analysis stage.
+The filenames follow a consistent pattern, using dates and version numbers to track progress. JSON files store structured data representing analysis results, while MD files contain textual information and process notes.
+
 
 ---
-Last updated: 2025-09-05
+Last updated: 2025-09-12
