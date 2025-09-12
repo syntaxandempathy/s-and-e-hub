@@ -1,0 +1,14 @@
+# {{ dir_title or dir_name }} — Series
+
+## Entries
+{% for child in children if child.type == 'dir' -%}
+- **{{ child.title or child.dir_name }}**
+  - TL;DR: {{ child.tldr or "…" }}
+  - Path: `{{ child.relpath }}/`
+{% endfor %}
+
+<details><summary><strong>Concepts</strong></summary>
+{{ concepts or "_Add key ideas…_" }}
+</details>
+
+<sub>Last updated: {{ today }}</sub>

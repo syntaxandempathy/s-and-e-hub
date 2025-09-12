@@ -1,0 +1,11 @@
+// Brand tokens (Bootstrap/Quarto will compile this SCSS)
+$primary: #6b5ed4;
+$secondary: #2a2a2a;
+$body-color: #1e1e1e;
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+// Light/dark link contrast
+a { text-decoration-thickness: .08rem; }
+
+// Subtle card/listing polish
+.listing .metadata .listing-date { opacity: .75; }

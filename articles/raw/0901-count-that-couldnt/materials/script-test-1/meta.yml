@@ -1,0 +1,15 @@
+title: Article Revision Metrics & Analysis
+tagline: Tracking textual evolution across multiple editing stages.
+tldr:
+- Quantifies changes in word count, sentence structure, and vocabulary.
+- Measures similarity between article versions using cosine similarity.
+- Calculates word and sentence retention rates during revisions.
+link: ''
+synopsis: This analysis tracks the evolution of an article through four revision stages
+  (Draft, Refined, Edited, Final), using metrics like word count, sentence count,
+  unique words, and cosine similarity to quantify changes and retention at each stage.  The
+  results illustrate the impact of each editing pass on the article's structure and
+  content.
+tags: article, revision, analysis, cosine similarity, text metrics
+audience: Writers, editors, researchers
+updated: 2025-09-03

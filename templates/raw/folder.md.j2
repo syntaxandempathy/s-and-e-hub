@@ -1,0 +1,10 @@
+<!-- templates/folder.md.j2 -->
+# {{ dir_title or dir_name }}
+_Automatically generated README._
+
+## Contents
+{% for entry in children -%}
+- {{ entry.type }}: `{{ entry.relpath }}` {% if entry.title %}— {{ entry.title }}{% endif %}
+{% endfor %}
+
+<sub>Last updated: {{ today }}</sub>
