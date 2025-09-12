@@ -3,12 +3,11 @@ project:
   render:
     - index.qmd
     - about.qmd
-    - articles/index.qmd
     - articles/**.qmd
 
 website:
   title: "Syntax & Empathy"
-  site-url: ""
+  site-url: "https://syntaxandempathy.github.io"
   navbar:
     left:
       - href: index.qmd
@@ -33,5 +32,8 @@ format:
     smooth-scroll: true
     code-copy: true
     anchor-sections: true
+
+execute:
+  freeze: auto
 
 metadata-files: []  # keep empty now; can add per-env config later
