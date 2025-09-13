@@ -1,27 +1,25 @@
-# AI-Assisted Writing: A Reproducible Colab Pipeline
+# Reproducible AI/Human Authorship Analysis Pipeline
 
-*A case study documenting the development of a robust pipeline for analyzing AI/human contributions in writing.*
+*A documented journey from fragmented scripts to a robust Google Colab pipeline for analyzing AI and human contributions in writing.*
 
 ## Overview
-This directory contains the source materials and analysis results for a project aimed at creating a reproducible pipeline to measure the balance of human and AI contributions in writing.  The initial attempts, documented in `meta.yml`, highlight the challenges and lessons learned.  The final pipeline, built in Google Colab, is showcased in the `10##-new-venue-victory` subdirectory. The project uses Python and various NLP libraries for semantic analysis and similarity comparisons.  The Colab notebooks and supporting materials demonstrate a complete, reproducible workflow for analyzing articles across multiple versions.
+This directory contains the artifacts from a project aimed at creating a reproducible pipeline for analyzing the interplay between AI and human contributions in writing.  The initial attempts, documented in `meta.yml`, highlight the challenges encountered using various methods before settling on a Google Colab-based solution.  The subsequent files showcase the evolution of a single article through different revisions, along with the scripts and notebooks used for analysis. This repository serves as a case study in building robust and reproducible research pipelines for AI-assisted writing.  The primary focus is on transparency and ethical considerations within AI-assisted authorship.
 
 ## Contents
-- `meta.yml` — Metadata about the project, including a synopsis and lessons learned.
-- `10##-new-venue-victory/01-draft-article.md` — First draft of the case study article.
-- `10##-new-venue-victory/02-refined-article.md` — Refined version of the article.
-- `10##-new-venue-victory/03-edited-article.md` — Edited version of the article.
+- `meta.yml` — Metadata describing the project, its challenges, and lessons learned.
+- `10##-new-venue-victory/01-draft-article.md` — First draft of the article "Building a Reproducible Colab Pipeline for AI/Human Authorship Analysis".
+- `10##-new-venue-victory/02-refined-article.md` — Second revision of the article.
+- `10##-new-venue-victory/03-edited-article.md` — Third revision of the article.
 - `10##-new-venue-victory/04-final-article.md` — Final version of the article.
-- `10##-new-venue-victory/materials/*.md` — Supporting materials, including transcripts and notes.
-- `10##-new-venue-victory/materials/*.ipynb` — Google Colab notebooks detailing the analysis pipeline.
-- `10##-new-venue-victory/materials/*.json` — JSON files containing analysis results and checkpoints.
+- `10##-new-venue-victory/materials/*` — Supporting materials including transcripts, Colab notebooks, and analysis results.
 
 
 ## Quick Start
-The analysis pipeline is implemented in Google Colab notebooks.  To run the analysis, open `10##-new-venue-victory/materials/ai-vs-human.ipynb` in Google Colab and follow the instructions in the notebook. You'll need to mount your Google Drive to access the necessary data files.
+The analysis pipeline is primarily implemented in the Jupyter Notebooks located in the `10##-new-venue-victory/materials` directory. These notebooks require a Google Colab environment and access to the article versions.  The `ai-vs-human.ipynb` notebook represents the most complete and refined version of the analysis pipeline.
 
 
 ## Conventions
-The project follows a version-controlled approach, tracking different stages of article development (draft, refined, edited, final).  Analysis results are stored as JSON files, providing structured data for further analysis and visualization. Google Colab notebooks are used for the main analysis pipeline and are broken into discrete, reproducible steps.
+The project uses a version-controlled approach to track the evolution of the article and the analysis pipeline.  The `materials` subdirectory contains intermediate and final analysis outputs as JSON files and Jupyter Notebooks.
 
 
 ---
