@@ -11,7 +11,7 @@ project:
 
 website:
   title: "Syntax & Empathy"
-  site-url: "https://syntaxandempathy.github.io/s-and-e-hub"
+  site-url: "https://syntax-and-empathy.github.io/s-and-e-hub"
   navbar:
     left:
       - href: index.qmd
@@ -25,7 +25,7 @@ website:
   search: true
   page-footer:
     center: |
-      © {date:YYYY} Syntax & Empathy
+      © 2025 Syntax & Empathy — [Licensed under CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 format:
   html:
