@@ -3,12 +3,15 @@ project:
   render:
     - index.qmd
     - about.qmd
-    - articles/**.{qmd,md}
+    - articles/**.{qmd,md,ipynb}
     - resources/**.{qmd,md,ipynb}
+  resources:
+    - assets/**            # ensure local fonts, icons, images are copied
+    - resources/**         # optional: keep downloads/attachments
 
 website:
   title: "Syntax & Empathy"
-  site-url: "https://syntaxandempathy.github.io"
+  site-url: "https://syntaxandempathy.github.io/s-and-e-hub"
   navbar:
     left:
       - href: index.qmd
@@ -26,15 +29,17 @@ website:
 
 format:
   html:
-    theme: 
+    theme:
       - flatly
       - styles.scss
     toc: true
     smooth-scroll: true
     code-copy: true
     anchor-sections: true
+    include-in-header:
+      - _includes/fonts-preload.html   # uses absolute path with /syntax-and-empathy/
 
 execute:
   freeze: auto
 
-metadata-files: []  # keep empty now; can add per-env config later
+metadata-files: []
