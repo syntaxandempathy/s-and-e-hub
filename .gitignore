@@ -1,4 +1,30 @@
+# Python cache and build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+
+# Virtual environments and local config
+.venv
 .env
-*/raw
+
+# Secrets and authentication
+*secret.json
+*token.json
+
+# OS-specific files
 .DS_Store
-Thumbs.db
+thumbs.db
+
+# Temporary and backup files
+.pxd
+.zip
+.bak
+
+# Quarto files
+/.quarto/
+**/*.quarto_ipynb

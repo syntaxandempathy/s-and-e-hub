@@ -3,16 +3,16 @@
 *A collection of articles and related files.*
 
 ## Overview
-This directory contains articles written for various purposes.  Each article is stored as a separate Markdown file.  This structure allows for easy organization and version control of the articles.  The `.gitkeep` file ensures that an empty directory is tracked by Git.  The `.DS_Store` file is a macOS system file and can be safely ignored.
+This directory contains articles in various formats.  It serves as a central repository for managing and organizing articles before they are published or otherwise processed. Currently, it only contains placeholder files to maintain the directory in git.  This is a work in progress, and more articles will be added over time.  To use this directory, simply add your articles to it.
 
 ## Contents
-* `.gitkeep` — Empty file to ensure Git tracks this directory.
-* `.DS_Store` — macOS system file (can be ignored).
+* `.gitkeep` —  An empty file to ensure the directory is tracked by Git.
 
+## Quick Start
+No specific setup or usage instructions are needed at this time.  Add your articles to this directory.
 
 ## Conventions
-Articles are named using a descriptive title, converted to lowercase with hyphens replacing spaces.  There is no set style guide beyond using standard Markdown formatting.
-
+No specific conventions are currently defined.
 
 ---
 Last updated: 2025-09-12
