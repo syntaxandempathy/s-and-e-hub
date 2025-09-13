@@ -1,20 +1,19 @@
 # Charts Bundle
 
-*A collection of visualizations for data analysis and reporting.*
+*A collection of charts visualizing key editorial metrics.*
 
 ## Overview
-This directory contains a set of PNG images used to illustrate key performance indicators and data trends.  The charts are designed for inclusion in presentations and reports.  They are currently static images; no interactive elements are included.  The images depict various aspects of the editorial process and its impact.  To use these charts, simply copy the desired image file into your project.
+This directory contains a bundle of image files used to represent various editorial metrics and processes.  The charts are designed for presentations and reports, offering a visual summary of data.  They are currently static image files; no interactive elements are included. The images depict different aspects of the editorial workflow, from content transformation types to human impact.  This bundle is intended to be used as-is, directly incorporated into presentations or reports.
 
 ## Contents
-* `content_transformation_types.png` — Chart illustrating content transformation types.
-* `editorial_journey.png` — Chart illustrating the editorial journey.
-* `human_editorial_impact.png` — Chart illustrating the impact of human editorial work.
-* `summary_metric.png` — Chart summarizing key metrics.
+* `content_transformation_types.png` — Chart showing different types of content transformations.
+* `editorial_journey.png` — Visualization of the editorial workflow stages.
+* `human_editorial_impact.png` — Chart illustrating the impact of human editorial intervention.
+* `summary_metric.png` — Summary chart of key editorial metrics.
 
 
 ## Conventions
-All image files use the PNG format for consistent quality and broad compatibility.
-
+All charts use a consistent color scheme and styling for better visual cohesion.
 
 ---
 Last updated: 2025-09-13

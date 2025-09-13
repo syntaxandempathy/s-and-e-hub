@@ -3,22 +3,25 @@
 *A collection of scripts and data for analyzing text transformations during the writing process.*
 
 ## Overview
-This directory contains data and scripts used to analyze the evolution of text through multiple editing stages.  The analysis focuses on word retention, sentence structure, and overall similarity between consecutive versions of a document.  The results are presented in CSV and Markdown files, along with visualizations in a zipped bundle.  This analysis helps to understand the impact of different editing stages on the final product. The provided Python script (though incomplete) was intended to process these data.
+This directory contains data and scripts used to analyze the evolution of a text document through several editing stages (draft, refined, edited, final).  The analysis focuses on metrics such as word retention, sentence structure changes, and cosine similarity between versions using TF-IDF.  The results are presented in both CSV and visual formats. This collection serves as a record of the experiment and its findings. The analysis highlights the impact of the editing process on the document's structure and content.  This repository includes data files, analysis scripts, and generated charts.
+
 
 ## Contents
-- `Article_metrics__by_stage_.csv` — Metrics (words, sentences, etc.) for each article stage.
-- `ChatGPT-Python analysis results.md` — ChatGPT's analysis of the Python script and its limitations.
-- `Consecutive_version_retention___similarity.csv` — Word and sequence similarity between consecutive versions.
-- `Pairwise_cosine_similarity__TF-IDF_.csv` — Pairwise cosine similarity scores using TF-IDF.
-- `base_agg.csv` — Aggregated metrics across all version comparisons.
-- `charts_bundle.zip` — Contains visualization charts (png files).
+* `Article_metrics__by_stage_.csv` — Metrics (words, sentences, etc.) for each stage of article development.
+* `ChatGPT-Python analysis results.md` — ChatGPT analysis of the Python script and results.
+* `Consecutive_version_retention___similarity.csv` — Word and sequence similarity between consecutive versions.
+* `Pairwise_cosine_similarity__TF-IDF_.csv` — Pairwise cosine similarity between all versions using TF-IDF.
+* `base_agg.csv` — Aggregated metrics across all article versions.
+* `charts_bundle.zip` — Zip archive containing visualizations of the analysis results (png format).
 
 
 ## Quick Start
-The Python script (`0510-generate-data.py`, not included) was designed to process the article files.  Due to incompleteness, execution requires patching and completion of the script. Results were partially generated via ChatGPT.
+The Python script (not included here) processes the four article versions (.md files, not included here) to generate the CSV files.  The charts were generated using a separate process, not included here.
+
 
 ## Conventions
-CSV files use commas as separators.  Chart filenames in `charts_bundle.zip` describe the visualized data.
+CSV files use consistent naming and column headers.  Data represents different perspectives on the text transformation process.
+
 
 ---
 Last updated: 2025-09-13

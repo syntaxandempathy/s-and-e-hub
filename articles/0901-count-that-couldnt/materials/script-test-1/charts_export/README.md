@@ -1,19 +1,18 @@
 # Charts Export Directory
 
-*This directory contains images used for reporting purposes.*
+*This directory contains PNG files for use in reporting and presentations.*
 
 ## Overview
-This directory stores PNG files used in various reports to illustrate key findings and trends.  The charts were generated using [tool name], and are currently not being actively updated. The images are organized chronologically, and may be used in presentations and documentation.  They illustrate human editorial impact, content transformation types, and summarize key metrics.  Currently, no further updates to these charts are expected.
+This directory contains a collection of PNG charts and images related to editorial impact and content transformation.  These visuals are intended for use in presentations, reports, and internal documentation.  The images are pre-generated and ready to be used as-is.  No further processing or generation is required. Currently, all files are marked as skipped in the metadata, and thus not directly accessible through automated processes.
 
 ## Contents
-* `01_human_editorial_impact.png` — Chart showing the impact of human editorial efforts.
-* `02_content_transformation_types.png` — Chart illustrating different types of content transformations.
-* `03_editorial_journey.png` — Chart visualizing the editorial workflow.
-* `04_summary_metric.png` — Chart summarizing a key performance metric.
-
+* `01_human_editorial_impact.png` — Chart showing human editorial impact.
+* `02_content_transformation_types.png` — Chart showing content transformation types.
+* `03_editorial_journey.png` — Chart illustrating the editorial journey.
+* `04_summary_metric.png` — Chart summarizing key metrics.
 
 ## Conventions
-All files are PNG images named using a sequential numbering scheme.  
+All files are PNG images.  File naming follows a consistent pattern (numbering, descriptive name).
 
 ---
 Last updated: 2025-09-13

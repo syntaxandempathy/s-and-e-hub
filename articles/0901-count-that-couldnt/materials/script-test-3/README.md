@@ -1,29 +1,28 @@
 # script-test-3
 
-*A collection of scripts and data for analyzing text transformations during article editing.*
+*A collection of scripts and data for analyzing article revisions.*
 
 ## Overview
-This directory contains Python scripts and CSV data files used to analyze the textual evolution of an article across multiple editing stages (draft, refined, edited, final).  The analysis includes metrics such as word count, sentence count, unique word counts, and pairwise similarity scores calculated using TF-IDF cosine similarity and difflib ratio.  The results are presented in CSV format and visualized in a bundled chart archive.  This repository facilitates the quantitative assessment of editorial changes and the impact of AI-assisted writing.
+This directory contains Python scripts and CSV files used to analyze the evolution of an article across multiple revisions (draft, refined, edited, final).  The analysis focuses on metrics such as word count, sentence count, and token retention between revisions.  The data is presented in various formats including CSV tables and charts (bundled separately). This repository allows for a quantitative assessment of the editorial process. The included Python script facilitates the analysis, while the CSVs provide a summary of the key findings.
 
 ## Contents
-* `Article_file_basic_counts.csv` — Basic metrics (characters, words, sentences) for each article version.
-* `ChatGPT-Run python on articles.md` — ChatGPT conversation detailing the execution of the Python analysis script.
-* `Pairwise_TF-IDF_cosine_similarity.csv` — Pairwise cosine similarity scores between article versions using TF-IDF.
-* `Pairwise_difflib_ratio.csv` — Pairwise similarity ratios between article versions using difflib.
-* `Per-stage_metrics.csv` — Per-stage metrics (characters, words, sentences, unique words, average sentence length).
-* `Token_retention_transitions.csv` — Token retention percentages across editing stages.
-* `Uploaded_files__quick_preview.csv` — Metadata and preview of uploaded files used in the analysis.
-* `base_agg.csv` — Aggregate metrics summarizing changes across versions.
-* `charts_bundle.zip` —  Zipped archive containing visualizations of the analysis results (images).
-* `0510-generate-data.py` — Python script for performing the analysis.
+- `0510-generate-data.py` — Python script to process and analyze article revisions.
+- `Article_file_basic_counts.csv` — Basic word, character, and sentence counts per article version.
+- `Pairwise_TF-IDF_cosine_similarity.csv` — Cosine similarity between article versions using TF-IDF.
+- `Pairwise_difflib_ratio.csv` — Similarity ratio between article versions using difflib.
+- `Per-stage_metrics.csv` — Per-stage metrics (draft, refined, edited, final).
+- `Token_retention_transitions.csv` — Token retention percentage between different stages.
+- `Uploaded_files__quick_preview.csv` — Quick preview of uploaded files.
+- `base_agg.csv` — Aggregated metrics across article versions.
+- `charts_bundle.zip` — (Contains charts summarizing the analysis; see individual files within the zip).
 
 
 ## Quick Start
-To reproduce the analysis, ensure you have the necessary Python libraries installed (pandas, scikit-learn, difflib). Then, run the `0510-generate-data.py` script.  The script processes the article files and generates the CSV output files.  Visualization requires separate software; image files are located in charts_bundle.zip.
+To run the analysis, ensure you have the necessary Python libraries installed (`pandas`, `scikit-learn`). Then, execute the script: `python 0510-generate-data.py`
 
 
 ## Conventions
-CSV files use the first row as a header.  The Python script is designed to be modular and easily adaptable to different input files by adjusting file paths within the script.
+CSV files use comma as the delimiter.  The script is designed to handle multiple article files; modify file paths within the script as needed.
 
 
 ---

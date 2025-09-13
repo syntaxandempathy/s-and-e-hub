@@ -3,14 +3,15 @@
 *High-quality images for marketing campaigns.*
 
 ## Overview
-This directory contains images used in various marketing initiatives.  The images are optimized for different platforms and purposes. Currently, this repository only includes assets that were deemed too large to include in the main repository.  These images are not directly accessible via the main application, but rather linked separately as needed.  Additional images may be added over time.
+This directory contains images used in recent marketing campaigns.  The images are optimized for various social media platforms and web banners.  Currently, only a subset of images is available here.  The images are organized by campaign but further organization may be added later.  For access to the full image library, please contact the marketing team.
 
 ## Contents
-* `ai-failure-vague-prompts-banner.png` — Banner image highlighting the issue of vague prompts in AI.
-* `ai-failure-vague-prompts-social.png` — Social media graphic for the same campaign.
+* `ai-failure-vague-prompts-banner.png` — Banner image for the "AI Failure: Vague Prompts" campaign.
+* `ai-failure-vague-prompts-social.png` — Social media image for the "AI Failure: Vague Prompts" campaign.
+
 
 ## Conventions
-Images are named descriptively to indicate their usage and context.  Larger images are stored here to keep the primary repository size manageable.
+Image filenames follow a consistent naming convention, generally including keywords related to the campaign and image usage.
 
 ---
 Last updated: 2025-09-13
