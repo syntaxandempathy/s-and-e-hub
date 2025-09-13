@@ -21,6 +21,7 @@ dist/
 thumbs.db
 
 # Temporary and backup files
+raw/
 .pxd
 .zip
 .bak
