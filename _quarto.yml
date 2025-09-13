@@ -36,8 +36,7 @@ format:
     smooth-scroll: true
     code-copy: true
     anchor-sections: true
-    include-in-header:
-      - _includes/fonts-preload.html   # uses absolute path with /syntax-and-empathy/
+    from: markdown+hard_line_breaks
 
 execute:
   freeze: auto
