@@ -1,4 +1,4 @@
-name: Quarto – Preview & Publish
+name: quarto-publish
 on:
   push:
     branches: [ main ]
@@ -15,14 +15,18 @@ jobs:
     concurrency:
       group: quarto-pages
       cancel-in-progress: true
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with: { fetch-depth: 0 }
+        with:
+          fetch-depth: 0
 
-      - name: Setup Quarto
+      - name: Setup Quarto (pinned)
         uses: quarto-dev/quarto-actions/setup@v2
-        with: { version: latest }
+        with:
+          # Pin to a known-good stable release to avoid 'latest' 404s
+          version: "1.7.33"
 
       - name: Install uv
         run: |
@@ -37,12 +41,18 @@ jobs:
             ~/.cache/uv
             .venv
           key: ${{ runner.os }}-uv-${{ hashFiles('uv.lock') }}
-          restore-keys: ${{ runner.os }}-uv-
+          restore-keys: |
+            ${{ runner.os }}-uv-
 
       - name: Sync Python environment (from uv.lock)
         run: |
           uv venv
-          if [ -f uv.lock ]; then uv sync; else uv lock && uv sync; fi
+          if [ -f uv.lock ]; then
+            uv sync
+          else
+            uv lock
+            uv sync
+          fi
           echo "QUARTO_PYTHON=$GITHUB_WORKSPACE/.venv/bin/python" >> "$GITHUB_ENV"
 
       - name: Clean build
@@ -51,8 +61,7 @@ jobs:
       - name: Render
         uses: quarto-dev/quarto-actions/render@v2
 
-      # PRs: upload preview artifact for review (no publish)
-      - name: Upload preview artifact
+      - name: Upload preview artifact (PRs only)
         if: ${{ github.event_name == 'pull_request' }}
         uses: actions/upload-artifact@v4
         with:
@@ -60,8 +69,7 @@ jobs:
           path: _site
           retention-days: 3
 
-      # main branch: publish to gh-pages
-      - name: Publish to gh-pages
+      - name: Publish to gh-pages (main only)
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         uses: quarto-dev/quarto-actions/publish@v2
         with:
