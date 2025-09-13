@@ -1,24 +1,17 @@
-# Image Folder Analysis: Metadata & Excerpts
+# Marketing Images
 
-*This README provides metadata and excerpts from files within the 'images' directory.*
+*High-quality images for marketing campaigns.*
 
-**Overview**
+## Overview
+This directory contains images used in recent marketing campaigns.  The images are optimized for various social media platforms and web banners.  Currently, only a subset of images is available here.  The images are organized by campaign but further organization may be added later.  For access to the full image library, please contact the marketing team.
 
-This directory contains a collection of image files and associated metadata.  The metadata includes file sizes and short text excerpts for some files. Note that a macOS `.DS_Store` file is present.  This README summarizes the directory's contents based on available metadata; further analysis is needed for a complete understanding of the image files themselves.  The included `meta.yml` file provides a more detailed analysis summary.
-
-**Contents**
-
-* `meta.yml`: YAML file summarizing the directory's contents and metadata analysis.
-* `.DS_Store`: macOS system file containing metadata about the directory's appearance.
-* `a-v-h-1.png`: Image file (contents not readily available).
-* `ai-failure-vague-prompts-banner.png`: Image file (contents not readily available).
-* `ai-failure-vague-prompts-social.png`: Image file (contents not readily available).
+## Contents
+* `ai-failure-vague-prompts-banner.png` — Banner image for the "AI Failure: Vague Prompts" campaign.
+* `ai-failure-vague-prompts-social.png` — Social media image for the "AI Failure: Vague Prompts" campaign.
 
 
-**Structure**
+## Conventions
+Image filenames follow a consistent naming convention, generally including keywords related to the campaign and image usage.
 
-The directory contains image files, primarily `.png` format.  File naming suggests potential association with AI-related projects and vague prompts.
-
-**Changelog**
-
-Last updated: 2025-09-04
+---
+Last updated: 2025-09-13
