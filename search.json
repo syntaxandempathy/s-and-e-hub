@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "resources/index.html",
+    "href": "resources/index.html",
+    "title": "Tools",
     "section": "",
-    "text": "Syntax & Empathy explores practical, humane approaches to building with AI—balancing technical rigor with human-centered design.\nThis site aggregates long-form posts, resources, and experiments that extend the publication."
+    "text": "Tools\nGitHub Pages System Quarto Web by Quarto\nFont: Lora-Cyrillic by Cyreal"
   },
   {
     "objectID": "index.html",
@@ -19,5 +19,12 @@
     "title": "Welcome",
     "section": "",
     "text": "{=quarto}{.render} listing:   contents: articles   type: default   sort: \"date desc\"   categories: true   feed: true"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Syntax & Empathy explores practical, humane approaches to building with AI—balancing technical rigor with human-centered design.\nThis site aggregates long-form posts, resources, and experiments that extend the publication."
   }
 ]
