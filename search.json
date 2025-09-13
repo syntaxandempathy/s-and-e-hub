@@ -4,7 +4,7 @@
     "href": "resources/index.html",
     "title": "Tools",
     "section": "",
-    "text": "Tools\nGitHub Pages System by Quarto\nAn open-source scientific and technical publishing system.\nQuarto Web\nFont by Cyreal\nCyreal is a Libre/Opensource foundry with expertise in Latin and Cyrillic scripts.\nLora-Cyrillic"
+    "text": "Tools\nPublishing system by Quarto\nAn open-source scientific and technical publishing system.\nGithub repo: Quarto Web\nFont by Cyreal\nCyreal is a Libre/Opensource foundry with expertise in Latin and Cyrillic scripts.\nGithub repo: Lora-Cyrillic"
   },
   {
     "objectID": "index.html",
@@ -19,12 +19,5 @@
     "title": "Welcome",
     "section": "",
     "text": "{=quarto}{.render} listing:   contents: articles   type: default   sort: \"date desc\"   categories: true   feed: true"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "Syntax & Empathy explores practical, humane approaches to building with AI—balancing technical rigor with human-centered design.\nThis site aggregates long-form posts, resources, and experiments that extend the publication."
   }
 ]
