@@ -3,7 +3,8 @@ project:
   render:
     - index.qmd
     - about.qmd
-    - articles/**.{qmd,md,ipynb}
+    - articles/**.{qmd,md}
+    - resources/**.{qmd,md,ipynb}
 
 website:
   title: "Syntax & Empathy"

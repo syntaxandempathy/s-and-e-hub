@@ -1,10 +1,10 @@
-name: README Sync (Gemini)
+name: GEMINI:readme-sync
 
 on:
   push:
     branches: [ main ]
     paths-ignore:
-      - '**/README.md'   # avoid infinite loops on the bot's commits
+      - '**/README.md'           # prevent infinite loop on bot commits
   workflow_dispatch:
     inputs:
       mode:
@@ -27,7 +27,7 @@ permissions:
   contents: write
 
 jobs:
-  sync:
+  readme_sync:
     runs-on: ubuntu-latest
     concurrency:
       group: readme-sync
@@ -76,9 +76,9 @@ jobs:
           set -e
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A
+          git add **/README.md
           if git diff --cached --quiet; then
-            echo "No changes to commit."
+            echo "No README changes to commit."
             exit 0
           fi
           git commit -m "chore(readme-sync): regenerate README.md files"

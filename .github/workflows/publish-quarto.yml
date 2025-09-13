@@ -1,9 +1,10 @@
-name: quarto-publish
+name: Quarto – Publish
+
 on:
   push:
-    branches: [ main ]
+    branches: [ main ]        # publish on every push to main (including README-only)
   pull_request:
-    branches: [ main ]
+    branches: [ main ]        # PRs: build preview artifact
   workflow_dispatch:
 
 permissions:
@@ -19,14 +20,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+        with: { fetch-depth: 0 }
 
       - name: Setup Quarto (pinned)
         uses: quarto-dev/quarto-actions/setup@v2
         with:
-          # Pin to a known-good stable release to avoid 'latest' 404s
-          version: "1.7.33"
+          version: "1.7.33"   # stable; avoids 'latest' 404s
 
       - name: Install uv
         run: |
@@ -41,24 +40,19 @@ jobs:
             ~/.cache/uv
             .venv
           key: ${{ runner.os }}-uv-${{ hashFiles('uv.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-uv-
+          restore-keys: ${{ runner.os }}-uv-
 
       - name: Sync Python environment (from uv.lock)
         run: |
+          set -e
           uv venv
-          if [ -f uv.lock ]; then
-            uv sync
-          else
-            uv lock
-            uv sync
-          fi
+          if [ -f uv.lock ]; then uv sync; else uv lock && uv sync; fi
           echo "QUARTO_PYTHON=$GITHUB_WORKSPACE/.venv/bin/python" >> "$GITHUB_ENV"
 
       - name: Clean build
         run: quarto render --clean
 
-      - name: Render
+      - name: Render site
         uses: quarto-dev/quarto-actions/render@v2
 
       - name: Upload preview artifact (PRs only)

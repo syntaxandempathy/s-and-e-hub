@@ -1,14 +1,43 @@
 /*-- scss:defaults --*/
-// Brand tokens (evaluated before Bootswatch/Bootstrap)
-$primary: #6b5ed4;
-$secondary: #2a2a2a;
-$body-color: #1e1e1e;
-$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+/* ===== Brand palette ===== */
+$brand-teal:  #266673;  // primary
+$brand-blue:  #7AA3B8;  // info
+$brand-mist:  #CDDDE4;  // subtle borders
+$brand-orange:#EB9847;  // accent
+$brand-slate: #515B61;  // text
+$brand-ice:   #EFF5F7;  // page background
 
-// You can override more tokens here if needed, e.g.:
-// $navbar-bg: $secondary;
+/* Bootstrap/Quarto tokens */
+$primary:     $brand-teal;
+$secondary:   $brand-slate;
+$info:        $brand-blue;
+$warning:     $brand-orange;
+$light:       $brand-ice;
+$dark:        $brand-slate;
+
+$body-bg:         $brand-ice;
+$body-color:      $brand-slate;
+$link-color:      $primary;
+$headings-color:  $brand-slate;
+
+/* Typography */
+$font-family-base: "Lora", Georgia, "Times New Roman", serif;
+$headings-font-family: "Lora", Georgia, "Times New Roman", serif;
+
+/* Navbar */
+$navbar-bg: $light;
+$navbar-fg: $dark;
+$navbar-brand-color: $dark;
+$navbar-brand-hover-color: $primary;
+
+/* Code blocks */
+$code-color: darken($primary, 10%);
+$code-bg: mix($brand-ice, white, 70%);
+
+/* Tables / borders */
+$border-color: $brand-mist;
 
 /*-- scss:rules --*/
-// Rules applied after theme compilation
 a { text-decoration-thickness: .08rem; }
+.navbar-brand img { height: 28px; }
 .listing .metadata .listing-date { opacity: .75; }
