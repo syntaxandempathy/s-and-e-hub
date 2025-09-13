@@ -1,299 +1,254 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-"""
-README Sync (Gemini-direct with Prompt + Template)
 
-- On push: process changed directories + any with stale README (older than newest file).
-- Manual: 'full' (entire repo) or 'target' (one path).
-- For each directory, loads:
-    * tools/readme/gemini_prompt.md     (instructions for Gemini)
-    * tools/readme/readme.template.md   (the README skeleton with placeholders)
-  then calls Gemini to fill the template and write README.md.
-
-Env:
-  GEMINI_API_KEY  (required)
-
-Inputs (manual):
-  --mode [full|target|auto]  default auto (push uses auto)
-  --target-dir PATH
-  --dry-run
-  --gemini-model MODEL_ID (default: gemini-1.5-flash)
-"""
-import argparse, os, sys, subprocess, json, re
-from pathlib import Path
-from datetime import datetime
-from typing import List, Set, Dict, Optional
+import argparse
+import datetime as dt
+import json
+import os
+import pathlib
+import subprocess
+import sys
+import textwrap
+from typing import Iterable, List, Dict, Any, Optional
 
 import requests
 
-EXCLUDES = {".git", ".github", "__pycache__", "node_modules", ".venv", "venv", ".pytest_cache"}
+API_URL_TEMPLATE = (
+    "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={key}"
+)
+DEFAULT_MODEL = "gemini-1.5-flash"  # fast, low-cost
+REPO_ROOT = pathlib.Path(__file__).resolve().parents[2]  # tools/readme/ -> repo root
+PROMPT_PATH = REPO_ROOT / "tools" / "readme" / "gemini_prompt.md"
+TEMPLATE_PATH = REPO_ROOT / "tools" / "readme" / "readme.template.md"
+
+IGNORE_DIRS = {
+    ".git", ".github", ".venv", "_site", ".quarto", "node_modules", "__pycache__",
+}
 README_NAME = "README.md"
 
-# ---------- Git & FS helpers ----------
-def sh(cmd: List[str], cwd: Optional[Path] = None, allow_fail: bool = False) -> str:
-    p = subprocess.run(cmd, cwd=str(cwd) if cwd else None, capture_output=True, text=True)
-    if p.returncode != 0 and not allow_fail:
-        raise RuntimeError(f"Command failed: {' '.join(cmd)}\n{p.stdout}\n{p.stderr}")
-    return p.stdout.strip()
 
-def repo_root() -> Path:
-    try:
-        out = sh(["git", "rev-parse", "--show-toplevel"])
-        return Path(out)
-    except Exception:
-        return Path.cwd()
+def log(msg: str) -> None:
+    print(msg, flush=True)
 
-def is_ignored(path: Path) -> bool:
-    parts = set(path.parts)
-    return bool(parts & EXCLUDES)
 
-def all_dirs(base: Path) -> List[Path]:
-    out = []
-    for p, dnames, fnames in os.walk(base):
-        pp = Path(p)
-        if is_ignored(pp.relative_to(base)):
-            dnames[:] = [d for d in dnames if d not in EXCLUDES]
-            continue
-        out.append(pp)
-    return out
+def run(cmd: List[str], cwd: Optional[pathlib.Path] = None) -> subprocess.CompletedProcess:
+    return subprocess.run(cmd, cwd=str(cwd) if cwd else None, text=True,
+                          stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=False)
 
-def newest_mtime(dirpath: Path) -> float:
-    newest = 0.0
-    for root, dnames, fnames in os.walk(dirpath):
-        for f in fnames:
-            fp = Path(root) / f
-            try:
-                newest = max(newest, fp.stat().st_mtime)
-            except FileNotFoundError:
-                pass
-    return newest
 
-def git_changed_dirs(base: Path, rng: Optional[str]) -> Set[Path]:
-    if not rng:
-        rng = "HEAD^..HEAD"
-    try:
-        out = sh(["git", "diff", "--name-only", rng], cwd=base)
-    except RuntimeError:
-        out = sh(["git", "ls-files"], cwd=base, allow_fail=True)
-    dirs: Set[Path] = set()
-    for line in out.splitlines():
-        if not line.strip():
-            continue
-        p = (base / line.strip()).resolve()
-        parent = (base / Path(line.strip()).parent).resolve() if not p.exists() else p.parent
-        try:
-            rel = parent.relative_to(base)
-        except Exception:
-            continue
-        if not is_ignored(rel):
-            dirs.add(parent)
-            if parent.parent != base and not is_ignored(parent.parent.relative_to(base)):
-                dirs.add(parent.parent)
+def git_changed_files(before: Optional[str], after: Optional[str]) -> List[pathlib.Path]:
+    """
+    Return paths changed between two SHAs. If unavailable, return empty (caller can fall back).
+    """
+    if not before or not after:
+        return []
+    cp = run(["git", "diff", "--name-only", before, after], cwd=REPO_ROOT)
+    if cp.returncode != 0:
+        return []
+    files = [REPO_ROOT / p for p in cp.stdout.strip().splitlines() if p.strip()]
+    return [p for p in files if p.exists()]
+
+
+def all_directories(root: pathlib.Path) -> List[pathlib.Path]:
+    dirs = []
+    for p in root.rglob("*"):
+        if p.is_dir():
+            rel = p.relative_to(root)
+            parts = set(rel.parts)
+            if parts & IGNORE_DIRS:
+                continue
+            dirs.append(p)
     return dirs
 
-def discover_candidates(base: Path, mode: str, target_dir: str, changed_range: Optional[str]) -> List[Path]:
-    if mode == "target":
-        if not target_dir:
-            print("[ERROR] mode=target requires --target-dir", file=sys.stderr)
-            sys.exit(2)
-        td = (base / target_dir).resolve()
-        if not td.exists() or not td.is_dir():
-            print(f"[ERROR] target directory not found: {td}", file=sys.stderr)
-            sys.exit(2)
-        return [td]
-    if mode == "full":
-        return [d for d in all_dirs(base) if d != base and not is_ignored(d.relative_to(base))]
-    # auto on push: changed + stale
-    dirs = git_changed_dirs(base, changed_range)
-    for d in all_dirs(base):
-        if d == base or is_ignored(d.relative_to(base)):
+
+def is_renderable_file(p: pathlib.Path) -> bool:
+    # Files worth describing; skip huge binaries by extension
+    exts_keep = {".qmd", ".md", ".ipynb", ".py", ".yaml", ".yml", ".json", ".toml", ".sh", ".cfg", ".ini", ".txt"}
+    exts_skip = {".png", ".jpg", ".jpeg", ".gif", ".svg", ".ico", ".pdf", ".zip", ".gz", ".tar", ".woff2"}
+    if p.suffix.lower() in exts_skip:
+        return False
+    return p.suffix.lower() in exts_keep
+
+
+def newest_mtime(files: Iterable[pathlib.Path]) -> float:
+    ts = [f.stat().st_mtime for f in files if f.exists()]
+    return max(ts) if ts else 0.0
+
+
+def directories_needing_readme_auto() -> List[pathlib.Path]:
+    """
+    AUTO mode:
+      - any directory containing a changed file
+      - any directory whose README.md is missing or older than its newest source file
+    """
+    before = os.environ.get("GITHUB_BEFORE")
+    after = os.environ.get("GITHUB_SHA")
+    changed = git_changed_files(before, after)
+
+    changed_dirs = {p.parent for p in changed if p.is_file()}
+    candidates = set(changed_dirs)
+
+    for d in all_directories(REPO_ROOT):
+        if any(part in IGNORE_DIRS for part in d.relative_to(REPO_ROOT).parts):
+            continue
+        files = [f for f in d.iterdir() if f.is_file() and f.name != README_NAME]
+        if not files:
+            continue
+        src_files = [f for f in files if is_renderable_file(f)]
+        if not src_files:
             continue
         readme = d / README_NAME
-        if not readme.exists():
-            dirs.add(d); continue
-        try:
-            if newest_mtime(d) > readme.stat().st_mtime + 1:
-                dirs.add(d)
-        except FileNotFoundError:
-            dirs.add(d)
+        newest = newest_mtime(src_files)
+        readme_age = readme.stat().st_mtime if readme.exists() else 0.0
+        if not readme.exists() or readme_age < newest:
+            candidates.add(d)
+
+    return sorted(candidates)
+
+
+def directories_full() -> List[pathlib.Path]:
+    dirs = []
+    for d in all_directories(REPO_ROOT):
+        if any(part in IGNORE_DIRS for part in d.relative_to(REPO_ROOT).parts):
+            continue
+        if any(f.is_file() for f in d.iterdir()):
+            dirs.append(d)
     return sorted(dirs)
 
-# ---------- Context + Template/Prompt ----------
-def short_excerpt(fp: Path, max_chars: int = 1200) -> str:
-    try:
-        text = fp.read_text(encoding="utf-8", errors="ignore")
-    except Exception:
-        return ""
-    text = re.sub(r"\s+", " ", text).strip()
-    return text[:max_chars]
 
-def gather_context(d: Path, max_files: int = 60) -> Dict:
-    files = []
-    for root, dnames, fnames in os.walk(d):
-        for name in sorted(fnames):
-            p = Path(root) / name
-            rel = p.relative_to(d)
+def directories_target(target: str) -> List[pathlib.Path]:
+    p = (REPO_ROOT / target).resolve()
+    if not p.exists() or not p.is_dir():
+        raise SystemExit(f"--target-dir '{target}' not found or not a directory")
+    return [p]
+
+
+def build_files_metadata(d: pathlib.Path) -> List[Dict[str, Any]]:
+    meta = []
+    for f in sorted(d.iterdir()):
+        if not f.is_file() or f.name == README_NAME:
+            continue
+        try:
+            size = f.stat().st_size
+        except Exception:
+            size = 0
+        entry = {"name": f.name, "size_bytes": size}
+        if is_renderable_file(f):
             try:
-                sz = p.stat().st_size
-            except FileNotFoundError:
-                continue
-            if name == README_NAME:
-                continue
-            # Skip large/binary-like files
-            if sz > 800_000 or p.suffix.lower() in {
-                ".png",".jpg",".jpeg",".gif",".webp",".pdf",".bin",".exe",".zip",".tar",".gz",
-                ".mp4",".mov",".wav",".ogg",".mp3"
-            }:
-                files.append({"path": str(rel), "size": sz, "skipped": True})
-                continue
-            files.append({"path": str(rel), "size": sz, "excerpt": short_excerpt(p)})
-            if len(files) >= max_files:
-                break
-        if len(files) >= max_files:
-            break
-    return {"dir": d.name, "relpath": str(d), "files": files}
+                with f.open("r", encoding="utf-8", errors="ignore") as fh:
+                    text = fh.read(5000)
+                lines = text.count("\n") + 1
+                entry["sample"] = text[:800]
+                entry["lines_estimate"] = lines
+            except Exception:
+                pass
+        meta.append(entry)
+    return meta
 
-def load_prompt(base: Path) -> str:
-    # Allow override via env or default path
-    env = os.environ.get("README_PROMPT_PATH", "")
-    custom = Path(env) if env else (base / "tools" / "readme" / "gemini_prompt.md")
-    if custom.exists():
-        return custom.read_text(encoding="utf-8")
-    # Built-in fallback (kept minimal)
-    return (
-        "You are a technical writer. Use GitHub-flavored Markdown. "
-        "Follow the provided README template exactly, filling placeholders with concrete content. "
-        "Do not add commentary before or after the Markdown."
-    )
 
-def load_template(base: Path) -> str:
-    env = os.environ.get("README_TEMPLATE_PATH", "")
-    custom = Path(env) if env else (base / "tools" / "readme" / "readme.template.md")
-    if custom.exists():
-        return custom.read_text(encoding="utf-8")
-    # Fallback template if missing
-    return (
-        "# {{TITLE}}\n\n*{{TAGLINE}}*\n\n## Overview\n{{OVERVIEW}}\n\n"
-        "## Contents\n{{CONTENTS}}\n\n## Quick Start\n{{USAGE}}\n\n"
-        "## Conventions\n{{CONVENTIONS}}\n\n---\nLast updated: {{TODAY}}\n"
-    )
+def load_text(path: pathlib.Path) -> str:
+    if not path.exists():
+        raise SystemExit(f"Required file missing: {path}")
+    return path.read_text(encoding="utf-8")
 
-# ---------- Gemini ----------
-def render_model_prompt(prompt_instructions: str, template_md: str, d: Path, ctx: Dict) -> str:
-    # Compact JSON for files
-    files_json = json.dumps(ctx["files"], ensure_ascii=False)[:18000]
-    today = datetime.utcnow().date().isoformat()
 
-    # The model prompt contains: your instructions + explicit template + variables
-    return f"""\
-{prompt_instructions}
-
-## Variables
-- DIR_NAME = {d.name}
-- TODAY = {today}
-
-## Directory Files (JSON)
-{files_json}
-
-## README Template (must fill placeholders)
-BEGIN_TEMPLATE
-{template_md}
-END_TEMPLATE
-
-## Rules
-- Replace placeholders like {{TITLE}}, {{TAGLINE}}, {{OVERVIEW}}, {{CONTENTS}}, {{USAGE}}, {{CONVENTIONS}}, {{TODAY}}.
-- In {{CONTENTS}}, list the most relevant files as bullets in the form: `filename` — one-line description.
-- Keep sections that make sense; if a section is not applicable, write a brief, truthful line rather than inventing data.
-- Output **only** the final Markdown for README.md, no code fences, no extra commentary.
-"""
-
-def gemini_generate_readme(d: Path, api_key: str, model: str, prompt_instructions: str, template_md: str) -> str:
-    prompt_text = render_model_prompt(prompt_instructions, template_md, d, gather_context(d))
-    body = {"contents": [{"role": "user", "parts": [{"text": prompt_text}]}]}
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
-    r = requests.post(url, headers={"Content-Type":"application/json"}, data=json.dumps(body), timeout=90)
-    if r.status_code != 200:
-        raise RuntimeError(f"Gemini error {r.status_code}: {r.text[:300]}")
-    data = r.json()
-    text = ""
+def call_gemini(prompt_text: str, api_key: str, model: str = DEFAULT_MODEL, max_tokens: int = 2048) -> str:
+    url = API_URL_TEMPLATE.format(model=model, key=api_key)
+    payload = {
+        "generationConfig": {
+            "temperature": 0.6,
+            "topP": 0.95,
+            "maxOutputTokens": max_tokens,
+        },
+        "contents": [
+            {"parts": [{"text": prompt_text}]}
+        ],
+    }
+    resp = requests.post(url, json=payload, timeout=60)
+    if resp.status_code != 200:
+        raise RuntimeError(f"Gemini API error {resp.status_code}: {resp.text[:500]}")
+    data = resp.json()
+    # Parse the first candidate text
     try:
-        text = data["candidates"][0]["content"]["parts"][0]["text"]
+        return data["candidates"][0]["content"]["parts"][0]["text"]
     except Exception:
-        pass
-    if not text:
-        raise RuntimeError("Gemini returned no text")
-    # If fenced, strip
-    m = re.search(r"```(?:md|markdown)?\s*(.*?)```", text, re.S|re.I)
-    if m:
-        text = m.group(1).strip()
-    return text.strip() + "\n"
+        raise RuntimeError(f"Unexpected Gemini response: {json.dumps(data)[:800]}")
 
-# ---------- I/O & CLI ----------
-def write_readme(d: Path, content: str, dry: bool) -> bool:
-    out = d / README_NAME
-    if dry:
-        print(f"[DRY] Would write {out}")
+
+def synthesize_readme(dir_path: pathlib.Path, api_key: str, model: str, dry_run: bool) -> bool:
+    today = dt.date.today().isoformat()
+    dir_name = str(dir_path.relative_to(REPO_ROOT)) or "."
+    files_meta = build_files_metadata(dir_path)
+    prompt = load_text(PROMPT_PATH)
+    prompt = prompt.replace("{{DIR_NAME}}", dir_name)
+    prompt = prompt.replace("{{TODAY}}", today)
+    prompt = prompt.replace("{{FILES_JSON}}", json.dumps(files_meta, ensure_ascii=False, indent=2))
+
+    log(f"➡️  Generating README for '{dir_name}' with {len(files_meta)} files described...")
+
+    md = call_gemini(prompt, api_key, model=model)
+
+    # Normalize whitespace a bit
+    md = md.strip() + "\n"
+
+    readme_path = dir_path / README_NAME
+    existing = readme_path.read_text(encoding="utf-8") if readme_path.exists() else ""
+    changed = (existing.strip() != md.strip())
+
+    if dry_run:
+        log(f"   (dry-run) {'would write' if changed else 'no change'}: {readme_path}")
         return False
-    out.write_text(content, encoding="utf-8")
-    return True
 
-def parse_args() -> argparse.Namespace:
-    ap = argparse.ArgumentParser(description="Generate README.md with Gemini (prompt + template)")
-    ap.add_argument("--mode", choices=["full","target","auto"], default="auto")
-    ap.add_argument("--target-dir", default="")
-    ap.add_argument("--dry-run", action="store_true")
-    ap.add_argument("--gemini-model", default="gemini-1.5-flash")
-    return ap.parse_args()
-
-def main():
-    args = parse_args()
-    base = repo_root()
-    before = os.environ.get("GITHUB_BEFORE", "")
-    sha = os.environ.get("GITHUB_SHA", "")
-    changed_range = f"{before}..{sha}" if (before and sha) else None
-
-    print(f"[INFO] repo={base}")
-    print(f"[INFO] mode={args.mode} target={args.target_dir!r} dry_run={args.dry_run}")
-    print(f"[INFO] changed_range={changed_range or 'HEAD^..HEAD'}")
-
-    if args.mode == "full":
-        candidates = discover_candidates(base, "full", "", changed_range)
-    elif args.mode == "target":
-        candidates = discover_candidates(base, "target", args.target_dir, changed_range)
+    if changed:
+        readme_path.write_text(md, encoding="utf-8")
+        log(f"   ✅ wrote {readme_path}")
+        return True
     else:
-        candidates = discover_candidates(base, "auto", "", changed_range)
+        log(f"   ⏭️  unchanged: {readme_path}")
+        return False
 
-    if not candidates:
-        print("[INFO] No candidate directories to process.")
-        return 0
 
-    api_key = os.environ.get("GEMINI_API_KEY", "")
+def parse_args(argv: List[str]) -> argparse.Namespace:
+    p = argparse.ArgumentParser(description="Generate/refresh README.md files with Gemini")
+    p.add_argument("--mode", choices=["auto", "full", "target"], default="auto",
+                   help="auto: changed+stale dirs; full: whole repo; target: one directory")
+    p.add_argument("--target-dir", default=None, help="Directory to process when mode=target")
+    p.add_argument("--model", default=DEFAULT_MODEL, help="Gemini model, e.g., gemini-1.5-flash")
+    p.add_argument("--dry-run", action="store_true", help="Compute and show changes without writing files")
+    return p.parse_args(argv)
+
+
+def main(argv: Optional[List[str]] = None) -> int:
+    args = parse_args(sys.argv[1:] if argv is None else argv)
+    api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        print("[ERROR] GEMINI_API_KEY not set.", file=sys.stderr)
+        log("ERROR: GEMINI_API_KEY is not set.")
         return 2
 
-    prompt_instructions = load_prompt(base)
-    template_md = load_template(base)
+    if args.mode == "target":
+        if not args.target_dir:
+            log("ERROR: --target-dir is required for mode=target")
+            return 2
+        targets = directories_target(args.target_dir)
+    elif args.mode == "full":
+        targets = directories_full()
+    else:
+        targets = directories_needing_readme_auto()
 
-    wrote = 0
-    for d in candidates:
+    if not targets:
+        log("No directories to process.")
+        return 0
+
+    wrote_any = False
+    for d in targets:
         try:
-            rel = d.relative_to(base)
-            if is_ignored(rel):
-                continue
-        except Exception:
-            pass
-        try:
-            md = gemini_generate_readme(d, api_key, args.gemini_model, prompt_instructions, template_md)
-            if write_readme(d, md, args.dry_run):
-                wrote += 1
-                print(f"[OK] Wrote {d / README_NAME}")
+            changed = synthesize_readme(d, api_key, model=args.model, dry_run=args.dry_run)
+            wrote_any = wrote_any or changed
         except Exception as e:
-            print(f"[WARN] Failed to build README for {d}: {e}", file=sys.stderr)
-            continue
+            log(f"   ❌ {d}: {e}")
 
-    print(f"[SUMMARY] dirs={len(candidates)} wrote={wrote} dry_run={args.dry_run}")
-    return 0
+    return 0 if (wrote_any or args.dry_run) else 0
+
 
 if __name__ == "__main__":
     sys.exit(main())

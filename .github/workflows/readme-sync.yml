@@ -1,37 +1,44 @@
-name: README Sync (Gemini Direct)
+name: README Sync (Gemini)
 
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+      - '**/README.md'   # avoid infinite loops on the bot's commits
   workflow_dispatch:
     inputs:
       mode:
-        description: "Run mode (manual)"
+        description: "Run mode"
         required: true
-        default: "full"
+        default: "auto"
         type: choice
-        options: [full, target]
+        options: [auto, full, target]
       target_dir:
         description: "Directory to process when mode=target (relative to repo root)"
         required: false
-        default: ""
       dry_run:
-        description: "Do not write files; just log"
-        type: boolean
-        default: false
+        description: "Do not write files"
+        required: true
+        default: "false"
+        type: choice
+        options: [false, true]
+
+permissions:
+  contents: write
 
 jobs:
   sync:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    concurrency:
+      group: readme-sync
+      cancel-in-progress: true
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+        with: { fetch-depth: 0 }
 
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -45,14 +52,29 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GITHUB_BEFORE: ${{ github.event.before }}
-          GITHUB_SHA: ${{ github.sha }}
+          GITHUB_SHA:    ${{ github.sha }}
         run: |
-          python tools/readme/readme_sync.py             --mode "${{ github.event_name == 'workflow_dispatch' && (github.event.inputs.mode || 'full') || 'auto' }}"             --target-dir "${{ github.event.inputs.target_dir || '' }}"             ${{ github.event.inputs.dry_run && '--dry-run' || '' }}
+          set -e
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            MODE="${{ github.event.inputs.mode }}"
+            TARGET="${{ github.event.inputs.target_dir }}"
+            DRY="${{ github.event.inputs.dry_run }}"
+          else
+            MODE="auto"
+            TARGET=""
+            DRY="false"
+          fi
+
+          echo "mode=$MODE target=$TARGET dry_run=$DRY"
+          python tools/readme/readme_sync.py \
+            --mode "$MODE" \
+            $([ -n "$TARGET" ] && echo --target-dir "$TARGET") \
+            $([ "$DRY" = "true" ] && echo --dry-run)
 
       - name: Commit & push if changed
         run: |
           set -e
-          git config user.name "github-actions[bot]"
+          git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
           if git diff --cached --quiet; then

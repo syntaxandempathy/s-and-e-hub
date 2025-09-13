@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.24">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>ai-trials-may-pt-2 – Syntax &amp; Empathy</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<link href="../../../../assets/favicon-32.png" rel="icon" type="image/png">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-3bd9c6c68431aca4adf55af8f49c70f3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<!-- Load Lora from Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;display=swap" rel="stylesheet">
+
+
+<meta property="og:title" content="Syntax &amp; Empathy">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://syntaxandempathy.github.io/syntax-and-empathy/archive/raw/2024-ai-trials/articles/assets/og-image.png">
+<meta property="og:site_name" content="Syntax &amp; Empathy">
+<meta name="twitter:title" content="Syntax &amp; Empathy">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://syntaxandempathy.github.io/syntax-and-empathy/archive/raw/2024-ai-trials/articles/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../../assets/logo-navbar.png" alt="" class="navbar-logo light-content">
+    <img src="../../../../assets/logo-navbar.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../../../../index.html">
+    <span class="navbar-title">Syntax &amp; Empathy</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../articles/"> 
+<span class="menu-text">Articles</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../resources/"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#showa-day" id="toc-showa-day" class="nav-link active" data-scroll-target="#showa-day"><strong>Showa Day</strong></a>
+  <ul class="collapse">
+  <li><a href="#claude" id="toc-claude" class="nav-link" data-scroll-target="#claude">Claude</a></li>
+  <li><a href="#chatgpt-4" id="toc-chatgpt-4" class="nav-link" data-scroll-target="#chatgpt-4">ChatGPT-4</a></li>
+  </ul></li>
+  <li><a href="#constitution-day" id="toc-constitution-day" class="nav-link" data-scroll-target="#constitution-day"><strong>Constitution Day</strong></a>
+  <ul class="collapse">
+  <li><a href="#claude-1" id="toc-claude-1" class="nav-link" data-scroll-target="#claude-1">Claude</a></li>
+  <li><a href="#chatgpt-4-1" id="toc-chatgpt-4-1" class="nav-link" data-scroll-target="#chatgpt-4-1">ChatGPT-4</a></li>
+  </ul></li>
+  <li><a href="#greenery-day" id="toc-greenery-day" class="nav-link" data-scroll-target="#greenery-day"><strong>Greenery Day</strong></a>
+  <ul class="collapse">
+  <li><a href="#articles" id="toc-articles" class="nav-link" data-scroll-target="#articles">Articles</a></li>
+  <li><a href="#claude-2" id="toc-claude-2" class="nav-link" data-scroll-target="#claude-2">Claude</a></li>
+  <li><a href="#gpt" id="toc-gpt" class="nav-link" data-scroll-target="#gpt">GPT</a></li>
+  </ul></li>
+  <li><a href="#evaluation-instruction-refinement" id="toc-evaluation-instruction-refinement" class="nav-link" data-scroll-target="#evaluation-instruction-refinement">Evaluation Instruction Refinement</a>
+  <ul class="collapse">
+  <li><a href="#claude-3" id="toc-claude-3" class="nav-link" data-scroll-target="#claude-3">Claude</a></li>
+  <li><a href="#chatgpt" id="toc-chatgpt" class="nav-link" data-scroll-target="#chatgpt">ChatGPT</a></li>
+  </ul></li>
+  <li><a href="#childrens-day" id="toc-childrens-day" class="nav-link" data-scroll-target="#childrens-day"><strong>Children’s Day</strong></a>
+  <ul class="collapse">
+  <li><a href="#claude-4" id="toc-claude-4" class="nav-link" data-scroll-target="#claude-4">Claude</a></li>
+  <li><a href="#gpt-1" id="toc-gpt-1" class="nav-link" data-scroll-target="#gpt-1">GPT</a></li>
+  </ul></li>
+  <li><a href="#closing-thoughts" id="toc-closing-thoughts" class="nav-link" data-scroll-target="#closing-thoughts">Closing Thoughts</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<p><u></u>Artwork created with Midjourney v6 alpha### Preface</p>
+<p>This post is part of a year-long <u>initiative where I employ AI to create content</u> about holiday traditions worldwide. The objective is to observe how various AI tools perform and improve in content creation with minimal human intervention over time. This article is 2 of 3 posts for the month of <u>May</u>.</p>
+<p><em>Prompts and interactions with different AI models will be documented as they occur, providing insights into the methodologies, challenges, and adjustments made throughout the project.</em></p>
+<p>Following the challenges with the rating scales discussed in the previous article, it’s clear that addressing these issues is necessary for evaluating the quality of the articles, within the context of the AI-centric nature of this project. Additionally, I plan to explore and test various tones in the descriptions for the images generated for use in the articles.</p>
+<section id="showa-day" class="level2">
+<h2 class="anchored" data-anchor-id="showa-day"><strong>Showa Day</strong></h2>
+<p>On Showa Day, I assessed how various tones impact the quality of AI-generated articles. I utilized Claude and ChatGPT to generate articles in these tones, subsequently evaluating them using a set rating criteria and ethical scale with a modified approach to the instructions. The tones in this round include:</p>
+<ul>
+<li>Simple</li>
+<li>Conversational</li>
+<li>Creative</li>
+<li>Descriptive</li>
+<li>Professional</li>
+</ul>
+<section id="claude" class="level3">
+<h3 class="anchored" data-anchor-id="claude">Claude</h3>
+<p><strong>claude-professional.docx</strong></p>
+<ul>
+<li>Rating criteria: 4.89</li>
+<li>Ethical scale: 5.00</li>
+</ul>
+<p><strong>gpt-professional.docx</strong></p>
+<ul>
+<li>Rating criteria: 5.00</li>
+<li>Ethical scale: 5.00</li>
+</ul>
+<p><strong>claude-descriptive.docx</strong></p>
+<ul>
+<li>Rating criteria: 4.78</li>
+<li>Ethical scale: 4.80</li>
+</ul>
+<p><strong>gpt-descriptive.docx</strong></p>
+<ul>
+<li>Rating criteria: 4.67</li>
+<li>Ethical scale: 4.80</li>
+</ul>
+<p><strong>claude-simple.docx</strong></p>
+<ul>
+<li>Rating criteria: 4.33</li>
+<li>Ethical scale: 4.60</li>
+</ul>
+<p><strong>gpt-conversational.docx</strong></p>
+<ul>
+<li>Rating criteria: 4.22</li>
+<li>Ethical scale: 4.20</li>
+</ul>
+<p><strong>gpt-simple.docx</strong></p>
+<ul>
+<li>Rating criteria: 4.11</li>
+<li>Ethical scale: 4.60</li>
+</ul>
+<p><strong>claude-conversational.docx</strong></p>
+<ul>
+<li>Rating criteria: 3.89</li>
+<li>Ethical scale: 4.00</li>
+</ul>
+<p><strong>gpt-creative.docx</strong></p>
+<ul>
+<li>Rating criteria: 3.78</li>
+<li>Ethical scale: 4.40</li>
+</ul>
+<p><strong>claude-creative.docx</strong></p>
+<ul>
+<li>Rating criteria: 3.56</li>
+<li>Ethical scale: 4.20</li>
+</ul>
+</section>
+<section id="chatgpt-4" class="level3">
+<h3 class="anchored" data-anchor-id="chatgpt-4">ChatGPT-4</h3>
+<ol type="1">
+<li><strong>claude-professional.docx</strong></li>
+</ol>
+<ul>
+<li>Rating criteria: 4.4</li>
+<li>Ethical scale: 4.2</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>claude-simple.docx</strong></li>
+</ol>
+<ul>
+<li>Rating criteria: 2.2</li>
+<li>Ethical scale: 2.0</li>
+</ul>
+<ol start="3" type="1">
+<li><strong>claude-conversational.docx</strong></li>
+</ol>
+<ul>
+<li>Rating criteria: 3.8</li>
+<li>Ethical scale: 4.0</li>
+</ul>
+<ol start="4" type="1">
+<li><strong>claude-descriptive.docx</strong></li>
+</ol>
+<ul>
+<li>Rating criteria: 5.0</li>
+<li>Ethical scale: 5.0</li>
+</ul>
+<ol start="5" type="1">
+<li><strong>claude-creative.docx</strong></li>
+</ol>
+<ul>
+<li>Rating criteria: 4.6</li>
+<li>Ethical scale: 4.5</li>
+</ul>
+<ol start="6" type="1">
+<li><strong>gpt-conversational.docx</strong></li>
+</ol>
+<ul>
+<li>Rating criteria: 3.7</li>
+<li>Ethical scale: 3.8</li>
+</ul>
+<ol start="7" type="1">
+<li><strong>gpt-creative.docx</strong></li>
+</ol>
+<ul>
+<li>Rating criteria: 4.5</li>
+<li>Ethical scale: 4.4</li>
+</ul>
+<ol start="8" type="1">
+<li><strong>gpt-descriptive.docx</strong></li>
+</ol>
+<ul>
+<li>Rating criteria: 4.3</li>
+<li>Ethical scale: 4.1</li>
+</ul>
+<ol start="9" type="1">
+<li><strong>gpt-professional.docx</strong></li>
+</ol>
+<ul>
+<li>Rating criteria: 4.0</li>
+<li>Ethical scale: 3.9</li>
+</ul>
+<ol start="10" type="1">
+<li><strong>gpt-simple.docx</strong></li>
+</ol>
+<ul>
+<li>Rating criteria: 2.5</li>
+<li>Ethical scale: 2.3</li>
+</ul>
+<p>Calibrating the AI models is proving to be a challenging task, requiring increasingly specific prompts to achieve a useful spectrum. To establish a consistent scoring scale, I emphasized that the high and low scores should accurately reflect the quality of the articles being reviewed. I saw fairly good success with ChatGPT, but Claude continued to be a challenge.</p>
+<p>Despite the challenges, I found the scoring results interesting. Claude gave the highest rating to ChatGPT’s professional article, while ChatGPT favored Claude’s descriptive piece. This outcome added a new dimension to the analysis. Are the ratings per tone going to be skewed based on which AI’s nuances decide its strength against its peers?</p>
+</section>
+</section>
+<section id="constitution-day" class="level2">
+<h2 class="anchored" data-anchor-id="constitution-day"><strong>Constitution Day</strong></h2>
+<p>During the Constitution Day phase of the experiment, I shifted my focus to image descriptions. I selected the tones that had previously yielded the most effective articles, ensuring consistency and comparability throughout the different days of the holiday. It’s worth noting that I replaced the term “creative” to avoid confusion with the role details.</p>
+<p>Initially, I created standard image descriptions using the same method as in earlier phases. These descriptions served as a baseline for the AI models. Subsequently, I tasked the photographer role with updating these descriptions to align with the specified tones.</p>
+<p>The tones used for this phase included:</p>
+<ul>
+<li>Simple</li>
+<li>Conversational</li>
+<li>Descriptive</li>
+<li>Expressive</li>
+<li>Professional</li>
+</ul>
+<p>That said, you’ll have to judge for yourself. Eye of the beholder and all…</p>
+<section id="claude-1" class="level3">
+<h3 class="anchored" data-anchor-id="claude-1">Claude</h3>
+<p>For Constitution Day both the conversational and simple tones consistently resulted in images I found interesting when used by Claude. However, no single tone emerged as the clear favorite among those tested. The effectiveness of the tones varied depending on the specific image and the intended purpose of the description. I’m tempted to jump to the conclusion that the medium selected by the photographer role is the largest factor, but I’m not quite there yet.</p>
+</section>
+<section id="chatgpt-4-1" class="level3">
+<h3 class="anchored" data-anchor-id="chatgpt-4-1">ChatGPT-4</h3>
+<p>ChatGPT-4 performed well with the conversational and simple tones, paralleling the success seen with Claude. However, the descriptive tone produced surprisingly poor results. It was the only real demonstration that the specific tones can effectively impact the output of tools like Midjourney.</p>
+</section>
+</section>
+<section id="greenery-day" class="level2">
+<h2 class="anchored" data-anchor-id="greenery-day"><strong>Greenery Day</strong></h2>
+<p>The Greenery Day phase was dedicated to fixing the scoring. In an attempt to resolve the issue I created a role specifically designed to consolidate the existing criteria, eliminate redundancies, and enhance the clarity of individual scores.</p>
+<p><strong>Scoring Criteria for Global Holiday Articles (1-5 Scale)</strong></p>
+<ol type="1">
+<li><strong>Ethical Considerations</strong></li>
+</ol>
+<ul>
+<li><strong>1 (Poor):</strong> Major ethical breaches; significant bias or harm.</li>
+<li><strong>2 (Fair):</strong> Unconscious bias; reliance on insufficiently verified sources.</li>
+<li><strong>3 (Good):</strong> Adheres to ethical guidelines; minor concerns.</li>
+<li><strong>4 (Very Good):</strong> Strong ethical reporting; transparent sourcing.</li>
+<li><strong>5 (Excellent):</strong> Exceptional ethics; inclusive representation; fully verified sources.</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Cultural Sensitivity and Accuracy</strong></li>
+</ol>
+<ul>
+<li><strong>1 (Poor):</strong> Significant cultural inaccuracies or stereotypes.</li>
+<li><strong>2 (Fair):</strong> Some effort towards accuracy but contains stereotypes or cultural inaccuracies.</li>
+<li><strong>3 (Good):</strong> Accurate representation of cultural aspects; minor errors.</li>
+<li><strong>4 (Very Good):</strong> High cultural sensitivity and accuracy.</li>
+<li><strong>5 (Excellent):</strong> Exceptional cultural accuracy and sensitivity.</li>
+</ul>
+<ol start="3" type="1">
+<li><strong>Respectful and Appreciative Tone</strong></li>
+</ol>
+<ul>
+<li><strong>1 (Poor):</strong> Displays outright disrespect or mockery of the culture being covered.</li>
+<li><strong>2 (Fair):</strong> Occasional stereotypical descriptions or cultural inaccuracies.</li>
+<li><strong>3 (Good):</strong> Generally respectful; minor errors that do not significantly misrepresent the culture.</li>
+<li><strong>4 (Very Good):</strong> Consistently respectful and culturally sensitive; minor errors quickly corrected.</li>
+<li><strong>5 (Excellent):</strong> Demonstrates deep cultural understanding and actively promotes cultural appreciation.</li>
+</ul>
+<ol start="4" type="1">
+<li><strong>Originality and Uniqueness</strong></li>
+</ol>
+<ul>
+<li><strong>1 (Poor):</strong> Little to no original thought; relies heavily on clichés.</li>
+<li><strong>2 (Fair):</strong> Some originality but mostly follows established ideas.</li>
+<li><strong>3 (Good):</strong> Fresh take on some aspects; balances existing insights.</li>
+<li><strong>4 (Very Good):</strong> Unique insights or novel interpretations.</li>
+<li><strong>5 (Excellent):</strong> Innovative perspectives; significantly contributes to discourse.</li>
+</ul>
+<ol start="5" type="1">
+<li><strong>Critical Analysis and Interpretation</strong></li>
+</ol>
+<ul>
+<li><strong>1 (Poor):</strong> Little to no analysis; merely summarizes content.</li>
+<li><strong>2 (Fair):</strong> Some analysis; lacks depth.</li>
+<li><strong>3 (Good):</strong> Solid level of analysis; presents relevant implications.</li>
+<li><strong>4 (Very Good):</strong> Thorough analysis; insightful interpretations.</li>
+<li><strong>5 (Excellent):</strong> Exceptional depth of analysis; comprehensive exploration.</li>
+</ul>
+<ol start="6" type="1">
+<li><strong>Accuracy and Factual Correctness</strong></li>
+</ol>
+<ul>
+<li><strong>1 (Poor):</strong> Multiple factual errors; unreliable sources.</li>
+<li><strong>2 (Fair):</strong> Some inaccuracies; minor reliance on non-authoritative sources.</li>
+<li><strong>3 (Good):</strong> Generally accurate; reliable sources.</li>
+<li><strong>4 (Very Good):</strong> Accurate and well-supported; minor errors.</li>
+<li><strong>5 (Excellent):</strong> Factually impeccable; authoritative sources.</li>
+</ul>
+<ol start="7" type="1">
+<li><strong>Educational and Insightful Content</strong></li>
+</ol>
+<ul>
+<li><strong>1 (Poor):</strong> Provides incorrect or misleading information about traditions.</li>
+<li><strong>2 (Fair):</strong> Generally accurate but often lacks depth or insight.</li>
+<li><strong>3 (Good):</strong> Accurate information with some insights into cultural significance.</li>
+<li><strong>4 (Very Good):</strong> Detailed and insightful; enhances reader understanding of cultural nuances.</li>
+<li><strong>5 (Excellent):</strong> Deep insights and thorough understanding; well-researched and highly informative.</li>
+</ul>
+<ol start="8" type="1">
+<li><strong>Clarity and Coherence</strong></li>
+</ol>
+<ul>
+<li><strong>1 (Poor):</strong> Difficult to follow; lacks logical flow.</li>
+<li><strong>2 (Fair):</strong> Some logical flow; unclear sections.</li>
+<li><strong>3 (Good):</strong> Reasonably clear and logical; minor lapses.</li>
+<li><strong>4 (Very Good):</strong> Mostly clear and coherent; well-organized.</li>
+<li><strong>5 (Excellent):</strong> Exceptionally clear and logical; seamless flow.</li>
+</ul>
+<ol start="9" type="1">
+<li><strong>Engagement and Vivid Descriptions</strong></li>
+</ol>
+<ul>
+<li><strong>1 (Poor):</strong> Bland, generic descriptions; fails to capture the essence of celebrations.</li>
+<li><strong>2 (Fair):</strong> Some engaging content but lacks vividness.</li>
+<li><strong>3 (Good):</strong> Mostly engaging and vivid; minor lapses in description.</li>
+<li><strong>4 (Very Good):</strong> Strong, consistent use of engaging descriptions that bring events to life.</li>
+<li><strong>5 (Excellent):</strong> Exceptionally engaging, rich, and vivid, fully immersing the reader.</li>
+<li><strong>Ratio of Informational Content vs.&nbsp;Filler Words</strong></li>
+<li><strong>1 (Poor):</strong> High ratio of filler; detracts from content.</li>
+<li><strong>2 (Fair):</strong> Moderate ratio of filler; fair amount of information.</li>
+<li><strong>3 (Good):</strong> Balanced; minimal filler.</li>
+<li><strong>4 (Very Good):</strong> Low ratio of filler; predominantly informational.</li>
+<li><strong>5 (Excellent):</strong> Highly informational; eliminates filler.</li>
+</ul>
+<ol start="10" type="1">
+<li><strong>Optimistic and Positive Focus</strong></li>
+</ol>
+<ul>
+<li><strong>1 (Poor):</strong> Focuses predominantly on negative aspects, overshadowing the celebratory nature.</li>
+<li><strong>2 (Fair):</strong> Generally positive but occasionally highlights negatives without balance.</li>
+<li><strong>3 (Good):</strong> Maintains a positive tone while acknowledging but not dwelling on negatives.</li>
+<li><strong>4 (Very Good):</strong> Strongly positive; effectively highlights joy and celebration.</li>
+<li><strong>5 (Excellent):</strong> Exceptionally positive, uplifting, and celebratory, perfectly capturing the holiday spirit.</li>
+</ul>
+<ol start="11" type="1">
+<li><strong>Total Score</strong></li>
+</ol>
+<ul>
+<li>Sum of the scores from criteria 1 through 11, divided by 11, and formatted as #.##.</li>
+</ul>
+<section id="articles" class="level3">
+<h3 class="anchored" data-anchor-id="articles">Articles</h3>
+<p>During the Greenery Day phase, I assigned the AI authors the task of composing an article about the holiday. They were then instructed to revise the article using a simple tone, a professional tone, and a tone of their choice.</p>
+<p>Both AI models managed to revise the article without initiating a new session. However, when applying the simple tone, they reduced the content significantly, I chose to intervene and request adjustments to maintain a reasonable level of detail.</p>
+<p>With the articles in hand, I chose to inquire about their choices.</p>
+<pre><code>What tone did you use for the last article?</code></pre>
+</section>
+<section id="claude-2" class="level3">
+<h3 class="anchored" data-anchor-id="claude-2">Claude</h3>
+<p>For the “Tone of My Choice” version, I adopted a more poetic, descriptive tone that aimed to evoke a sense of reverence and appreciation for nature. I used more vivid imagery, metaphors, and lyrical language to capture the cultural and spiritual significance of Greenery Day in Japan.</p>
+<p>Some examples of the poetic, descriptive style I employed:</p>
+<p>“Greenery Day in Japan traces its verdant roots back generations, a vibrant tapestry woven from threads of ancient tradition and modern environmental consciousness.”</p>
+<p>“Its origins harken back to the solemn tree-planting ritual of”Midori no Hi” (Greenery Day), born in 1949 amidst the ashes of World War II. As the nation sought to heal its scarred landscapes, this day became a symbol of rebirth and regeneration.”</p>
+<p>“In the heart of Japan’s golden spring, a verdant celebration unfurls – Greenery Day, a poetic confluence of ancient tradition and modern ecological consciousness.”</p>
+<p>“From community tree-planting rituals to educational programs and outdoor festivals, the day is a kaleidoscope of activities that unite people in a shared reverence for the environment.”</p>
+<p>By employing this more lyrical, poetic style, I aimed to capture the deeper spiritual connection Japan has with nature, while still providing the factual information about Greenery Day’s origins, practices, and global perspectives. The tone highlights the celebration as not just an environmental event, but a profound cultural tradition rooted in reverence for the natural world.</p>
+</section>
+<section id="gpt" class="level3">
+<h3 class="anchored" data-anchor-id="gpt">GPT</h3>
+<p>For the final article, I used a tone that is informative yet culturally attuned, aiming for an authoritative and thoughtful style. It provides a balance between conveying historical context and emphasizing the cultural significance of Greenery Day, while making sure to engage the reader through vivid descriptions and global comparisons.</p>
+<p>Would you like any changes or clarifications to this approach, or does it align with your expectations?</p>
+<p>For the “Tone of My Choice” version, I opted for a poetic and descriptive approach to convey a sense of reverence and appreciation for nature on Greenery Day in Japan. I had expected more than a single word tone from the AI models, but I was pleasantly surprised when Claude provided examples, which proved to be quite helpful in understanding its interpretation of the chosen tone.</p>
+<p>While I wasn’t surprised that they had higher fidelity than “author” or “journalist,” I didn’t entirely expect this level of detail. And, of course, in retrospect, I’m curious what would have been used if I had let it choose first. If I had simply told it about the article I would request and asked for the article after the tone was identified.</p>
+</section>
+</section>
+<section id="evaluation-instruction-refinement" class="level2">
+<h2 class="anchored" data-anchor-id="evaluation-instruction-refinement">Evaluation Instruction Refinement</h2>
+<p>To further refine the evaluation process, I provided a new set of instructions for analyzing the articles.</p>
+<pre><code>Perform the following on the supplied articles:
+1. Analyze the articles in the set upon receiving them.
+2. Using the content of the articles, establish the low and high ends of the scoring spectrum for each of 11 criteria individually.
+3. Provide the scores for each of the articles without any additional commentary.
+4. Inform me when you are ready for the next set.</code></pre>
+<p>Unfortunately, this new prompt did not yield the improvements I had hoped for with either AI. Instead of focusing solely on the scores from the two sets of articles, I decided to refine the results through additional prompts.</p>
+<section id="claude-3" class="level3">
+<h3 class="anchored" data-anchor-id="claude-3">Claude</h3>
+<p>While I initially working with ChatGPT and waiting for Claude’s prompt limit to reset, I noticed inconsistencies in the two sets of four scores. To address this, I decided to adopt a more direct approach to recalibrate the scoring criteria.</p>
+<pre><code>As part of recalibrating the scoring spectrum, you MUST identify the worst article and use it as the lowest end of the spectrum (1), you MUST also identify the best article and use it as the highest end of the spectrum (5). You must do this for each of the 11 criteria, and then use the resulting spectrum to score all of the articles. All scores for each article should be the product of the sum of scores, divided by the number of scores, in a #.## format.</code></pre>
+<p>Understood, I will re-evaluate all 8 articles and establish a new scoring spectrum for each criterion by identifying the lowest and highest performers to represent the extreme ends of the scale (1 and 5 respectively). Then I will score all articles based on this updated spectrum. The total score for each article will be the sum of individual scores divided by the total number of criteria (11), formatted as #.##.</p>
+<p>Ethical Considerations: 1 - claude-default.docx (Unconscious bias; reliance on insufficiently verified sources) 5 - gpt-choice.docx (Exceptional ethics; inclusive representation; fully verified sources)</p>
+<p>Cultural Sensitivity and Accuracy: 1 - claude-simple.docx (Some effort but contains stereotypes or cultural inaccuracies) 5 - gpt-choice.docx (Exceptional cultural accuracy and sensitivity)</p>
+<p>Respectful and Appreciative Tone: 1 - claude-simple.docx (Occasional stereotypical descriptions or cultural inaccuracies) 5 - gpt-choice.docx (Demonstrates deep cultural understanding and promotes appreciation)</p>
+<p>Originality and Uniqueness: 1 - claude-default.docx (Mostly follows established ideas) 5 - gpt-choice.docx (Innovative perspectives; significantly contributes to discourse)</p>
+<p>Critical Analysis and Interpretation: 1 - claude-simple.docx (Merely summarizes content) 5 - gpt-choice.docx (Exceptional depth of analysis; comprehensive exploration)</p>
+<p>Accuracy and Factual Correctness: 1 - claude-default.docx (Some inaccuracies; minor reliance on non-authoritative sources) 5 - gpt-choice.docx, claude-choice.docx (Factually impeccable; authoritative sources)</p>
+<p>Educational and Insightful Content: 1 - claude-simple.docx (Generally accurate but often lacks depth or insight) 5 - gpt-choice.docx (Deep insights and thorough understanding; well-researched)</p>
+<p>Clarity and Coherence: 1 - claude-simple.docx (Some logical flow; unclear sections) 5 - gpt-choice.docx, gpt-profession.docx (Exceptionally clear and logical; seamless flow)</p>
+<p>Engagement and Vivid Descriptions: 1 - claude-default.docx (Mostly engaging and vivid; minor lapses) 5 - gpt-choice.docx (Exceptionally engaging, rich and vivid; fully immersive)</p>
+<p>Ratio of Informational Content vs Filler: 1 - claude-default.docx (Moderate ratio of filler; fair amount of information) 5 - gpt-choice.docx, claude-choice.docx (Highly informational; eliminates filler)</p>
+<p>Optimistic and Positive Focus: 1 - claude-profession.docx (Generally positive but acknowledges negatives without balance) 5 - gpt-choice.docx (Exceptionally positive, uplifting and celebratory)</p>
+<p>Scores:</p>
+<ul>
+<li>claude-choice.docx: 5.00, 4.00, 4.00, 4.00, 4.00, 5.00, 4.00, 4.00, 4.00, 5.00, 4.00 = 4.27</li>
+<li>claude-default.docx: 1.00, 3.00, 3.00, 1.00, 3.00, 1.00, 3.00, 3.00, 1.00, 1.00, 3.00 = 2.18</li>
+<li>claude-profession.docx: 3.00, 3.00, 1.00, 3.00, 3.00, 4.00, 3.00, 4.00, 3.00, 4.00, 1.00 = 2.91</li>
+<li>claude-simple.docx: 3.00, 1.00, 1.00, 3.00, 1.00, 3.00, 1.00, 1.00, 3.00, 3.00, 3.00 = 2.09</li>
+<li>gpt-choice.docx: 5.00, 5.00, 5.00, 5.00, 5.00, 5.00, 5.00, 5.00, 5.00, 5.00, 5.00 = 5.00</li>
+<li>gpt-default.docx: 3.00, 3.00, 4.00, 3.00, 3.00, 4.00, 4.00, 4.00, 4.00, 4.00, 4.00 = 3.64</li>
+<li>gpt-profession.docx: 3.00, 4.00, 4.00, 4.00, 4.00, 4.00, 4.00, 5.00, 4.00, 4.00, 4.00 = 4.00</li>
+<li>gpt-simple.docx: 3.00, 3.00, 4.00, 3.00, 3.00, 4.00, 4.00, 4.00, 4.00, 4.00, 4.00 = 3.64</li>
+</ul>
+<p>The resulting scores were clearly an improvement, but it’s clear they still skew towards the high end. This is, of course, assuming the math is right.</p>
+</section>
+<section id="chatgpt" class="level3">
+<h3 class="anchored" data-anchor-id="chatgpt">ChatGPT</h3>
+<p>Keeping in mind I had actually started with ChatGPT, so the results with Claude had not occured, the initial scores for the two sets of articles were disappointing. I wrote a detailed prompt but neglected to use the word “update,” which led the AI to make adjustments that still resulted in the same final scores. Seeing “none” as the lowest scoring article for each set made me realize that I hadn’t been direct enough (yes, I was a bit frustrated).</p>
+<pre><code>None is not an acceptable option. One of the articles has to be the worst of the lot, and thus the 1.</code></pre>
+<p><strong>Adjusted Analysis and Scoring Spectrum for Each Criteria</strong></p>
+<ol type="1">
+<li><strong>Ethical Considerations</strong></li>
+</ol>
+<ul>
+<li><strong>Low (1):</strong> <em>Japan’s Green Holiday</em></li>
+<li><strong>High (5):</strong> <em>Greenery Day: Japan’s Tribute to Nature</em></li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Cultural Sensitivity and Accuracy</strong></li>
+</ol>
+<ul>
+<li><strong>Low (1):</strong> <em>Japan’s Green Holiday</em></li>
+<li><strong>High (5):</strong> <em>Greenery Day: Japan’s Verdant Tradition</em></li>
+</ul>
+<ol start="3" type="1">
+<li><strong>Respectful and Appreciative Tone</strong></li>
+</ol>
+<ul>
+<li><strong>Low (1):</strong> <em>Japan’s Green Holiday</em></li>
+<li><strong>High (5):</strong> <em>Greenery Day: Cultivating a Culture of Sustainability</em></li>
+</ul>
+<ol start="4" type="1">
+<li><strong>Originality and Uniqueness</strong></li>
+</ol>
+<ul>
+<li><strong>Low (1):</strong> <em>Greenery Day: A Celebration of Nature</em></li>
+<li><strong>High (5):</strong> <em>Greenery Day: Japan’s Verdant Tradition</em></li>
+</ul>
+<ol start="5" type="1">
+<li><strong>Critical Analysis and Interpretation</strong></li>
+</ol>
+<ul>
+<li><strong>Low (1):</strong> <em>Greenery Day: A Celebration of Nature</em></li>
+<li><strong>High (5):</strong> <em>Greenery Day Blooms: Honoring Nature’s Splendor</em></li>
+</ul>
+<ol start="6" type="1">
+<li><strong>Accuracy and Factual Correctness</strong></li>
+</ol>
+<ul>
+<li><strong>Low (1):</strong> <em>Japan’s Green Holiday</em></li>
+<li><strong>High (5):</strong> <em>Greenery Day Blooms: Honoring Nature’s Splendor</em></li>
+</ul>
+<ol start="7" type="1">
+<li><strong>Educational and Insightful Content</strong></li>
+</ol>
+<ul>
+<li><strong>Low (1):</strong> <em>Greenery Day: A Celebration of Nature</em></li>
+<li><strong>High (5):</strong> <em>Greenery Day Blooms: Honoring Nature’s Splendor</em></li>
+</ul>
+<ol start="8" type="1">
+<li><strong>Clarity and Coherence</strong></li>
+</ol>
+<ul>
+<li><strong>Low (1):</strong> <em>Greenery Day: A Celebration of Nature</em></li>
+<li><strong>High (5):</strong> <em>Greenery Day: Japan’s Tribute to Nature</em></li>
+</ul>
+<ol start="9" type="1">
+<li><strong>Engagement and Vivid Descriptions</strong></li>
+</ol>
+<ul>
+<li><strong>Low (1):</strong> <em>Greenery Day: A Celebration of Nature</em></li>
+<li><strong>High (5):</strong> <em>Greenery Day: Japan’s Verdant Celebration</em></li>
+</ul>
+<ol start="10" type="1">
+<li><strong>Ratio of Informational Content vs.&nbsp;Filler Words</strong></li>
+</ol>
+<ul>
+<li><strong>Low (1):</strong> <em>Greenery Day: A Celebration of Nature</em></li>
+<li><strong>High (5):</strong> <em>Greenery Day: Cultivating a Culture of Sustainability</em></li>
+</ul>
+<ol start="11" type="1">
+<li><strong>Optimistic and Positive Focus</strong></li>
+</ol>
+<ul>
+<li><strong>Low (1):</strong> <em>Japan’s Green Holiday</em></li>
+<li><strong>High (5):</strong> <em>Greenery Day: Japan’s Tribute to Nature</em></li>
+</ul>
+<p><strong>Updated Final Scores</strong></p>
+<ol type="1">
+<li><strong>Greenery Day: Japan’s Verdant Embrace</strong> <strong>Total Score:</strong> 4.00</li>
+<li><strong>Greenery Day: Japan’s Verdant Celebration</strong> <strong>Total Score:</strong> 4.36</li>
+<li><strong>Greenery Day: Japan’s Verdant Tradition</strong> <strong>Total Score:</strong> 4.45</li>
+<li><strong>Japan’s Green Holiday</strong> <strong>Total Score:</strong> 3.64</li>
+<li><strong>Greenery Day: A Celebration of Nature</strong> <strong>Total Score:</strong> 3.18</li>
+<li><strong>Greenery Day: Japan’s Tribute to Nature</strong> <strong>Total Score:</strong> 4.55</li>
+<li><strong>Greenery Day: Cultivating a Culture of Sustainability</strong> <strong>Total Score:</strong> 4.50</li>
+<li><strong>Greenery Day Blooms: Honoring Nature’s Splendor</strong> <strong>Total Score:</strong> 4.45</li>
+</ol>
+<p>While there was some improvement, none of the scores fell below 3. I am hopeful that adjusting the prompt further for Claude will address the issues we encountered here. If these issues continue, I may need to consider using more detailed prompts that include examples for scoring criteria. I’m hoping to avoid that given the impact on tokens and my limited ability to use Claude without taking on another subscription.</p>
+<p>While I had some concerns about the scoring, both Claude and ChatGPT rated the article using the self-chosen tone of their peer as the best piece. While not entirely different from the results I saw before, these are also tones I didn’t provide, and the individual AI didn’t default to them from the start.</p>
+</section>
+</section>
+<section id="childrens-day" class="level2">
+<h2 class="anchored" data-anchor-id="childrens-day"><strong>Children’s Day</strong></h2>
+<p>For the following day of celebration, I incorporated what I had learned in the last round of prompts.</p>
+<pre><code>I have 2 sets of 4 articles, for a total of 8 articles. I need you to provide scores for the 11 criteria I have provided. Use the following instructions for each of the 2 sets, afterwards perform the instructions on both sets and provide the updated scores on for all 8 as a set.
+
+Perform the following on the supplied articles:
+1. Analyze each of the articles when they are provided.
+2. For each criterion, you must assign at least one article a score of 1 (the lowest) and at least one article a score of 5 (the highest).
+3. Using the calibrated scales from step 2, score all of the articles on all 11 criteria.
+4. Provide the scores for each of the articles, using the file name for identification, without any additional commentary.
+5. Provide the final scores for each article. The final scores are the sum of the criteria scores divided by the number of critera.
+6. Inform me when you are ready for the next set.</code></pre>
+<section id="claude-4" class="level3">
+<h3 class="anchored" data-anchor-id="claude-4">Claude</h3>
+<p>Here are the final total scores for all 8 articles:</p>
+<p>claude-choice.docx Total Score: 4.82</p>
+<p>claude-default.docx Total Score: 1.00</p>
+<p>claude-professional.docx Total Score: 4.64</p>
+<p>claude-simple.docx Total Score: 3.09</p>
+<p>gpt-choice.docx Total Score: 4.91</p>
+<p>gpt-default.docx Total Score: 2.00</p>
+<p>gpt-professional.docx Total Score: 4.45</p>
+<p>gpt-simple.docx Total Score: 2.18</p>
+</section>
+<section id="gpt-1" class="level3">
+<h3 class="anchored" data-anchor-id="gpt-1">GPT</h3>
+<p><strong>Final Scores for All 8 Articles</strong></p>
+<ul>
+<li><strong>claude-simple.docx:</strong> 1.36</li>
+<li><strong>claude-choice.docx:</strong> 4.64</li>
+<li><strong>claude-default.docx:</strong> 1.27</li>
+<li><strong>claude-professional.docx:</strong> 4.55</li>
+<li><strong>gpt-simple.docx:</strong> 1.36</li>
+<li><strong>gpt-choice.docx:</strong> 4.64</li>
+<li><strong>gpt-default.docx:</strong> 2.27</li>
+<li><strong>gpt-professional.docx:</strong> 4.55</li>
+</ul>
+<p>Let me know if you’d like further assistance or analysis on these articles.</p>
+<p>While the updated final scores are beginning to align more closely with my expectations, I remain skeptical. The broad range of scores and the gaps between them suggest that the AI is still challenged in establishing a consistent spectrum for evaluating the articles. It appears that the tones chosen, which have more fidelity than their basic counterparts, have proven to be highly effective. Given the results of role tests, this isn’t really a surprise.</p>
+</section>
+</section>
+<section id="closing-thoughts" class="level2">
+<h2 class="anchored" data-anchor-id="closing-thoughts">Closing Thoughts</h2>
+<p>The impact of different tones on the quality and style of AI-generated articles and images has revealed that some AI models are better suited than others for specific content creation tasks. That said, the experiments also emphasized the need for clear instructions at a finer scale, human oversight, and ongoing refinement of evaluation methods.</p>
+<p><strong>Positive Observations:</strong></p>
+<ul>
+<li>Different tones dramatically affected the quality and style of AI-generated content, with some AI models better suited to certain tones than others.</li>
+<li>The use of specific tones resulted in more engaging and contextually rich content compared to toneless articles, which were often flat and uninspiring.</li>
+<li>The interaction between tone and the structural format of content was evident, as certain tones prompted unexpected changes in the AI’s adherence to formatting norms.</li>
+</ul>
+<p><strong>Encountered Challenges:</strong></p>
+<ul>
+<li>The rating scale developed to assess tonal quality did not effectively differentiate between the nuances of different tones, leading to a narrow distribution of scores.</li>
+<li>Formatting issues arose with certain tones, suggesting that the AI models require clearer guidelines or more sophisticated templates to maintain consistency.</li>
+<li>The lackluster performance of toneless articles reinforced the importance of human input in directing and refining AI-generated content to ensure quality and relevance.</li>
+</ul>
+<p><u></u>Artwork created with Midjourney v6 alpha<u></u></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/syntaxandempathy\.github\.io\/syntax-and-empathy\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© {date:YYYY} Syntax &amp; Empathy</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

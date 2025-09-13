@@ -6,8 +6,7 @@
 {{OVERVIEW}}
 
 ## Contents
-- `file1.py` — {{desc1}}
-- `file2.py` — {{desc2}}
+{{CONTENTS}}
 
 ## Quick Start
 {{USAGE}}
@@ -16,5 +15,4 @@
 {{CONVENTIONS}}
 
 ---
-
 Last updated: {{TODAY}}
