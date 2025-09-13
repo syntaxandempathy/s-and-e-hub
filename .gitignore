@@ -22,6 +22,7 @@ thumbs.db
 
 # Temporary and backup files
 raw/
+**/raw/
 .pxd
 .zip
 .bak
