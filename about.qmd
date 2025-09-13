@@ -1,7 +1,0 @@
----
-title: About
----
-
-**Syntax & Empathy** explores practical, humane approaches to building with AI—balancing technical rigor with human-centered design.
-
-This site aggregates long-form posts, resources, and experiments that extend the publication.
