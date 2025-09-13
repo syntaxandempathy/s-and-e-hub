@@ -1,24 +1,68 @@
-name: Publish Quarto site
+name: Quarto – Preview & Publish
 on:
   push:
     branches: [ main ]
+  pull_request:
+    branches: [ main ]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    concurrency:
+      group: quarto-pages
+      cancel-in-progress: true
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with: { fetch-depth: 0 }
 
-      - uses: quarto-dev/quarto-actions/setup@v2
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with: { version: latest }
+
+      - name: Install uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          uv --version
+
+      - name: Cache uv + venv
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/uv
+            .venv
+          key: ${{ runner.os }}-uv-${{ hashFiles('uv.lock') }}
+          restore-keys: ${{ runner.os }}-uv-
+
+      - name: Sync Python environment (from uv.lock)
+        run: |
+          uv venv
+          if [ -f uv.lock ]; then uv sync; else uv lock && uv sync; fi
+          echo "QUARTO_PYTHON=$GITHUB_WORKSPACE/.venv/bin/python" >> "$GITHUB_ENV"
+
+      - name: Clean build
+        run: quarto render --clean
 
       - name: Render
         uses: quarto-dev/quarto-actions/render@v2
 
+      # PRs: upload preview artifact for review (no publish)
+      - name: Upload preview artifact
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-preview
+          path: _site
+          retention-days: 3
+
+      # main branch: publish to gh-pages
       - name: Publish to gh-pages
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages

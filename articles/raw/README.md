@@ -1,28 +1,28 @@
-# AI-Assisted Writing Analysis: Articles
+# AI-Assisted Writing: A Reproducible Colab Pipeline
 
-*A collection of articles and supporting materials documenting the development of an AI authorship analysis pipeline.*
+*A case study documenting the development of a robust pipeline for analyzing AI/human contributions in writing.*
 
 ## Overview
-This directory contains a series of articles detailing the challenges and eventual success in building a reproducible pipeline to analyze the contributions of AI and human authors in a writing workflow.  The project involved several iterations, shifting from simpler JSON-based approaches to a robust Python-based system implemented in Google Colab. The articles document this iterative process, highlighting technical hurdles, design decisions, and lessons learned. Supporting materials, including Colab notebooks and transcripts, are also included. This repository provides a case study of practical AI integration and the importance of reproducible research.  The articles are intended for developers, writers, and anyone interested in using AI tools effectively and ethically.
+This directory contains the source materials and analysis results for a project aimed at creating a reproducible pipeline to measure the balance of human and AI contributions in writing.  The initial attempts, documented in `meta.yml`, highlight the challenges and lessons learned.  The final pipeline, built in Google Colab, is showcased in the `10##-new-venue-victory` subdirectory. The project uses Python and various NLP libraries for semantic analysis and similarity comparisons.  The Colab notebooks and supporting materials demonstrate a complete, reproducible workflow for analyzing articles across multiple versions.
 
 ## Contents
-- `meta.yml` — Metadata for the article series.
-- `10##-new-venue-victory/01-draft-article.md` — First draft of the article on building a reproducible Colab pipeline.
-- `10##-new-venue-victory/02-refined-article.md` — Refined version of the Colab pipeline article.
-- `10##-new-venue-victory/03-edited-article.md` — Edited version of the Colab pipeline article.
-- `10##-new-venue-victory/04-final-article.md` — Final version of the Colab pipeline article.
-- `10##-new-venue-victory/materials/0614-transcript-2.md` — Transcript of a development session.
-- `10##-new-venue-victory/materials/0614-transcript-3.md` — Another development session transcript.
-- `10##-new-venue-victory/materials/Claude-Python NLP Research in Colab.md` —  Detailed Claude responses outlining the Colab pipeline development.
-- `10##-new-venue-victory/materials/ai-vs-human-v0.1.ipynb` — Initial Colab notebook.
-- `10##-new-venue-victory/materials/ai-vs-human-v0.2.ipynb` — Updated Colab notebook.
+- `meta.yml` — Metadata about the project, including a synopsis and lessons learned.
+- `10##-new-venue-victory/01-draft-article.md` — First draft of the case study article.
+- `10##-new-venue-victory/02-refined-article.md` — Refined version of the article.
+- `10##-new-venue-victory/03-edited-article.md` — Edited version of the article.
+- `10##-new-venue-victory/04-final-article.md` — Final version of the article.
+- `10##-new-venue-victory/materials/*.md` — Supporting materials, including transcripts and notes.
+- `10##-new-venue-victory/materials/*.ipynb` — Google Colab notebooks detailing the analysis pipeline.
+- `10##-new-venue-victory/materials/*.json` — JSON files containing analysis results and checkpoints.
 
 
 ## Quick Start
-The Colab notebooks (`ai-vs-human-v0.1.ipynb`, `ai-vs-human-v0.2.ipynb`) contain the core analysis pipeline.  To run them, you'll need a Google account and access to Google Colab.  The notebooks are designed to be self-contained, though familiarity with Python and basic data analysis concepts is beneficial.
+The analysis pipeline is implemented in Google Colab notebooks.  To run the analysis, open `10##-new-venue-victory/materials/ai-vs-human.ipynb` in Google Colab and follow the instructions in the notebook. You'll need to mount your Google Drive to access the necessary data files.
+
 
 ## Conventions
-Articles follow a consistent five-part structure: introduction, background, methods, results, and conclusion. Supporting materials are organized chronologically within subdirectories.
+The project follows a version-controlled approach, tracking different stages of article development (draft, refined, edited, final).  Analysis results are stored as JSON files, providing structured data for further analysis and visualization. Google Colab notebooks are used for the main analysis pipeline and are broken into discrete, reproducible steps.
+
 
 ---
-Last updated: 2025-09-12
+Last updated: 2025-09-13
