@@ -1,24 +1,16 @@
-# Image Folder Analysis: Metadata & Excerpts
+# Marketing Images
 
-*This README provides metadata and excerpts from files within the 'images' directory.*
+*High-quality images for marketing campaigns.*
 
-**Overview**
+## Overview
+This directory contains images used in various marketing initiatives.  The images are optimized for different platforms and purposes. Currently, this repository only includes assets that were deemed too large to include in the main repository.  These images are not directly accessible via the main application, but rather linked separately as needed.  Additional images may be added over time.
 
-This directory contains a collection of image files and associated metadata.  The metadata includes file sizes and short text excerpts for some files. Note that a macOS `.DS_Store` file is present.  This README summarizes the directory's contents based on available metadata; further analysis is needed for a complete understanding of the image files themselves.  The included `meta.yml` file provides a more detailed analysis summary.
+## Contents
+* `ai-failure-vague-prompts-banner.png` — Banner image highlighting the issue of vague prompts in AI.
+* `ai-failure-vague-prompts-social.png` — Social media graphic for the same campaign.
 
-**Contents**
+## Conventions
+Images are named descriptively to indicate their usage and context.  Larger images are stored here to keep the primary repository size manageable.
 
-* `meta.yml`: YAML file summarizing the directory's contents and metadata analysis.
-* `.DS_Store`: macOS system file containing metadata about the directory's appearance.
-* `a-v-h-1.png`: Image file (contents not readily available).
-* `ai-failure-vague-prompts-banner.png`: Image file (contents not readily available).
-* `ai-failure-vague-prompts-social.png`: Image file (contents not readily available).
-
-
-**Structure**
-
-The directory contains image files, primarily `.png` format.  File naming suggests potential association with AI-related projects and vague prompts.
-
-**Changelog**
-
-Last updated: 2025-09-04
+---
+Last updated: 2025-09-13
