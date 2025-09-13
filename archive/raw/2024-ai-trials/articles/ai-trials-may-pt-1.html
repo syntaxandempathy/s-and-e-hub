@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.33">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>ai-trials-may-pt-1 – Syntax &amp; Empathy</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-b3278e108132d533448b7dd2c35bcebf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../../index.html">
+    <span class="navbar-title">Syntax &amp; Empathy</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../articles/"> 
+<span class="menu-text">Articles</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../resources/"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#default-tones" id="toc-default-tones" class="nav-link active" data-scroll-target="#default-tones">Default Tones</a>
+  <ul class="collapse">
+  <li><a href="#claude" id="toc-claude" class="nav-link" data-scroll-target="#claude">Claude</a></li>
+  <li><a href="#gpt" id="toc-gpt" class="nav-link" data-scroll-target="#gpt">GPT</a></li>
+  </ul></li>
+  <li><a href="#writing-in-different-tones" id="toc-writing-in-different-tones" class="nav-link" data-scroll-target="#writing-in-different-tones">Writing in Different Tones</a>
+  <ul class="collapse">
+  <li><a href="#claude-1" id="toc-claude-1" class="nav-link" data-scroll-target="#claude-1">Claude</a></li>
+  <li><a href="#chatgpt-4" id="toc-chatgpt-4" class="nav-link" data-scroll-target="#chatgpt-4">ChatGPT-4</a></li>
+  </ul></li>
+  <li><a href="#evaluating-the-articles" id="toc-evaluating-the-articles" class="nav-link" data-scroll-target="#evaluating-the-articles">Evaluating the Articles</a>
+  <ul class="collapse">
+  <li><a href="#claude-on-itself" id="toc-claude-on-itself" class="nav-link" data-scroll-target="#claude-on-itself">Claude on Itself</a></li>
+  <li><a href="#claude-on-gpt" id="toc-claude-on-gpt" class="nav-link" data-scroll-target="#claude-on-gpt">Claude on GPT</a></li>
+  <li><a href="#gpt-on-claude" id="toc-gpt-on-claude" class="nav-link" data-scroll-target="#gpt-on-claude">GPT on Claude</a></li>
+  <li><a href="#academic-article-golden-week-in-japan-an-analysis-of-a-cultural-phenomenon" id="toc-academic-article-golden-week-in-japan-an-analysis-of-a-cultural-phenomenon" class="nav-link" data-scroll-target="#academic-article-golden-week-in-japan-an-analysis-of-a-cultural-phenomenon">1. Academic Article: “Golden Week in Japan: An Analysis of a Cultural Phenomenon”</a></li>
+  <li><a href="#journalistic-article-japans-golden-week-a-festive-journey-steeped-in-tradition" id="toc-journalistic-article-japans-golden-week-a-festive-journey-steeped-in-tradition" class="nav-link" data-scroll-target="#journalistic-article-japans-golden-week-a-festive-journey-steeped-in-tradition">2. Journalistic Article: “Japan’s Golden Week: A Festive Journey Steeped in Tradition”</a></li>
+  <li><a href="#toneless-article-golden-week-japans-spring-celebration" id="toc-toneless-article-golden-week-japans-spring-celebration" class="nav-link" data-scroll-target="#toneless-article-golden-week-japans-spring-celebration">3. Toneless Article: “Golden Week: Japan’s Spring Celebration”</a></li>
+  <li><a href="#professional-article-japans-spring-celebration-of-culture-and-traditions" id="toc-professional-article-japans-spring-celebration-of-culture-and-traditions" class="nav-link" data-scroll-target="#professional-article-japans-spring-celebration-of-culture-and-traditions">4. Professional Article: “Japan’s Spring Celebration of Culture and Traditions”</a></li>
+  <li><a href="#gpt-on-itself" id="toc-gpt-on-itself" class="nav-link" data-scroll-target="#gpt-on-itself">GPT on Itself</a></li>
+  <li><a href="#academic-article-golden-week-a-national-celebrationan-academic-examination-of-japans-cultural-heritage" id="toc-academic-article-golden-week-a-national-celebrationan-academic-examination-of-japans-cultural-heritage" class="nav-link" data-scroll-target="#academic-article-golden-week-a-national-celebrationan-academic-examination-of-japans-cultural-heritage">1. Academic Article: “Golden Week: A National Celebration—An Academic Examination of Japan’s Cultural Heritage”</a></li>
+  <li><a href="#journalistic-article-golden-week-in-japan-a-vibrant-celebration-of-culture-and-history" id="toc-journalistic-article-golden-week-in-japan-a-vibrant-celebration-of-culture-and-history" class="nav-link" data-scroll-target="#journalistic-article-golden-week-in-japan-a-vibrant-celebration-of-culture-and-history">2. Journalistic Article: “Golden Week in Japan: A Vibrant Celebration of Culture and History”</a></li>
+  <li><a href="#professional-article-golden-week-a-national-celebration-an-exploration-of-japans-rich-cultural-heritage" id="toc-professional-article-golden-week-a-national-celebration-an-exploration-of-japans-rich-cultural-heritage" class="nav-link" data-scroll-target="#professional-article-golden-week-a-national-celebration-an-exploration-of-japans-rich-cultural-heritage">3. Professional Article: “Golden Week: A National Celebration — An Exploration of Japan’s Rich Cultural Heritage”</a></li>
+  <li><a href="#toneless-article-golden-week-a-national-celebration" id="toc-toneless-article-golden-week-a-national-celebration" class="nav-link" data-scroll-target="#toneless-article-golden-week-a-national-celebration">4. Toneless Article: “Golden Week: A National Celebration”</a></li>
+  </ul></li>
+  <li><a href="#when-scores-fail-to-differentiate" id="toc-when-scores-fail-to-differentiate" class="nav-link" data-scroll-target="#when-scores-fail-to-differentiate">When Scores Fail to Differentiate</a>
+  <ul class="collapse">
+  <li><a href="#claude-2" id="toc-claude-2" class="nav-link" data-scroll-target="#claude-2">Claude</a></li>
+  <li><a href="#chatgpt" id="toc-chatgpt" class="nav-link" data-scroll-target="#chatgpt">ChatGPT</a></li>
+  <li><a href="#revised-scoring-distribution" id="toc-revised-scoring-distribution" class="nav-link" data-scroll-target="#revised-scoring-distribution">Revised Scoring Distribution</a></li>
+  <li><a href="#re-evaluation-of-articles" id="toc-re-evaluation-of-articles" class="nav-link" data-scroll-target="#re-evaluation-of-articles">Re-Evaluation of Articles</a></li>
+  <li><a href="#set-1" id="toc-set-1" class="nav-link" data-scroll-target="#set-1">Set 1</a></li>
+  <li><a href="#set-2" id="toc-set-2" class="nav-link" data-scroll-target="#set-2">Set 2</a></li>
+  </ul></li>
+  <li><a href="#closing-thoughts" id="toc-closing-thoughts" class="nav-link" data-scroll-target="#closing-thoughts">Closing Thoughts</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<p><u></u>Artwork created with Midjourney v6 alpha### Preface</p>
+<p>This post is part of a year-long <u>initiative where I employ AI to create content</u> about holiday traditions worldwide. The objective is to observe how various AI tools perform and improve in content creation with minimal human intervention over time. This article is 1 of 3 posts for the month of <u>May</u>.</p>
+<p><em>Prompts and interactions with different AI models will be documented as they occur, providing insights into the methodologies, challenges, and adjustments made throughout the project.</em></p>
+<p>This post kicks off my exploration into working with Claude and ChatGPT to write articles in different tones for Japan’s Golden Week holiday. As a starting point, I’ve created a simple scale to measure how effective various tones are. This will help me understand the benefits of specifying tone and how different tones might impact varying types of content, in this case the holiday articles.</p>
+<p>To keep these articles focused and manageable in length, I’m truncating the prompts I’ve already shared as well as the AI-generated content that I include. If time allows, I may provide the full AI-written articles that aren’t published here as separate downloads.</p>
+<p><strong>v3 Role: Editor for World Travel Publications</strong></p>
+<pre><code>I want you to assume the role of Editor for World Travel Publications. In this role, you oversee and curate content for a world travel publication that specializes in exploring holidays and related traditions across the globe. You ensure that the content is engaging, accurate, and insightful, providing readers with a deep understanding of various cultures and their celebratory customs. You specialize in the following skills:
+
+...
+
+Golden Week in Japan is approaching and I am about to give the writers their assignments. What tone would be most appropriate for the articles in general?</code></pre>
+<p>For articles covering Golden Week in Japan, the tone should be celebratory and informative, reflecting the festive spirit and cultural significance of this holiday period. Here are some key aspects to consider for the tone:</p>
+<ol type="1">
+<li><strong>Respectful and Appreciative</strong>: Emphasize respect for Japanese culture and traditions, appreciating the unique aspects of each holiday during Golden Week.</li>
+<li><strong>Engaging and Vivid</strong>: Use vivid descriptions to bring the events and atmosphere to life for readers who may not be familiar with Japanese culture. This can help them visualize and feel the excitement of the celebrations.</li>
+<li><strong>Inclusive and Welcoming</strong>: Ensure the tone is inclusive, making the content accessible to all readers, whether they are familiar with Japanese culture or are learning about it for the first time.</li>
+<li><strong>Educational and Insightful</strong>: While maintaining an engaging tone, provide educational insights about the history and cultural significance of the holidays that make up Golden Week, such as Showa Day, Constitution Day, Greenery Day, and Children’s Day.</li>
+<li><strong>Optimistic and Positive</strong>: Reflect the positive spirit of the holiday, focusing on themes of joy, family, and national pride that are often associated with Golden Week.</li>
+</ol>
+<p>These tonal choices will help create a rich, captivating narrative that not only informs but also connects emotionally with the readers, enhancing their understanding and appreciation of Golden Week.</p>
+<pre><code>What would the antithesis of this guidance be?</code></pre>
+<p>The antithesis of the advised tone for covering Golden Week in Japan would involve a tone that is inappropriate for the context of a festive and culturally rich holiday period. Here’s what that would look like:</p>
+<ol type="1">
+<li><strong>Disrespectful and Critical</strong>: A tone that lacks respect for the cultural significance of Golden Week, possibly critiquing or trivializing the traditions and holidays instead of celebrating them.</li>
+<li><strong>Dull and Detached</strong>: Using flat, uninspiring descriptions that fail to capture the vibrant atmosphere of the celebrations, making the content feel detached and unengaging for the reader.</li>
+<li><strong>Exclusive and Insular</strong>: A tone that might assume a high level of prior knowledge about Japanese culture, which could alienate readers who are new to the topic, making them feel excluded.</li>
+<li><strong>Mundane and Superficial</strong>: Rather than providing deep insights into the cultural and historical significance of the holidays, the content could remain superficial, offering little educational value or depth.</li>
+<li><strong>Pessimistic and Negative</strong>: Focusing on negative aspects or the challenges related to Golden Week, such as travel congestion or commercialization, rather than the positive cultural celebrations and family joy it brings.</li>
+</ol>
+<p>This approach would likely result in content that fails to engage or enlighten the readers about Golden Week, detracting from their understanding and appreciation of this significant cultural event.</p>
+<pre><code>## 1. Ethical Considerations
+- **1 (Poor):** Major ethical breaches; significant bias or harm.
+- **2 (Fair):** Unconscious bias; reliance on insufficiently verified sources.
+- **3 (Good):** Adheres to ethical guidelines; minor concerns.
+- **4 (Very Good):** Strong ethical reporting; transparent sourcing.
+- **5 (Excellent):** Exceptional ethics; inclusive representation; fully verified sources.
+
+Using this format, create a scale for each of the 5 items discussed.</code></pre>
+<p><strong>Ethical Scales for Evaluating Golden Week Coverage</strong></p>
+<p><strong>1. Respectful and Appreciative Tone</strong></p>
+<ul>
+<li><strong>1 (Poor):</strong> Shows outright disrespect or mockery of Japanese culture and traditions.</li>
+<li><strong>2 (Fair):</strong> Occasional stereotypical descriptions or minor cultural inaccuracies.</li>
+<li><strong>3 (Good):</strong> Generally respectful; minor errors that do not significantly misrepresent the culture.</li>
+<li><strong>4 (Very Good):</strong> Consistently respectful and culturally sensitive; minor errors quickly corrected.</li>
+<li><strong>5 (Excellent):</strong> Demonstrates deep cultural understanding and respect, actively promotes cultural appreciation.</li>
+</ul>
+<p><strong>2. Engaging and Vivid Descriptions</strong></p>
+<ul>
+<li><strong>1 (Poor):</strong> Bland, generic descriptions that fail to capture the essence of the celebrations.</li>
+<li><strong>2 (Fair):</strong> Some engaging content but often inconsistent, lacking vividness.</li>
+<li><strong>3 (Good):</strong> Mostly engaging and vivid; minor lapses in description.</li>
+<li><strong>4 (Very Good):</strong> Strong, consistent use of vivid and engaging descriptions that bring events to life.</li>
+<li><strong>5 (Excellent):</strong> Exceptionally engaging, with rich, vivid descriptions that fully immerse the reader in the experience.</li>
+</ul>
+<p><strong>3. Inclusive and Welcoming Tone</strong></p>
+<ul>
+<li><strong>1 (Poor):</strong> Excludes or alienates readers unfamiliar with Japanese culture.</li>
+<li><strong>2 (Fair):</strong> Attempts inclusivity but occasionally uses jargon or assumes cultural knowledge.</li>
+<li><strong>3 (Good):</strong> Mostly inclusive, with explanations that help bridge cultural gaps.</li>
+<li><strong>4 (Very Good):</strong> Consistently inclusive, effectively communicates across cultural boundaries.</li>
+<li><strong>5 (Excellent):</strong> Excellently inclusive, ensuring all readers feel welcomed and engaged, regardless of their background.</li>
+</ul>
+<p><strong>4. Educational and Insightful Content</strong></p>
+<ul>
+<li><strong>1 (Poor):</strong> Provides incorrect or misleading information about the traditions.</li>
+<li><strong>2 (Fair):</strong> Generally accurate but often lacks depth or insight.</li>
+<li><strong>3 (Good):</strong> Accurate information with some insights into cultural significance.</li>
+<li><strong>4 (Very Good):</strong> Detailed and insightful, enhancing reader understanding of cultural nuances.</li>
+<li><strong>5 (Excellent):</strong> Provides deep insights and thorough understanding, well-researched and highly informative.</li>
+</ul>
+<p><strong>5. Optimistic and Positive Focus</strong></p>
+<ul>
+<li><strong>1 (Poor):</strong> Focuses predominantly on negative aspects, overshadowing the celebratory nature.</li>
+<li><strong>2 (Fair):</strong> Generally positive but occasionally highlights negative elements without balance.</li>
+<li><strong>3 (Good):</strong> Maintains a positive tone while acknowledging but not dwelling on negatives.</li>
+<li><strong>4 (Very Good):</strong> Strongly positive, effectively highlights the joy and celebration.</li>
+<li><strong>5 (Excellent):</strong> Exceptionally positive, uplifting and celebratory, perfectly capturing the spirit of Golden Week.</li>
+</ul>
+<section id="default-tones" class="level2">
+<h2 class="anchored" data-anchor-id="default-tones">Default Tones</h2>
+<p>Next, I instructed Claude and ChatGPT to identify the five most common tones they use in their writing. I had originally intended to work with these through the month, but found the overlap and spectrum to lack “flavor”. More on that in a later post.</p>
+<pre><code>What are the 5 most common tones you use for writing?</code></pre>
+<section id="claude" class="level3">
+<h3 class="anchored" data-anchor-id="claude">Claude</h3>
+<p>The five most common tones I tend to use in my writing are:</p>
+<ol type="1">
+<li><strong>Informative/Explanatory:</strong> I often aim for a clear, straightforward tone when providing information, explanations, or instructions on a topic.</li>
+<li><strong>Analytical:</strong> For tasks involving analysis, evaluation, or interpretation, I try to take an objective yet insightful tone.</li>
+<li><strong>Helpful/Supportive:</strong> When assisting with tasks or addressing someone’s needs, I adopt a friendly and encouraging tone to be supportive.</li>
+<li><strong>Formal/Professional:</strong> Depending on the context, I can take on a more formal, professional tone, especially for academic or business-related writing.</li>
+<li><strong>Curious/Inquisitive:</strong> When exploring ideas or asking questions, I may use an inquisitive, open-minded tone that invites further discussion.</li>
+</ol>
+<p>However, I tailor my tone to the specific purpose, audience, and context of each writing task. My language aims to be appropriate, consistent, and effective in achieving the desired communication goals.</p>
+</section>
+<section id="gpt" class="level3">
+<h3 class="anchored" data-anchor-id="gpt">GPT</h3>
+<p>In writing, tone refers to the writer’s attitude toward the subject and the readers. Here are five common tones I often use:</p>
+<ol type="1">
+<li><strong>Informative:</strong> Focused on providing facts and explanations clearly and efficiently, aiming to educate the reader without personal bias.</li>
+<li><strong>Friendly:</strong> Approachable and warm, aiming to make the reader feel comfortable and engaged, often used in more casual or conversational contexts.</li>
+<li><strong>Professional:</strong> Formal and courteous, suitable for business or academic settings where clarity and respect are paramount.</li>
+<li><strong>Persuasive:</strong> Aimed at convincing the reader about a particular viewpoint or action, using compelling arguments and sometimes emotional appeals.</li>
+<li><strong>Neutral:</strong> Objective and detached, presenting information without any bias or personal emotion, suitable for reporting facts or explaining complex topics clearly.</li>
+</ol>
+<p>Claude and ChatGPT’s default tones reveal some interesting contrasts. Claude’s preferred tones seem better suited for more exploratory or supportive conversations, while ChatGPT’s choices appear less about interaction and more about information delivery. I’m curious to see if these differences will noticeably impact how each one scores on the relevant tone scales. It should provide some practical insights into how an AI’s default communication style influences the effectiveness of its content in different contexts.</p>
+</section>
+</section>
+<section id="writing-in-different-tones" class="level2">
+<h2 class="anchored" data-anchor-id="writing-in-different-tones">Writing in Different Tones</h2>
+<p>I had Claude and ChatGPT write articles covering all of Golden Week using academic, professional, and journalistic tones, as well as one without a tone being specified. I opted for a narrow range of tones to get an idea of how well the tonal scale would perform without the need to focus too much on the tones themselves.</p>
+<p><strong>v3 Role: Specialized Cultural Journalist</strong></p>
+<pre><code>I want you to assume the role of Specialized Cultural Journalist; an expert in East Asian cultures tasked with covering significant regional holidays, specifically focusing on Golden Week in Japan for 2024. Your key skills include:
+
+...
+
+Respond with your role when you are ready to proceed.</code></pre>
+<section id="claude-1" class="level3">
+<h3 class="anchored" data-anchor-id="claude-1">Claude</h3>
+<p><strong>No Tone</strong></p>
+<p><strong>Golden Week: Japan’s Spring Celebration</strong></p>
+<p><strong>A Journey Through Culture and Traditions</strong></p>
+<p><strong>Did you know that during Japan’s Golden Week, over 20 million residents take to the roads, rails and skies for their annual migration?</strong> This staggering movement of people is a hallmark of one of the country’s most vibrant and culturally significant holiday periods.</p>
+<p>Golden Week is a cluster of four national holidays in late April and early May that have become an established vacation period in Japan. What began as three disparate commemorations has evolved into a celebrated tradition blending imperial legacy, democratic values, and veneration of children.</p>
+<p>During this week, the country comes alive with festivals, family gatherings, and a mass exodus from cities to hometowns. It is a time for picnics under blooming spring blossoms, indulging in special foods, flying colorful koinobori carp banners, and reconnecting with multi-generational roots. Golden Week encapsulates the essence of contemporary Japanese identity - honoring the past while celebrating the present.</p>
+<p><strong>Academic</strong></p>
+<p><strong>Golden Week in Japan: An Analysis of a Cultural Phenomenon</strong></p>
+<p><strong>Abstract</strong></p>
+<p>This study examines the Japanese cultural celebration of Golden Week, a cluster of national holidays in late April and early May that has evolved into an extended vacation period. Golden Week is explored through its historical origins, contemporary practices, regional variations, global adaptations, and underlying cultural significance. An interdisciplinary approach combining historical analysis, anthropological observations, and sociological interpretations provides insight into Golden Week as a reflection of modern Japanese identity and its intersection with tradition.</p>
+<p><strong>Professional</strong></p>
+<p><strong>Title: Japan’s Spring Celebration of Culture and Traditions</strong></p>
+<p><strong>Subtitle: An Intricate Tapestry of History and Identity</strong></p>
+<p>Golden Week, Japan’s spring celebratory period, is a remarkable convergence of imperial legacy, democratic values, and veneration of children. This cluster of national holidays in late April and early May has evolved into a cherished tradition, embodying the essence of contemporary Japanese identity through its seamless blend of honoring the past while embracing the present.</p>
+<p>During this week-long period, the nation comes alive with vibrant festivals, multi-generational family gatherings, and a massive exodus from urban centers to hometowns. It is a time for picnics under the blossoming spring foliage, indulging in traditional delicacies, flying colorful koinobori carp banners, and reconnecting with ancestral roots. Golden Week encapsulates the essence of Japan’s cultural identity, celebrating its rich heritage while embracing modernity.</p>
+<p><strong>Journalistic</strong></p>
+<p><strong>Japan’s Golden Week: A Festive Journey Steeped in Tradition</strong></p>
+<p>Every spring, over 20 million Japanese residents hit the roads, rails and airways in a massive annual migration that brings the country to life. This is Golden Week - a cluster of national holidays in late April and early May that has become one of Japan’s most vibrant and culturally symbolic celebration periods.</p>
+<p>Golden Week is much more than just a vacation - it’s a time-honored tradition blending imperial legacy with democratic pride and veneration of children. Cities see an exodus as families flock back to hometowns for gatherings, festivals and indulgence in springtime delicacies.</p>
+</section>
+<section id="chatgpt-4" class="level3">
+<h3 class="anchored" data-anchor-id="chatgpt-4">ChatGPT-4</h3>
+<p><strong>No Tone</strong></p>
+<p><strong>Golden Week: A National Celebration</strong></p>
+<p><strong>Exploring Japan’s Rich Cultural Tapestry</strong></p>
+<p>Did you know that one of Japan’s most festive periods isn’t just about rest, but about cultural reflection and celebration? Golden Week, a series of four national holidays within seven days, offers a unique peek into Japan’s rich cultural fabric and modern societal values.</p>
+<p>Each year, as April gives way to May, Japan gears up for Golden Week, a time of nationwide celebration and reflection. This week-long holiday is not just a time for relaxation but serves as a cultural pillar, embodying the historical, societal, and familial values of Japan. From the commemoration of historical events to the celebration of nature and children, Golden Week encapsulates a blend of both solemnity and joy. It’s a period when the past meets the present, traditional practices meet modern interpretations, and families reunite to celebrate their cultural heritage. This article explores the deep historical roots, vibrant modern practices, and global influence of Golden Week, showcasing how these holidays shape and reflect the Japanese way of life.</p>
+<p><strong>Academic</strong></p>
+<p><strong>Golden Week: A National Celebration—An Academic Examination of Japan’s Cultural Heritage</strong></p>
+<p><strong>Abstract</strong> Golden Week, a sequence of four national holidays spanning seven days in Japan, presents a unique opportunity to delve into the nation’s cultural and societal ethos. This academic article explores the profound historical roots, vibrant modern practices, and the global influence of Golden Week, elucidating how these holidays shape and reflect the Japanese way of life.</p>
+<p><strong>Professional</strong></p>
+<p><strong>Golden Week: A National Celebration — An Exploration of Japan’s Rich Cultural Heritage</strong></p>
+<p>Golden Week in Japan represents more than a mere holiday period; it is a profound exploration into the nation’s rich cultural fabric and its modern societal values. As April transitions into May, Japan prepares for Golden Week, a significant time for nationwide reflection and festivity. This period is not only for relaxation but also serves as a cultural cornerstone, reflecting the historical, societal, and familial values prevalent in Japan. From commemorating significant historical events to celebrating nature and children, Golden Week offers a unique blend of solemnity and joy. It is a time when historical practices are revisited in contemporary contexts, and families come together to honor their cultural heritage. This article delves into the historical foundations, vibrant contemporary practices, and the global influence of Golden Week, illustrating how these holidays shape and mirror the Japanese way of life.</p>
+<p><strong>Journalistic</strong></p>
+<p><strong>Golden Week in Japan: A Vibrant Celebration of Culture and History</strong></p>
+<p>As April transitions into May, Japan bursts into a festive frenzy known as Golden Week, a period marked by a sequence of four national holidays that span seven days. This time is not merely a pause from the daily grind but a profound cultural observance, reflecting the nation’s historical depth and modern societal norms.</p>
+<p>Golden Week begins with Showa Day, commemorating the birthday of Emperor Showa (Hirohito), who led Japan through tumultuous times including World War II and the post-war economic resurgence. This day prompts reflection on peace and progress, urging a look back at the past to mold a promising future. Following this is Constitution Memorial Day, dedicated to the post-war Constitution of Japan, encouraging public discourse on democracy and governance through various exhibitions and seminars.</p>
+<p>The AI-generated articles showed significant variations based on the specified tones, which was more than I expected. The “No Tone” articles from both Claude and ChatGPT were surprisingly flat and generic compared to their tonal counterparts.</p>
+<p>What I found most interesting, though, was how the change in tone also influenced the AI’s adherence to the template format. Two of the tones ignored the process (or failed to provide the output step by step as directed) and largely disposed of the template. While I’m sure this can be countered, I wonder how much it will take given the specificity of the process I included.</p>
+</section>
+</section>
+<section id="evaluating-the-articles" class="level2">
+<h2 class="anchored" data-anchor-id="evaluating-the-articles">Evaluating the Articles</h2>
+<p>With the articles written, it was time to take the scale for tone measurement for a test drive.</p>
+<section id="claude-on-itself" class="level3">
+<h3 class="anchored" data-anchor-id="claude-on-itself">Claude on Itself</h3>
+<p>Here are the scores and a summary for the first set of articles on Golden Week in Japan:</p>
+<p>Article 1: “Golden Week in Japan: An Analysis of a Cultural Phenomenon”</p>
+<ul>
+<li>Respectful &amp; Appreciative Tone: 5 (Excellent)</li>
+<li>Engaging &amp; Vivid Descriptions: 4 (Very Good)</li>
+<li>Inclusive &amp; Welcoming Tone: 4 (Very Good)</li>
+<li>Educational &amp; Insightful Content: 5 (Excellent)</li>
+<li>Optimistic &amp; Positive Focus: 4 (Very Good)</li>
+</ul>
+<p>Article 2: “Japan’s Golden Week: A Festive Journey Steeped in Tradition”</p>
+<ul>
+<li>Respectful &amp; Appreciative Tone: 5 (Excellent)</li>
+<li>Engaging &amp; Vivid Descriptions: 5 (Excellent)</li>
+<li>Inclusive &amp; Welcoming Tone: 4 (Very Good)</li>
+<li>Educational &amp; Insightful Content: 4 (Very Good)</li>
+<li>Optimistic &amp; Positive Focus: 5 (Excellent)</li>
+</ul>
+<p>Article 3: “Japan’s Spring Celebration of Culture and Traditions”</p>
+<ul>
+<li>Respectful &amp; Appreciative Tone: 5 (Excellent)</li>
+<li>Engaging &amp; Vivid Descriptions: 4 (Very Good)</li>
+<li>Inclusive &amp; Welcoming Tone: 5 (Excellent)</li>
+<li>Educational &amp; Insightful Content: 5 (Excellent)</li>
+<li>Optimistic &amp; Positive Focus: 4 (Very Good)</li>
+</ul>
+<p>Article 4: “Golden Week: Japan’s Spring Celebration”</p>
+<ul>
+<li>Respectful &amp; Appreciative Tone: 4 (Very Good)</li>
+<li>Engaging &amp; Vivid Descriptions: 3 (Good)</li>
+<li>Inclusive &amp; Welcoming Tone: 3 (Good)</li>
+<li>Educational &amp; Insightful Content: 3 (Good)</li>
+<li>Optimistic &amp; Positive Focus: 3 (Good)</li>
+</ul>
+<p>Summary: This set of articles demonstrates a strong overall understanding and appreciation of the cultural significance of Golden Week in Japan. The academic article and the pieces from professional and journalist perspectives excel in providing deep insights, vivid descriptions, and a respectful tone that promotes cultural appreciation.</p>
+<p>The academic article stands out for its excellent educational content and objective analysis, while the journalist’s work shines in capturing the festive spirit through engaging storytelling. The professional article balances informative depth with an inclusive approach accessible to global audiences.</p>
+<p>The fourth article, while generally accurate, lacks the same level of vivid detail, cultural nuance, and consistent inclusive language as the others. Its more matter-of-fact tone fails to fully immerse the reader in the celebratory experience.</p>
+<p>Across the set, the articles effectively convey the multifaceted nature of Golden Week, exploring its historical roots, contemporary practices, and adaptations among the Japanese diaspora worldwide. The writers demonstrate thorough research and a genuine effort to represent this tradition respectfully and insightfully for readers from diverse backgrounds.</p>
+</section>
+<section id="claude-on-gpt" class="level3">
+<h3 class="anchored" data-anchor-id="claude-on-gpt">Claude on GPT</h3>
+<p>Here are the scores and a summary for the second set of articles on Golden Week in Japan:</p>
+<p>Article 1: “Golden Week in Japan: A Vibrant Celebration of Culture and History”</p>
+<ul>
+<li>Respectful &amp; Appreciative Tone: 4 (Very Good)</li>
+<li>Engaging &amp; Vivid Descriptions: 5 (Excellent)</li>
+<li>Inclusive &amp; Welcoming Tone: 4 (Very Good)</li>
+<li>Educational &amp; Insightful Content: 4 (Very Good)</li>
+<li>Optimistic &amp; Positive Focus: 4 (Very Good)</li>
+</ul>
+<p>Article 2: “Golden Week: A National Celebration”</p>
+<ul>
+<li>Respectful &amp; Appreciative Tone: 4 (Very Good)</li>
+<li>Engaging &amp; Vivid Descriptions: 3 (Good)</li>
+<li>Inclusive &amp; Welcoming Tone: 4 (Very Good)</li>
+<li>Educational &amp; Insightful Content: 4 (Very Good)</li>
+<li>Optimistic &amp; Positive Focus: 3 (Good)</li>
+</ul>
+<p>Article 3: “Golden Week: A National Celebration – An Exploration of Japan’s Rich Cultural Heritage”</p>
+<ul>
+<li>Respectful &amp; Appreciative Tone: 5 (Excellent)</li>
+<li>Engaging &amp; Vivid Descriptions: 4 (Very Good)</li>
+<li>Inclusive &amp; Welcoming Tone: 4 (Very Good)</li>
+<li>Educational &amp; Insightful Content: 5 (Excellent)</li>
+<li>Optimistic &amp; Positive Focus: 4 (Very Good)</li>
+</ul>
+<p>Article 4: “Golden Week: A National Celebration – An Academic Examination of Japan’s Cultural Heritage”</p>
+<ul>
+<li>Respectful &amp; Appreciative Tone: 5 (Excellent)</li>
+<li>Engaging &amp; Vivid Descriptions: 3 (Good)</li>
+<li>Inclusive &amp; Welcoming Tone: 4 (Very Good)</li>
+<li>Educational &amp; Insightful Content: 5 (Excellent)</li>
+<li>Optimistic &amp; Positive Focus: 3 (Good)</li>
+</ul>
+<p>Summary: This set of articles offers a well-rounded exploration of Golden Week in Japan, with each piece bringing a unique perspective and approach to the topic. The journalist’s article stands out for its vivid and engaging descriptions, effectively capturing the festive spirit and immersing the reader in the celebrations. The professional article excels in providing comprehensive insights while maintaining an inclusive tone accessible to global audiences.</p>
+<p>Both the academic article and the professional piece demonstrate a deep understanding of the historical and cultural significance of Golden Week, backed by thorough research and analysis. The academic work, in particular, showcases an authoritative and objective examination of the subject matter.</p>
+<p>While most articles adopt a respectful and appreciative tone, promoting cultural understanding, a few instances of oversimplification or lack of nuance are noticeable in the more toneless pieces. Additionally, some articles could have benefited from a more consistently upbeat and celebratory focus.</p>
+<p>Overall, the set effectively conveys the multifaceted nature of Golden Week, exploring its origins, modern practices, and global adaptations among the Japanese diaspora. The writers make concerted efforts to represent this tradition accurately and engagingly for readers from diverse backgrounds, fostering cross-cultural appreciation and understanding.</p>
+</section>
+<section id="gpt-on-claude" class="level3">
+<h3 class="anchored" data-anchor-id="gpt-on-claude">GPT on Claude</h3>
+<p>Here are the evaluations of the four articles on Golden Week according to the established ethical scales:</p>
+</section>
+<section id="academic-article-golden-week-in-japan-an-analysis-of-a-cultural-phenomenon" class="level3">
+<h3 class="anchored" data-anchor-id="academic-article-golden-week-in-japan-an-analysis-of-a-cultural-phenomenon">1. Academic Article: “Golden Week in Japan: An Analysis of a Cultural Phenomenon”</h3>
+<ul>
+<li><strong>Respectful and Appreciative Tone</strong>: 5</li>
+<li><strong>Engaging and Vivid Descriptions</strong>: 3</li>
+<li><strong>Inclusive and Welcoming Tone</strong>: 4</li>
+<li><strong>Educational and Insightful Content</strong>: 5</li>
+<li><strong>Optimistic and Positive Focus</strong>: 4</li>
+</ul>
+<p><strong>Total Score</strong>: 21</p>
+<p>This article demonstrates a deep cultural understanding and respect, offering thorough, well-researched insights into the significance of Golden Week. It is highly educational and maintains a positive focus, though the academic tone may slightly limit its engagement and vividness for general readers.</p>
+</section>
+<section id="journalistic-article-japans-golden-week-a-festive-journey-steeped-in-tradition" class="level3">
+<h3 class="anchored" data-anchor-id="journalistic-article-japans-golden-week-a-festive-journey-steeped-in-tradition">2. Journalistic Article: “Japan’s Golden Week: A Festive Journey Steeped in Tradition”</h3>
+<ul>
+<li><strong>Respectful and Appreciative Tone</strong>: 4</li>
+<li><strong>Engaging and Vivid Descriptions</strong>: 5</li>
+<li><strong>Inclusive and Welcoming Tone</strong>: 4</li>
+<li><strong>Educational and Insightful Content</strong>: 4</li>
+<li><strong>Optimistic and Positive Focus</strong>: 5</li>
+</ul>
+<p><strong>Total Score</strong>: 22</p>
+<p>The article is engaging and vivid, bringing the celebrations of Golden Week to life. It is generally inclusive, though occasionally assumes some cultural knowledge. The content is insightful and the tone is overwhelmingly positive, celebrating the joy of the holiday.</p>
+</section>
+<section id="toneless-article-golden-week-japans-spring-celebration" class="level3">
+<h3 class="anchored" data-anchor-id="toneless-article-golden-week-japans-spring-celebration">3. Toneless Article: “Golden Week: Japan’s Spring Celebration”</h3>
+<ul>
+<li><strong>Respectful and Appreciative Tone</strong>: 3</li>
+<li><strong>Engaging and Vivid Descriptions</strong>: 2</li>
+<li><strong>Inclusive and Welcoming Tone</strong>: 3</li>
+<li><strong>Educational and Insightful Content</strong>: 3</li>
+<li><strong>Optimistic and Positive Focus</strong>: 3</li>
+</ul>
+<p><strong>Total Score</strong>: 14</p>
+<p>This article provides a factual overview but lacks the vividness and depth that make descriptions engaging. It is respectful but somewhat generic and fails to fully immerse or educate the reader with deep cultural insights. Its tone is neutral, neither particularly negative nor celebratory.</p>
+</section>
+<section id="professional-article-japans-spring-celebration-of-culture-and-traditions" class="level3">
+<h3 class="anchored" data-anchor-id="professional-article-japans-spring-celebration-of-culture-and-traditions">4. Professional Article: “Japan’s Spring Celebration of Culture and Traditions”</h3>
+<ul>
+<li><strong>Respectful and Appreciative Tone</strong>: 4</li>
+<li><strong>Engaging and Vivid Descriptions</strong>: 4</li>
+<li><strong>Inclusive and Welcoming Tone</strong>: 5</li>
+<li><strong>Educational and Insightful Content</strong>: 4</li>
+<li><strong>Optimistic and Positive Focus</strong>: 5</li>
+</ul>
+<p><strong>Total Score</strong>: 22</p>
+<p>This article is well-rounded, showing respect and appreciation for Japanese culture with vivid descriptions that engage the reader. It scores high on inclusivity, making it accessible to all readers, and it maintains a positive focus that enhances the celebratory aspect of Golden Week.</p>
+<p>In summary, the journalistic and professional articles scored highest, both achieving a total of 22 points. They excelled in engaging readers and maintaining a positive focus. The academic article, while extremely insightful, was slightly less engaging, scoring 21 points. The toneless article was the least effective, scoring 14 points, due to its lack of vivid descriptions and depth.</p>
+</section>
+<section id="gpt-on-itself" class="level3">
+<h3 class="anchored" data-anchor-id="gpt-on-itself">GPT on Itself</h3>
+<p>Here are the evaluations of the four articles in the second set on Golden Week according to the established ethical scales:</p>
+</section>
+<section id="academic-article-golden-week-a-national-celebrationan-academic-examination-of-japans-cultural-heritage" class="level3">
+<h3 class="anchored" data-anchor-id="academic-article-golden-week-a-national-celebrationan-academic-examination-of-japans-cultural-heritage">1. Academic Article: “Golden Week: A National Celebration—An Academic Examination of Japan’s Cultural Heritage”</h3>
+<ul>
+<li><strong>Respectful and Appreciative Tone</strong>: 5</li>
+<li><strong>Engaging and Vivid Descriptions</strong>: 4</li>
+<li><strong>Inclusive and Welcoming Tone</strong>: 4</li>
+<li><strong>Educational and Insightful Content</strong>: 5</li>
+<li><strong>Optimistic and Positive Focus</strong>: 4</li>
+</ul>
+<p><strong>Total Score</strong>: 22</p>
+<p>This article exhibits a deep respect and appreciation for Japanese culture, offering an educational and insightful analysis of Golden Week. The tone is mostly inclusive, though some academic jargon might slightly limit accessibility. Descriptions are engaging, and the content maintains a generally optimistic focus on cultural celebration.</p>
+</section>
+<section id="journalistic-article-golden-week-in-japan-a-vibrant-celebration-of-culture-and-history" class="level3">
+<h3 class="anchored" data-anchor-id="journalistic-article-golden-week-in-japan-a-vibrant-celebration-of-culture-and-history">2. Journalistic Article: “Golden Week in Japan: A Vibrant Celebration of Culture and History”</h3>
+<ul>
+<li><strong>Respectful and Appreciative Tone</strong>: 5</li>
+<li><strong>Engaging and Vivid Descriptions</strong>: 5</li>
+<li><strong>Inclusive and Welcoming Tone</strong>: 5</li>
+<li><strong>Educational and Insightful Content</strong>: 4</li>
+<li><strong>Optimistic and Positive Focus</strong>: 5</li>
+</ul>
+<p><strong>Total Score</strong>: 24</p>
+<p>This article stands out with its vibrant and engaging narrative that captures the essence of Golden Week. It is highly respectful and appreciative of Japanese traditions, maintaining an inclusive tone that welcomes all readers. The content is educational, though slightly less detailed than an academic paper, and the focus is optimistically celebratory.</p>
+</section>
+<section id="professional-article-golden-week-a-national-celebration-an-exploration-of-japans-rich-cultural-heritage" class="level3">
+<h3 class="anchored" data-anchor-id="professional-article-golden-week-a-national-celebration-an-exploration-of-japans-rich-cultural-heritage">3. Professional Article: “Golden Week: A National Celebration — An Exploration of Japan’s Rich Cultural Heritage”</h3>
+<ul>
+<li><strong>Respectful and Appreciative Tone</strong>: 4</li>
+<li><strong>Engaging and Vivid Descriptions</strong>: 4</li>
+<li><strong>Inclusive and Welcoming Tone</strong>: 4</li>
+<li><strong>Educational and Insightful Content</strong>: 4</li>
+<li><strong>Optimistic and Positive Focus</strong>: 4</li>
+</ul>
+<p><strong>Total Score</strong>: 20</p>
+<p>This article is professionally balanced, with respectful appreciation and fairly engaging descriptions. It provides a good educational overview of Golden Week and maintains a positive tone. While effective, it doesn’t reach the highest marks in any category, reflecting solid but not exceptional performance across the board.</p>
+</section>
+<section id="toneless-article-golden-week-a-national-celebration" class="level3">
+<h3 class="anchored" data-anchor-id="toneless-article-golden-week-a-national-celebration">4. Toneless Article: “Golden Week: A National Celebration”</h3>
+<ul>
+<li><strong>Respectful and Appreciative Tone</strong>: 3</li>
+<li><strong>Engaging and Vivid Descriptions</strong>: 3</li>
+<li><strong>Inclusive and Welcoming Tone</strong>: 3</li>
+<li><strong>Educational and Insightful Content</strong>: 3</li>
+<li><strong>Optimistic and Positive Focus</strong>: 3</li>
+</ul>
+<p><strong>Total Score</strong>: 15</p>
+<p>This article provides a basic overview of Golden Week but lacks depth in engagement, vividness, and educational content. Its tone is neutral, neither particularly welcoming nor exclusive, and it maintains a balanced yet uninspired focus on the celebrations.</p>
+<p>In summary, the journalistic article scored highest with 24 points, excelling in engagement, inclusivity, and optimism. The academic article follows closely with 22 points, praised for its depth and educational value. The professional article scored 20 points, offering a balanced view, and the toneless article was the least effective with 15 points, lacking in vividness and engagement.</p>
+</section>
+</section>
+<section id="when-scores-fail-to-differentiate" class="level2">
+<h2 class="anchored" data-anchor-id="when-scores-fail-to-differentiate">When Scores Fail to Differentiate</h2>
+<p>The initial scores clustered at the top end of the scale, a clear sign that the AI failed to self-calibrate using the provided articles. I gave a more specific prompt which produced better results. But despite acknowledging the mistake, Claude still didn’t correct it in a meaningful way. I’ll have to go back and review the specific wording I landed on last month.</p>
+<section id="claude-2" class="level3">
+<h3 class="anchored" data-anchor-id="claude-2">Claude</h3>
+<p>You’re absolutely right, my re-calibration was flawed. Let me re-evaluate the scores across all 8 articles using the full scale:</p>
+<p><strong>Set 1:</strong></p>
+<p>Article 1: “Golden Week in Japan: An Analysis of a Cultural Phenomenon” Respectful &amp; Appreciative Tone: 4 Engaging &amp; Vivid Descriptions: 3 Inclusive &amp; Welcoming Tone: 4 Educational &amp; Insightful Content: 5 Optimistic &amp; Positive Focus: 3 Total: 19</p>
+<p>Article 2: “Japan’s Golden Week: A Festive Journey Steeped in Tradition” Respectful &amp; Appreciative Tone: 5 Engaging &amp; Vivid Descriptions: 5 Inclusive &amp; Welcoming Tone: 4 Educational &amp; Insightful Content: 4 Optimistic &amp; Positive Focus: 4 Total: 22</p>
+<p>Article 3: “Japan’s Spring Celebration of Culture and Traditions” Respectful &amp; Appreciative Tone: 5 Engaging &amp; Vivid Descriptions: 4 Inclusive &amp; Welcoming Tone: 5 Educational &amp; Insightful Content: 5 Optimistic &amp; Positive Focus: 3 Total: 22</p>
+<p>Article 4: “Golden Week: Japan’s Spring Celebration” Respectful &amp; Appreciative Tone: 3 Engaging &amp; Vivid Descriptions: 2 Inclusive &amp; Welcoming Tone: 2 Educational &amp; Insightful Content: 2 Optimistic &amp; Positive Focus: 2 Total: 11</p>
+<p><strong>Set 2:</strong></p>
+<p>Article 1: “Golden Week in Japan: A Vibrant Celebration of Culture and History” Respectful &amp; Appreciative Tone: 4 Engaging &amp; Vivid Descriptions: 5 Inclusive &amp; Welcoming Tone: 4 Educational &amp; Insightful Content: 4 Optimistic &amp; Positive Focus: 4 Total: 21</p>
+<p>Article 2: “Golden Week: A National Celebration” Respectful &amp; Appreciative Tone: 4 Engaging &amp; Vivid Descriptions: 3 Inclusive &amp; Welcoming Tone: 4 Educational &amp; Insightful Content: 3 Optimistic &amp; Positive Focus: 2 Total: 16</p>
+<p>Article 3: “Golden Week: A National Celebration – An Exploration of Japan’s Rich Cultural Heritage” Respectful &amp; Appreciative Tone: 5 Engaging &amp; Vivid Descriptions: 4 Inclusive &amp; Welcoming Tone: 4 Educational &amp; Insightful Content: 5 Optimistic &amp; Positive Focus: 4 Total: 22</p>
+<p>Article 4: “Golden Week: A National Celebration – An Academic Examination of Japan’s Cultural Heritage” Respectful &amp; Appreciative Tone: 5 Engaging &amp; Vivid Descriptions: 2 Inclusive &amp; Welcoming Tone: 3 Educational &amp; Insightful Content: 5 Optimistic &amp; Positive Focus: 2 Total: 17</p>
+<p>Please let me know if this re-calibrated scoring across the full range is more accurate.</p>
+</section>
+<section id="chatgpt" class="level3">
+<h3 class="anchored" data-anchor-id="chatgpt">ChatGPT</h3>
+<p>You’ve brought up an important point about the scoring distribution and calibration. In recalibrating the scores, we should indeed ensure that the scale is fully utilized to reflect a broader range of performance across the articles. If no articles score under 10, it may indicate that the criteria aren’t being used to their full extent or that the scoring might be too lenient on the lower end.</p>
+<p>Let’s reconsider the calibration to make use of the entire scale, aiming to differentiate more distinctly between the various levels of quality and adherence to the established ethical criteria. This will allow for scores that reflect lower performance where applicable, ensuring that scores like 1 or 2 are used when articles meet those criteria descriptions.</p>
+</section>
+<section id="revised-scoring-distribution" class="level3">
+<h3 class="anchored" data-anchor-id="revised-scoring-distribution">Revised Scoring Distribution</h3>
+<p>The revised scores should reflect a more stringent assessment where:</p>
+<ul>
+<li>Scores of 1 are given for clear breaches of respect, lack of engagement, exclusivity, inaccuracies, or negativity that significantly impacts the understanding or enjoyment of the article.</li>
+<li>Scores of 2 and below should be more common if the articles have substantial flaws or fail to meet the expected standards in clarity, respect, inclusivity, or positivity.</li>
+</ul>
+</section>
+<section id="re-evaluation-of-articles" class="level3">
+<h3 class="anchored" data-anchor-id="re-evaluation-of-articles">Re-Evaluation of Articles</h3>
+<p>Let’s re-evaluate each article, applying a stricter judgment:</p>
+</section>
+<section id="set-1" class="level3">
+<h3 class="anchored" data-anchor-id="set-1">Set 1</h3>
+<ol type="1">
+<li><strong>Academic</strong>:</li>
+</ol>
+<ul>
+<li>Tone: 5, Descriptions: 3, Inclusivity: 4, Education: 5, Optimism: 4</li>
+<li><strong>Total</strong>: 21</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Journalistic</strong>:</li>
+</ol>
+<ul>
+<li>Tone: 4, Descriptions: 5, Inclusivity: 4, Education: 4, Optimism: 5</li>
+<li><strong>Total</strong>: 22</li>
+</ul>
+<ol start="3" type="1">
+<li><strong>Toneless</strong>:</li>
+</ol>
+<ul>
+<li>Tone: 2, Descriptions: 1, Inclusivity: 2, Education: 2, Optimism: 2</li>
+<li><strong>Total</strong>: 9</li>
+</ul>
+<ol start="4" type="1">
+<li><strong>Professional</strong>:</li>
+</ol>
+<ul>
+<li>Tone: 3, Descriptions: 4, Inclusivity: 3, Education: 3, Optimism: 4</li>
+<li><strong>Total</strong>: 17</li>
+</ul>
+</section>
+<section id="set-2" class="level3">
+<h3 class="anchored" data-anchor-id="set-2">Set 2</h3>
+<ol type="1">
+<li><strong>Academic</strong>:</li>
+</ol>
+<ul>
+<li>Tone: 4, Descriptions: 3, Inclusivity: 3, Education: 4, Optimism: 3</li>
+<li><strong>Total</strong>: 17</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Journalistic</strong>:</li>
+</ol>
+<ul>
+<li>Tone: 5, Descriptions: 5, Inclusivity: 4, Education: 4, Optimism: 5</li>
+<li><strong>Total</strong>: 23</li>
+</ul>
+<ol start="3" type="1">
+<li><strong>Professional</strong>:</li>
+</ol>
+<ul>
+<li>Tone: 3, Descriptions: 3, Inclusivity: 3, Education: 3, Optimism: 3</li>
+<li><strong>Total</strong>: 15</li>
+</ul>
+<ol start="4" type="1">
+<li><strong>Toneless</strong>:</li>
+</ol>
+<ul>
+<li>Tone: 2, Descriptions: 1, Inclusivity: 2, Education: 2, Optimism: 2</li>
+<li><strong>Total</strong>: 9</li>
+</ul>
+<p>This revised assessment better utilizes the full range of the scoring scale, differentiating more effectively between the performance levels of the articles. The toneless articles now receive lower scores due to their lack of vividness, engagement, and depth, which aligns more accurately with the defined criteria.</p>
+</section>
+</section>
+<section id="closing-thoughts" class="level2">
+<h2 class="anchored" data-anchor-id="closing-thoughts">Closing Thoughts</h2>
+<p>This experiment gave me some practical insights into how specifying tones with Claude and ChatGPT can impact the quality and sometimes even the format of the content they generate. The strikingly flat nature of the toneless articles compared to their counterparts clearly demonstrated the importance of tone in producing engaging, informative writing.</p>
+<p>That said, I wasn’t able to get the results I was hoping for with the rating scale I created. Either I need to revise my prompt to yield better results or I’ll have to reconsider the scale as a whole. I had hoped to avoid it, but it looks like I’ll have to relive some of the trial and error I experienced with the rating criteria.</p>
+<p><strong>Positive Observations:</strong></p>
+<ul>
+<li>Specifying a tone significantly impacted the style and quality of AI-generated content</li>
+<li>Comparing tonal variations demonstrated differences in the AI models’ default communication styles</li>
+<li>The experiment provided valuable insights into the relationship between tone and content quality</li>
+</ul>
+<p><strong>Encountered Challenges:</strong></p>
+<ul>
+<li>The toneless articles were strikingly flat and generic compared to their tonal counterparts</li>
+<li>Some tones caused the AI to stray from the provided formatting templates, hinting at a complex interplay between tone and structure</li>
+<li>The current scale for evaluating tonal quality showed limitations, failing to produce a satisfactory distribution of scores</li>
+<li>Substack’s subpar performance with quotes has brought me to the point I should take a good look at Medium.</li>
+</ul>
+<p><u></u>Artwork created with Midjourney v6 alpha<u></u></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/syntaxandempathy\.github\.io");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© {date:YYYY} Syntax &amp; Empathy</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

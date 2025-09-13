@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.33">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>ai-trials-july-pt-2 – Syntax &amp; Empathy</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-b3278e108132d533448b7dd2c35bcebf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../../index.html">
+    <span class="navbar-title">Syntax &amp; Empathy</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../articles/"> 
+<span class="menu-text">Articles</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../resources/"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#tldr" id="toc-tldr" class="nav-link active" data-scroll-target="#tldr">TL;DR</a>
+  <ul class="collapse">
+  <li><a href="#ai-models" id="toc-ai-models" class="nav-link" data-scroll-target="#ai-models">AI Models:</a></li>
+  <li><a href="#process" id="toc-process" class="nav-link" data-scroll-target="#process">Process</a></li>
+  <li><a href="#holidays" id="toc-holidays" class="nav-link" data-scroll-target="#holidays">Holidays:</a></li>
+  </ul></li>
+  <li><a href="#my-experience" id="toc-my-experience" class="nav-link" data-scroll-target="#my-experience">My Experience</a>
+  <ul class="collapse">
+  <li><a href="#scoring" id="toc-scoring" class="nav-link" data-scroll-target="#scoring">Scoring</a></li>
+  <li><a href="#charting-and-visualization" id="toc-charting-and-visualization" class="nav-link" data-scroll-target="#charting-and-visualization">Charting and Visualization</a></li>
+  </ul></li>
+  <li><a href="#insights-observations" id="toc-insights-observations" class="nav-link" data-scroll-target="#insights-observations">Insights &amp; Observations</a>
+  <ul class="collapse">
+  <li><a href="#the-good" id="toc-the-good" class="nav-link" data-scroll-target="#the-good">The Good</a></li>
+  <li><a href="#the-bad" id="toc-the-bad" class="nav-link" data-scroll-target="#the-bad">The Bad</a></li>
+  <li><a href="#the-ugly" id="toc-the-ugly" class="nav-link" data-scroll-target="#the-ugly">The Ugly</a></li>
+  </ul></li>
+  <li><a href="#whats-next" id="toc-whats-next" class="nav-link" data-scroll-target="#whats-next">What’s Next?</a></li>
+  <li><a href="#data-visualizations" id="toc-data-visualizations" class="nav-link" data-scroll-target="#data-visualizations">Data &amp; Visualizations</a>
+  <ul class="collapse">
+  <li><a href="#heatmaps" id="toc-heatmaps" class="nav-link" data-scroll-target="#heatmaps">Heatmaps</a></li>
+  <li><a href="#line-charts" id="toc-line-charts" class="nav-link" data-scroll-target="#line-charts">Line Charts</a></li>
+  <li><a href="#box-and-whisker-plot" id="toc-box-and-whisker-plot" class="nav-link" data-scroll-target="#box-and-whisker-plot">Box and Whisker Plot</a></li>
+  <li><a href="#parallel-coordinates-plot" id="toc-parallel-coordinates-plot" class="nav-link" data-scroll-target="#parallel-coordinates-plot">Parallel Coordinates Plot</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<p><u></u>Image created with Midjourney v6 alpha### Preface</p>
+<p>This post is part of a year-long <u>initiative where I employ AI to create content</u> about holiday traditions worldwide. The objective is to observe how various AI tools perform and improve in content creation with minimal human intervention over time. This is the 2nd of 2 articles for the month of <u>July</u>.</p>
+<p><em>Prompts and interactions with different AI models will be documented as they occur, providing insights into the methodologies, challenges, and adjustments made throughout the project</em></p>
+<section id="tldr" class="level2">
+<h2 class="anchored" data-anchor-id="tldr">TL;DR</h2>
+<p>This month, I tested roles created by current versions of my GPT across five holidays. The results were underwhelming. GPT-4 showed the most inconsistency, while Claude performed better with JSON than XML. Despite trying various combinations of roles and inputs, I saw no significant improvement in performance.</p>
+<p>After using Claude to analyze 60 sets of scores, I’ve concluded that the current method of creating roles has reached a point of diminishing returns. While still better than basic roles, these tests show minimal gains between third and fourth generation roles. This suggests I need to reconsider my approach to achieve additional improvements. However, for now, I’m setting this part of the project aside to focus on other areas.</p>
+<ul>
+<li>Claude outperformed its peers across attributes and role-input combinations.</li>
+<li>Third generation roles (a.k.a. R3) benefited slightly from XML authored by GPT-4o.</li>
+<li>Fourth generation (a.k.a. R4) results were marginally better than R3, albeit far more verbose.</li>
+<li>GPT-4, recently assigned legacy status, was the least consistent across articles.</li>
+<li>Using Claude and GPT-4o to create charts was fun, I may have gotten carried away…</li>
+</ul>
+<section id="ai-models" class="level3">
+<h3 class="anchored" data-anchor-id="ai-models">AI Models:</h3>
+<ul>
+<li>Claude 3.5 Sonnet</li>
+<li>ChatGPT-4</li>
+<li>ChatGPT-4o</li>
+</ul>
+</section>
+<section id="process" class="level3">
+<h3 class="anchored" data-anchor-id="process">Process</h3>
+<p>To reduce bias and increase the number of scores for analysis, I rescored the holidays from <u>July Part 1</u> and applied the same approach to them, in addition to the holidays scheduled for this post:</p>
+<ol type="1">
+<li>Created new R3 and R4 roles for each article using various AI models and input types.</li>
+<li>Standardized all remaining prompts to validate prior experiments on role granularity.</li>
+<li>Tasked each AI with scoring every article using the same R3 Editor role.</li>
+<li>Directed Claude to analyze the data and recommend charts, then used ChatGPT-4o to produce these visualizations.</li>
+</ol>
+</section>
+<section id="holidays" class="level3">
+<h3 class="anchored" data-anchor-id="holidays">Holidays:</h3>
+<ol type="1">
+<li>Egyptian Revolution of 1952 (July 23)</li>
+<li>July 4th in the United States</li>
+<li>Star Festival in Japan (July 7)</li>
+<li>Ashari Purnima in Bangladesh (July 7-8)</li>
+<li>Kupala Night in Ukraine (July 6-7)</li>
+</ol>
+</section>
+</section>
+<section id="my-experience" class="level2">
+<h2 class="anchored" data-anchor-id="my-experience">My Experience</h2>
+<p>I found the process of scoring articles both frustrating and tedious. Working simultaneously with Claude, GPT-4, and GPT-4 revealed that either Claude 3 or 3.5 had introduced notable improvements in data management, which ultimately influenced my approach later in the process.</p>
+<section id="scoring" class="level3">
+<h3 class="anchored" data-anchor-id="scoring">Scoring</h3>
+<p><strong>Claude</strong></p>
+<p>Claude completed all scoring tasks without significant problems, despite the 5-file upload limit. Its excellent recall allowed it to reference articles by specific parameters in the names (e.g., <code>all articles with -C- in the name</code>) without needing repeated uploads. When I tried to add them a second time, Claude firmly prevented me from doing so, making it clear it hadn’t forgotten - reminiscent of my grandmother scolding me for sneaking candy before dinner as a child.</p>
+<p><strong>GPT-4</strong></p>
+<p>GPT-4’s performance varied across sessions. Some sessions completed without issues, while other attempts were littered with scoring problems. In some sessions, I uploaded the relevant articles for every score set, splitting larger sets when necessary. In others, I relied on GPT-4’s recall capabilities, with mixed results. While GPT-4’s recall surpassed GPT-4o’s, it still fell short of Claude’s capabilities.</p>
+<p><strong>GPT-4o</strong></p>
+<p>GPT-4 consistently struggled throughout the scoring sessions. Despite instructions to produce Markdown tables, it provided criterion scores in bullet lists alongside the tables. A recurring issue was the frequent occurrence of tied scores, which required additional prompts to get the AI to conduct a new round of scoring. I had to remind it that ties were not allowed according to its instructions. I have to assume, at this time, that the diminished performance is indicative of increased rigor when providing instruction.</p>
+<p><strong>Better Editors</strong></p>
+<p>To improve performance as sessions progressed, I employed these tactics:</p>
+<ul>
+<li>Instructed GPT-4 and GPT-4o to list articles before scoring, improving recall of previously provided content.</li>
+<li>Referenced ‘editor instructions’ from XML/JSON inputs when directing GPT-4o, reducing ties in final scores.</li>
+</ul>
+</section>
+<section id="charting-and-visualization" class="level3">
+<h3 class="anchored" data-anchor-id="charting-and-visualization">Charting and Visualization</h3>
+<p>I typically use ChatGPT for data analysis, but Claude’s superior performance in scoring and handling the large volume of scores influenced my decision to use it for this task. Claude’s excellent memory ensured access earlier information, and its improved data management eliminated the need for detailed prompts.</p>
+<p>I tasked Claude with suggesting appropriate charts and providing the necessary datasets. For visualization and chart creation, I turned to ChatGPT-4. I was disappointed that the default interactive views failed to display less common chart types correctly, seemingly due to an external plugin it was referencing. Switching to static views resolved these display problems effectively.</p>
+<p><u></u>The only chart I really needed for this round.After creating the charts recommended by Claude, which were more than enough, I went on a chart creation spree to see what GPT-4o could do with the data it had been supplied, I’ve only included a fraction of these in the appendix. When it was all said and done, I asked Claude what its insights based on the data were.</p>
+<p><strong>Claude’s Summary:</strong></p>
+<p>Certainly. After analyzing all the data across the various charts and visualizations, here are the top 5 insights:</p>
+<ol type="1">
+<li>Model Performance Variability: Claude consistently outperforms GPT-4 and GPT-4o across most attributes and role-input combinations. This is evident in the radar charts, parallel coordinates plot, and the individual model heatmaps. Claude’s scores are generally higher and more consistent across different criteria.</li>
+<li>Role and Input Type Effectiveness: The composite heatmap reveals that R3 (Role 3) performs slightly better with 4oxml input (4.353), while R4 (Role 4) shows better results with jsn input (4.323). This suggests that different roles may benefit from specific input types, although the differences are relatively small.</li>
+<li>Performance Fluctuations Across Holidays: The line chart showing performance across holidays indicates significant fluctuations, especially for GPT-4. Revolution Day stands out with notably high scores for GPT-4, while other holidays show more varied performance across models. This suggests that the content or context of different holidays may impact model performance differently.</li>
+<li>Attribute-Specific Strengths: The radar charts and parallel coordinates plot demonstrate that all models tend to score lower on Originality and Critical Analysis compared to other attributes. Conversely, attributes like Respectful Tone, Factual Correctness, and Cultural Accuracy often receive higher scores across models.</li>
+<li>Consistency vs.&nbsp;Variability: The box plots reveal that Claude generally shows higher median scores and less variability in its performance across different role-input combinations. In contrast, GPT-4 demonstrates the most variability, particularly for R3 combinations. This suggests that Claude may be more reliable across different scenarios, while GPT-4’s performance is more context-dependent.</li>
+</ol>
+<p>These insights highlight the complex interplay between models, roles, input types, and evaluation criteria, emphasizing the importance of considering multiple factors when assessing AI language model performance in the context of cultural holiday descriptions.</p>
+</section>
+</section>
+<section id="insights-observations" class="level2">
+<h2 class="anchored" data-anchor-id="insights-observations">Insights &amp; Observations</h2>
+<section id="the-good" class="level3">
+<h3 class="anchored" data-anchor-id="the-good">The Good</h3>
+<ul>
+<li>Standardized approach successfully isolated the author role’s impact across 60 articles.</li>
+<li>Claude demonstrated impressive efficiency in scoring tasks and data analysis.</li>
+<li>Extensive chart library creation provided valuable insights into GPT-4o’s visualization capabilities.</li>
+</ul>
+</section>
+<section id="the-bad" class="level3">
+<h3 class="anchored" data-anchor-id="the-bad">The Bad</h3>
+<ul>
+<li>GPT-4o persistently struggled, often requiring multiple rescoring attempts due to tied scores.</li>
+<li>Interactive chart views in GPT-4 failed to correctly display less common chart types.</li>
+<li>The newest role maker failed to show any real benefit.</li>
+</ul>
+</section>
+<section id="the-ugly" class="level3">
+<h3 class="anchored" data-anchor-id="the-ugly">The Ugly</h3>
+<p>When scoring Kupala Night, ChatGPT-4 became obsessed, rescoring the first set five times with questionable results. Ironically, this was the only time GPT-4 actually checked its work as instructed. Even after I tried to nudge it along, it continued chasing its tail. I eventually abandoned the session. Using the same prompt in the next session did not exhibit this issue.</p>
+<p>Silly puppy. 🐶</p>
+</section>
+</section>
+<section id="whats-next" class="level2">
+<h2 class="anchored" data-anchor-id="whats-next">What’s Next?</h2>
+<ul>
+<li>I plan to explore using JSON in GPT-4 after reading about its potential, especially given Claude’s performance.</li>
+<li>August is peppered with single-day holidays. I will start learning about prompting best practices and put them to the test - the best practices, not the holidays.</li>
+<li>While I enjoyed my first foray into creating charts with GPT-4, the charts themselves left more than a little to be desired. I’ll see if I can’t fix that.</li>
+</ul>
+</section>
+<section id="data-visualizations" class="level2">
+<h2 class="anchored" data-anchor-id="data-visualizations">Data &amp; Visualizations</h2>
+<section id="heatmaps" class="level3">
+<h3 class="anchored" data-anchor-id="heatmaps">Heatmaps</h3>
+<p>R4-jsn performs best overall, followed closely by R3-4oxml, while R4-xml and R3-4xml show lower performance across models.Chart suitability:</p>
+<p><u></u><u></u><code>Claude (C): Role,xml,jsn,4xml,4oxml R3,N/A,N/A,4.356,4.402 R4,4.412,4.494,N/A,N/A GPT-4 (4): Role,xml,jsn,4xml,4oxml R3,N/A,N/A,4.320,4.376 R4,4.250,4.276,N/A,N/A GPT-4o (4o): Role,xml,jsn,4xml,4oxml R3,N/A,N/A,4.288,4.280 R4,4.282,4.198,N/A,N/A</code></p>
+<p>Stacked Bar Chart</p>
+<p>Performance varies significantly across holidays and models, with no consistent leader. GPT-4 shows high variability, while Claude tends to perform more consistently.</p>
+<p><u></u><code>Holiday,Model,R3 Average,R4 Average Kupala Night,C,4.320,4.478 Kupala Night,4,4.295,4.258 Kupala Night,4o,4.135,4.234 Star Festival,C,4.365,4.453 Star Festival,4,4.175,4.318 Star Festival,4o,4.125,4.248 Ashari Purnima,C,4.190,4.380 Ashari Purnima,4,3.900,3.918 Ashari Purnima,4o,4.245,4.210 Revolution Day,C,4.435,4.453 Revolution Day,4,4.850,4.470 Revolution Day,4o,4.473,4.220 July 4th,C,4.360,4.575 July 4th,4,4.000,3.905 July 4th,4o,4.225,4.233</code></p>
+</section>
+<section id="line-charts" class="level3">
+<h3 class="anchored" data-anchor-id="line-charts">Line Charts</h3>
+<p>Performance fluctuates across holidays for all models and role-input combinations, with Revolution Day showing notably high scores for GPT-4.</p>
+<p><u></u><u></u>### Radar Charts</p>
+<p>Models show different strengths across attributes. Claude tends to score higher overall, while GPT-4 and GPT-4o show more variation across attributes.</p>
+<p><u></u><u></u><u></u><u></u><u></u><u></u><code>Claude (C): Attribute,R3-4xml,R3-4oxml,R4-xml,R4-jsn Ethical Considerations,4.32,4.38,4.40,4.48 Cultural Accuracy,4.42,4.48,4.50,4.58 Respectful Tone,4.52,4.58,4.60,4.68 Originality,3.92,3.98,4.00,4.08 Critical Analysis,4.22,4.28,4.30,4.38 Factual Correctness,4.52,4.58,4.60,4.68 Educational Content,4.42,4.48,4.50,4.58 Clarity,4.32,4.38,4.40,4.48 Engagement,4.12,4.18,4.20,4.28 Information Density,4.22,4.28,4.30,4.38 Positive Focus,4.42,4.48,4.50,4.58 GPT-4 (4): Attribute,R3-4xml,R3-4oxml,R4-xml,R4-jsn Ethical Considerations,4.20,4.20,4.20,4.20 Cultural Accuracy,4.20,4.20,4.20,4.20 Respectful Tone,4.20,4.20,4.20,4.20 Originality,3.68,3.76,3.66,3.66 Critical Analysis,3.78,3.78,3.72,3.74 Factual Correctness,4.18,4.18,4.18,4.14 Educational Content,4.18,4.18,4.18,4.14 Clarity,4.38,4.46,4.28,4.14 Engagement,4.10,4.10,4.08,4.00 Information Density,4.18,4.18,4.18,4.14 Positive Focus,4.18,4.18,4.18,4.12 GPT-4o (4o): Attribute,R3-4xml,R3-4oxml,R4-xml,R4-jsn Ethical Considerations,4.24,4.20,4.30,4.10 Cultural Accuracy,4.28,4.28,4.34,4.20 Respectful Tone,4.24,4.24,4.34,4.14 Originality,3.88,3.88,3.98,3.74 Critical Analysis,3.88,3.84,3.98,3.74 Factual Correctness,4.24,4.24,4.34,4.14 Educational Content,4.24,4.24,4.34,4.14 Clarity,4.20,4.24,4.30,4.10 Engagement,4.20,4.28,4.26,4.14 Information Density,4.16,4.20,4.22,4.10 Positive Focus,4.24,4.24,4.34,4.14</code></p>
+</section>
+<section id="box-and-whisker-plot" class="level3">
+<h3 class="anchored" data-anchor-id="box-and-whisker-plot">Box and Whisker Plot</h3>
+<p>Claude shows higher median scores and less variability, while GPT-4 shows the most variability, particularly for R3 combinations.</p>
+<p><u></u><u></u><u></u><code>Claude (C): Role-Input,Min,Q1,Median,Q3,Max R3-4xml,4.110,4.240,4.275,4.310,4.360 R3-4oxml,4.270,4.365,4.410,4.450,4.510 R4-xml,4.330,4.410,4.415,4.430,4.475 R4-jsn,4.430,4.475,4.495,4.530,4.540 GPT-4 (4): Role-Input,Min,Q1,Median,Q3,Max R3-4xml,3.930,3.950,4.210,4.270,4.930 R3-4oxml,3.870,4.050,4.140,4.320,4.770 R4-xml,3.855,3.910,4.225,4.470,4.950 R4-jsn,3.910,3.910,4.190,4.275,4.840 GPT-4o (4o): Role-Input,Min,Q1,Median,Q3,Max R3-4xml,4.000,4.060,4.130,4.300,4.510 R3-4oxml,4.140,4.190,4.190,4.435,4.450 R4-xml,4.240,4.280,4.300,4.350,4.350 R4-jsn,4.080,4.095,4.180,4.235,4.400</code></p>
+</section>
+<section id="parallel-coordinates-plot" class="level3">
+<h3 class="anchored" data-anchor-id="parallel-coordinates-plot">Parallel Coordinates Plot</h3>
+<p>Models show different patterns across attributes. Claude tends to have higher scores across most attributes, while GPT-4 and GPT-4o show more variation.</p>
+<p><u></u><code>Model,Role-Input,Ethical Considerations,Cultural Accuracy,Respectful Tone,Originality,Critical Analysis,Factual Correctness,Educational Content,Clarity,Engagement,Information Density,Positive Focus Claude,R3-4xml,4.32,4.42,4.52,3.92,4.22,4.52,4.42,4.32,4.12,4.22,4.42 Claude,R3-4oxml,4.38,4.48,4.58,3.98,4.28,4.58,4.48,4.38,4.18,4.28,4.48 Claude,R4-xml,4.40,4.50,4.60,4.00,4.30,4.60,4.50,4.40,4.20,4.30,4.50 Claude,R4-jsn,4.48,4.58,4.68,4.08,4.38,4.68,4.58,4.48,4.28,4.38,4.58 GPT-4,R3-4xml,4.20,4.20,4.20,3.68,3.78,4.18,4.18,4.38,4.10,4.18,4.18 GPT-4,R3-4oxml,4.20,4.20,4.20,3.76,3.78,4.18,4.18,4.46,4.10,4.18,4.18 GPT-4,R4-xml,4.20,4.20,4.20,3.66,3.72,4.18,4.18,4.28,4.08,4.18,4.18 GPT-4,R4-jsn,4.20,4.20,4.20,3.66,3.74,4.14,4.14,4.14,4.00,4.14,4.12 GPT-4o,R3-4xml,4.24,4.28,4.24,3.88,3.88,4.24,4.24,4.20,4.20,4.16,4.24 GPT-4o,R3-4oxml,4.20,4.28,4.24,3.88,3.84,4.24,4.24,4.24,4.28,4.20,4.24 GPT-4o,R4-xml,4.30,4.34,4.34,3.98,3.98,4.34,4.34,4.30,4.26,4.22,4.34 GPT-4o,R4-jsn,4.10,4.20,4.14,3.74,3.74,4.14,4.14,4.10,4.14,4.10,4.14</code></p>
+<p><u></u>Images created with Midjourney v6 alpha<u></u></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/syntaxandempathy\.github\.io");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© {date:YYYY} Syntax &amp; Empathy</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

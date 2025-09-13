@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.33">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>ai-trials-november-pt-1 – Syntax &amp; Empathy</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-b3278e108132d533448b7dd2c35bcebf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../../index.html">
+    <span class="navbar-title">Syntax &amp; Empathy</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../articles/"> 
+<span class="menu-text">Articles</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../resources/"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#experimental-elements" id="toc-experimental-elements" class="nav-link active" data-scroll-target="#experimental-elements">Experimental Elements</a>
+  <ul class="collapse">
+  <li><a href="#ai-models-used" id="toc-ai-models-used" class="nav-link" data-scroll-target="#ai-models-used">AI Models Used</a></li>
+  <li><a href="#goals" id="toc-goals" class="nav-link" data-scroll-target="#goals">Goals</a></li>
+  </ul></li>
+  <li><a href="#prompt-evolution" id="toc-prompt-evolution" class="nav-link" data-scroll-target="#prompt-evolution">Prompt Evolution</a>
+  <ul class="collapse">
+  <li><a href="#the-copypaste-kid" id="toc-the-copypaste-kid" class="nav-link" data-scroll-target="#the-copypaste-kid">The Copy/Paste Kid</a></li>
+  </ul></li>
+  <li><a href="#the-unprofessional-18" id="toc-the-unprofessional-18" class="nav-link" data-scroll-target="#the-unprofessional-18">The Unprofessional 18</a>
+  <ul class="collapse">
+  <li><a href="#claude" id="toc-claude" class="nav-link" data-scroll-target="#claude">Claude</a></li>
+  <li><a href="#chatgpt-4o" id="toc-chatgpt-4o" class="nav-link" data-scroll-target="#chatgpt-4o">ChatGPT-4o</a></li>
+  <li><a href="#the-good" id="toc-the-good" class="nav-link" data-scroll-target="#the-good">The Good</a></li>
+  <li><a href="#the-bad" id="toc-the-bad" class="nav-link" data-scroll-target="#the-bad">The Bad</a></li>
+  </ul></li>
+  <li><a href="#future-directions" id="toc-future-directions" class="nav-link" data-scroll-target="#future-directions">Future Directions</a></li>
+  <li><a href="#additional-tools" id="toc-additional-tools" class="nav-link" data-scroll-target="#additional-tools">Additional Tools</a>
+  <ul class="collapse">
+  <li><a href="#cultural-heritage-journalist-role" id="toc-cultural-heritage-journalist-role" class="nav-link" data-scroll-target="#cultural-heritage-journalist-role">Cultural Heritage Journalist Role</a></li>
+  <li><a href="#information-from-perplexity" id="toc-information-from-perplexity" class="nav-link" data-scroll-target="#information-from-perplexity">Information from Perplexity</a></li>
+  </ul></li>
+  <li><a href="#article-scores" id="toc-article-scores" class="nav-link" data-scroll-target="#article-scores">Article Scores</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<p><u></u>Artwork created with Midjourney v6.1### Preface</p>
+<p>This post is part of a year-long <u>initiative where I employ AI to create content</u> about holiday traditions worldwide. The objective is to observe how various AI tools perform and improve in content creation with minimal human intervention over time. This is the 1st of 3 articles for the month of <u>November</u>.</p>
+<p><em>Prompts and interactions with different AI models will be documented as they occur, providing insights into the methodologies, challenges, and adjustments made throughout the project</em></p>
+<p>I began November by testing increasingly specific prompts to generate Día de los Muertos articles. The experiment progressed from basic requests about the Day of the Dead to detailed prompts incorporating cultural information, specific roles, and structured templates. When scoring the results, Claude showed consistent improvement for itself and GPT-4o as more structure was added, while interestingly, GPT-4o preferred Claude’s articles with minimal direction. This suggests the shared scoring rubric or the different templates might be influencing results in unexpected ways.</p>
+<section id="experimental-elements" class="level2">
+<h2 class="anchored" data-anchor-id="experimental-elements">Experimental Elements</h2>
+<section id="ai-models-used" class="level3">
+<h3 class="anchored" data-anchor-id="ai-models-used">AI Models Used</h3>
+<ul>
+<li>Claude</li>
+<li>ChatGPT-4o</li>
+<li>Perplexity</li>
+</ul>
+</section>
+<section id="goals" class="level3">
+<h3 class="anchored" data-anchor-id="goals">Goals</h3>
+<ul>
+<li>Evaluate AI models’ ability to generate culturally appropriate content about Día de los Muertos</li>
+<li>Assess how increasingly detailed prompts affect content quality</li>
+<li>Compare different AI models’ performance across complexity levels</li>
+<li>Establish a baseline for tests later this month.</li>
+</ul>
+</section>
+</section>
+<section id="prompt-evolution" class="level2">
+<h2 class="anchored" data-anchor-id="prompt-evolution">Prompt Evolution</h2>
+<p>The progression from basic to complex prompts revealed interesting patterns in AI behavior. Beginning with simple instructions like “Write an article about the Day of the Dead in Mexico,” the experiment culminated in sophisticated prompts that incorporated cultural information, specific roles, and detailed templates.</p>
+<p><strong>DD = Día de los Muertos</strong></p>
+<p>Starting with straightforward prompts requesting articles about the Day of the Dead in Mexico. These served as a baseline for comparison as the complexity increased.</p>
+<pre><code>Write an article about the Day of the Dead in Mexico.</code></pre>
+<ul>
+<li>DD-C.md</li>
+<li>DD-GPT.md</li>
+</ul>
+<p><strong>PR = Professional Tone &amp; AP= Appropriate Tone</strong></p>
+<p>The next step involved incorporating specific tones into the prompts, such as “professional” and “appropriate.” I assumed that a professional tone had an implied definition, while the appropriate tone was left to the AI’s interpretation.</p>
+<pre><code>Write an article about the Day of the Dead in Mexico using a professional tone.</code></pre>
+<ul>
+<li>DD-PR-C.md</li>
+<li>DD-PR-GPT.md</li>
+<li>DD-AP-C.md</li>
+<li>DD-AP-GPT.md</li>
+</ul>
+<p><strong>Info = Holiday information included</strong></p>
+<p>I then provided additional context in the prompts by including holiday-specific information sourced from Perplexity, priming another round of authors. I chose not to provide example articles to prevent influencing the writing style of the AI-generated content.</p>
+<pre><code>The Day of the Dead (Día de los Muertos) is a vibrant and significant Mexican celebration that honors deceased loved ones. This multi-day holiday, typically observed on November 1st and 2nd, has a rich history and has evolved over centuries to become an integral part of Mexican culture.
+...
+You are encouraged to expand on this information, so long as the information is factual. Do write anything that is not factually true. Do not extrapolate of imagine anything, regardless of factual foundation.</code></pre>
+<ul>
+<li>DD-Info-C.md</li>
+<li>DD-Info-GPT.md</li>
+<li>DD-PR-Info-C.md</li>
+<li>DD-PR-Info-GPT.md</li>
+<li>DD-AP-Info-C.md</li>
+<li>DD-AP-Info-GPT.md</li>
+</ul>
+<p><strong>BR = Basic Role &amp; CR= Complex Role</strong></p>
+<p>To further define the authors’ roles, I created a detailed role with my GPT and provided a dramatically simplified version to serve as a basic role. The GPT roles tend to be verbose, so I’ve included the full prompt in the appendix for context.</p>
+<pre><code>You are a Cultural Heritage Journalist. Write an article about the Day of the Dead in Mexico. I want to know about it's origins, traditions, and how it has evolved over the years.</code></pre>
+<pre><code>"title": "Cultural Heritage Journalist - Central America"
+
+"description": "This role specializes in researching, analyzing, and crafting compelling narratives that explore the traditions, festivals, and cultural heritage of Central American countries. Through extensive data gathering, contextual analysis, and respectful storytelling, the role is designed to convey authentic perspectives on the rich cultural practices of the region. The journalist is expected to engage in a balance of historical research, cultural comparison, and contemporary relevance, presenting these traditions in an engaging format for readers."
+
+...</code></pre>
+<p>To limit the sheer number of articles being created, I decided not to extend the six prior articles. As I write this, I realize I didn’t create the professional versions of this set. This might have been a deliberate choice, as things got hectic at the end of October with the LinkedIn series on Depression Awareness and the Halloween articles in October Pt 3.</p>
+<ul>
+<li>DD-AP-BR-Info-C.md</li>
+<li>DD-AP-CR-Info-C.md</li>
+<li>DD-AP-BR-Info-GPT.md</li>
+<li>DD-AP-CR-Info-GPT.md</li>
+</ul>
+<p><strong>T= Template</strong></p>
+<p>Finally, I gave each AI the article template they had previously created.</p>
+<pre><code>Additionally, you are expect to use the provided outline as directional guidance for your article, adhering to the accompanying writing guidance for authors.</code></pre>
+<ul>
+<li>DD-AP-CR-T-Info-C.md</li>
+<li>DD-AP-CR-T-Info-GPT.md</li>
+</ul>
+<section id="the-copypaste-kid" class="level3">
+<h3 class="anchored" data-anchor-id="the-copypaste-kid">The Copy/Paste Kid</h3>
+<p>The increasing complexity, information, and direction of the 18 resulting articles range from the AI being left to create articles without any expectations to using a tone of its own definition, roles essentially defined by another AI session in ChatGPT-4o, a template defined by prior author and editor roles, and information provided by Perplexity AI.</p>
+<p>While I’m doing more than just copying and pasting this information, my main effort this round is coordination and orchestration. The amount of work I’m doing in the prompts this round is minimal.</p>
+</section>
+</section>
+<section id="the-unprofessional-18" class="level2">
+<h2 class="anchored" data-anchor-id="the-unprofessional-18">The Unprofessional 18</h2>
+<p><u></u>After receiving the scores, I asked each editor role to provide a summary explaining the rationale behind the rankings and the observed trends. Although they detailed why certain articles outperformed others across five dimensions, they didn’t offer a holistic explanation. I followed up with a chain of thought prompt to explore the root cause in the context of “C” versus “GPT” articles.</p>
+<p><u></u>The detailed analysis from each AI is available in the Appendix, and both demonstrate a similar perspective on this matter. However, I hold a different view. Claude’s scores show a consistent upward trend as more detail is added, whereas GPT-4o showed a preference for Claude’s articles when less definition was present. I suspect the shared rubric might be influencing these results, but I anticipate observing a different trend when I allow the AI more freedom in subsequent coverage.</p>
+<section id="claude" class="level3">
+<h3 class="anchored" data-anchor-id="claude">Claude</h3>
+<p>Looking at C vs GPT, it appears that while both work from the same source material, GPT shows greater sophistication in synthesizing and presenting cultural content. This manifests in several key ways:</p>
+<p>C-designated articles tend to be more straightforward and linear in their presentation. They reliably cover the core elements of Día de los Muertos but often do so in a more standardized, less nuanced way. Think of it as providing a well-organized but somewhat rigid museum tour of the tradition.</p>
+<p>GPT-designated articles, in contrast, demonstrate more flexibility and depth in their approach. They’re better at weaving together historical context with contemporary relevance, showing more skill in discussing cultural evolution while maintaining respect for traditions. It’s like having a culturally immersed guide who can adjust their narrative to highlight meaningful connections and deeper cultural significance.</p>
+<p>The most striking difference emerges when both are given complex roles (CR) and additional information (Info). While C articles do improve with more guidance, GPT articles show a more dramatic improvement, suggesting better ability to integrate multiple perspectives and handle cultural nuance. This is particularly evident in how they discuss sensitive topics like commercialization and cultural adaptation without compromising authenticity.</p>
+<p>This performance gap suggests that C and GPT represent different levels of capability in cultural content creation, with GPT showing more advanced ability to balance educational value, cultural sensitivity, and engaging narrative.</p>
+</section>
+<section id="chatgpt-4o" class="level3">
+<h3 class="anchored" data-anchor-id="chatgpt-4o">ChatGPT-4o</h3>
+<p>The root cause of the scoring differences lies in how each article type’s <strong>structure and tone interact with the content goals</strong>. Articles with “C” designations tend to be concise and factual, which aids clarity but limits engagement and cultural depth, particularly when they lack additional information. “GPT” articles, by contrast, benefit from both a <strong>flexible tone and expanded context</strong> (especially when labeled with “Info”), allowing for a more nuanced, sensitive, and engaging approach to cultural content.</p>
+<p>In summary, <strong>the combination of complex structures, additional information, and appropriate tone in “GPT” articles</strong> provides a better foundation for handling culturally rich and emotionally resonant topics like Day of the Dead. Conversely, the <strong>structural simplicity, basic roles, and tone constraints</strong> in “C” articles often restrict them to a more straightforward delivery, which can detract from the richness of cultural storytelling.</p>
+<p><u></u>## Insights &amp; Observations</p>
+</section>
+<section id="the-good" class="level3">
+<h3 class="anchored" data-anchor-id="the-good">The Good</h3>
+<ul>
+<li>While the two AI had different views on Claude’s articles they agreed on the general issue.</li>
+</ul>
+</section>
+<section id="the-bad" class="level3">
+<h3 class="anchored" data-anchor-id="the-bad">The Bad</h3>
+<ul>
+<li>ChatGPT-4o’s scoring continues to be somewhat erratic.</li>
+<li>Evaluation rubric and/or templates may have skewed scoring results.</li>
+</ul>
+</section>
+</section>
+<section id="future-directions" class="level2">
+<h2 class="anchored" data-anchor-id="future-directions">Future Directions</h2>
+<ul>
+<li>Explore meta prompting over several holidays over the course of the month.</li>
+<li>Compare results with the baseline established in this article.</li>
+</ul>
+</section>
+<section id="additional-tools" class="level2">
+<h2 class="anchored" data-anchor-id="additional-tools">Additional Tools</h2>
+<p>The tools behind the articles. No affiliations.</p>
+<ul>
+<li><u>Arc</u>: Browser supreme</li>
+<li>ChatGPT-4o <code>*</code>: Alt text &amp; visualizations</li>
+<li><u>Midjourney</u> <code>*</code>: Article and AI article images</li>
+<li><u>Rename X</u> <code>*</code>: File renaming app for Mac</li>
+<li><u>Type.ai</u> <code>*</code>: Text editor</li>
+</ul>
+<p>Paid items indicated by <code>*</code></p>
+<p><u></u>Artwork created with Midjourney v6.1## Appendix</p>
+<section id="cultural-heritage-journalist-role" class="level3">
+<h3 class="anchored" data-anchor-id="cultural-heritage-journalist-role">Cultural Heritage Journalist Role</h3>
+<pre><code>{
+  "role": {
+    "title": "Cultural Heritage Journalist - Central America",
+    "description": "This role specializes in researching, analyzing, and crafting compelling narratives that explore the traditions, festivals, and cultural heritage of Central American countries. Through extensive data gathering, contextual analysis, and respectful storytelling, the role is designed to convey authentic perspectives on the rich cultural practices of the region. The journalist is expected to engage in a balance of historical research, cultural comparison, and contemporary relevance, presenting these traditions in an engaging format for readers."
+  },
+  "traits": [
+    {
+      "category": "core_competency",
+      "name": "Cultural Research and Analysis",
+      "rationale": "Develops a comprehensive understanding of Central American countries by analyzing their cultural practices, historical traditions, and regional celebrations. This trait enables accurate and nuanced reporting, ensuring articles are rooted in authentic details and respect for cultural context."
+    },
+    {
+      "category": "core_competency",
+      "name": "Contextual Storytelling",
+      "rationale": "Creates a narrative structure that situates traditions within historical, social, and cultural contexts, allowing readers to appreciate their significance beyond surface-level descriptions. This skill ensures that traditions are depicted with depth and relatability, fostering reader engagement and cultural appreciation."
+    },
+    {
+      "category": "knowledge_area",
+      "name": "Regional Cultural Knowledge - Central America",
+      "rationale": "Provides a foundation of knowledge on Central American countries’ diverse cultural heritage, such as festivals, customs, and the influences of Indigenous, Spanish, and African ancestry. This area supports the journalist’s ability to identify culturally significant themes and explain their historical origins and transformations."
+    },
+    {
+      "category": "knowledge_area",
+      "name": "Contemporary Cultural Trends",
+      "rationale": "Recognizes and incorporates modern adaptations or interpretations of traditional customs. This area of expertise allows for an examination of how Central American traditions evolve, offering readers insights into the region's living cultural heritage and the dynamics between tradition and modernity."
+    },
+    {
+      "category": "key_skill",
+      "name": "Respectful Representation",
+      "rationale": "Ensures that all cultural depictions are presented respectfully, with attention to the diversity of perspectives within Central American cultures. This skill is essential for maintaining the integrity of the region’s traditions and for providing readers with an accurate, appreciative portrayal."
+    },
+    {
+      "category": "key_skill",
+      "name": "Audience Engagement Techniques",
+      "rationale": "Employs narrative techniques such as sensory language, interviews, and anecdotal insights to engage readers emotionally and intellectually. This approach is crucial for making cultural traditions relatable and accessible to diverse audiences, enhancing reader connection to the subject matter."
+    },
+    {
+      "category": "core_competency",
+      "name": "Cross-Cultural Comparison",
+      "rationale": "Identifies and contextualizes similarities and distinctions between traditions within Central American countries and beyond, helping readers understand the unique qualities of each culture while recognizing universal themes. This skill adds depth and comparative insight to the journalist’s work."
+    },
+    {
+      "category": "knowledge_area",
+      "name": "Ethnographic Research Methods",
+      "rationale": "Applies research techniques such as interviews, literature reviews, and field observations (when possible) to gather firsthand insights into cultural practices. This knowledge area supports a well-rounded approach to data collection, enriching articles with authentic voices and reliable information."
+    },
+    {
+      "category": "key_skill",
+      "name": "Digital and Archival Research",
+      "rationale": "Utilizes online databases, libraries, and cultural archives to gather background information on Central American traditions. This skill ensures articles are informed by credible sources, providing readers with a reliable depiction of cultural practices."
+    }
+  ]
+}</code></pre>
+</section>
+<section id="information-from-perplexity" class="level3">
+<h3 class="anchored" data-anchor-id="information-from-perplexity">Information from Perplexity</h3>
+<pre><code>The Day of the Dead (Día de los Muertos) is a vibrant and significant Mexican celebration that honors deceased loved ones. This multi-day holiday, typically observed on November 1st and 2nd, has a rich history and has evolved over centuries to become an integral part of Mexican culture.
+
+\## Origins
+
+The Day of the Dead has roots that can be traced back to pre-Columbian times, specifically to the Aztec civilization in the 14th century[1]. The Aztecs held festivals each year to honor the gods and the spirits of dead ancestors, calling them back to the living world. A key figure in Aztec mythology was Mictecacihuatl, the "Lady of the Dead," who ruled the underworld and was represented by a grinning skull face - a symbol that persists in modern Day of the Dead imagery.
+
+When Spanish conquistadors arrived in the 16th century, they brought Catholicism to the region. The Spanish attempted to integrate local traditions into Catholicism after failing to eradicate the indigenous festivities entirely. They moved the monthlong celebration from August to November 1st and 2nd to coincide with the Catholic holidays of All Saints' Day and All Souls' Day. This merging of Pre-Hispanic beliefs and Catholic traditions gave birth to what we now know as the Day of the Dead.
+
+\## Traditions
+
+The Day of the Dead is rich in symbolism and traditions, many of which have endured for centuries:
+
+1\. \*\*Altars (Ofrendas)\*\*: Families create altars in their homes to honor deceased loved ones. These altars are adorned with:
+
+\- Photos of the deceased
+
+\- Candles to guide spirits home
+
+\- Favorite foods and drinks of the departed
+
+\- Marigolds (cempasúchiles)
+
+\- Sugar skulls
+
+\- Pan de muerto (traditional sweet bread)
+
+2\. \*\*Grave Decorations\*\*: Many people visit cemeteries to clean and decorate the graves of their loved ones. Some communities lay paths of marigold petals from the graves to their homes to guide the souls.
+
+3\. \*\*Calaveras\*\*: Skull imagery, often in the form of sugar skulls or artistic representations, is a prominent symbol of the holiday.
+
+4\. \*\*Papel Picado\*\*: Decoratively cut paper banners are used to represent the element of wind in the ofrendas.
+
+5\. \*\*Food and Drink\*\*: Special foods like pan de muerto and traditional drinks are prepared and shared during the celebration.
+
+\## Evolution
+
+While the core essence of the Day of the Dead has remained consistent, the holiday has evolved over time:
+
+1\. \*\*Cultural Significance\*\*: In recent decades, the Day of the Dead has become a national symbol in Mexico. It is now taught in schools and has been recognized by UNESCO as part of the Intangible Cultural Heritage of Humanity.
+
+2\. \*\*20th Century Rebranding\*\*: Some Mexican academics argue that the current form of the Day of the Dead is largely a 20th-century rebranding of Spanish traditions. This rebranding, which occurred during the presidency of Lázaro Cárdenas, aimed to encourage Mexican nationalism through an "Aztec" identity.
+
+3\. \*\*Global Recognition\*\*: The holiday has gained international recognition, partly due to its portrayal in popular media like the films "Coco" and "The Book of Life".
+
+4\. \*\*Artistic Expression\*\*: The holiday has inspired various forms of artistic expression, including the creation of sand tapestries (tapetes de arena) in some regions of Mexico[4].
+
+5\. \*\*Commercialization\*\*: Like many cultural celebrations, the Day of the Dead has experienced some degree of commercialization, particularly as its popularity has grown globally.
+
+Despite these changes, the Day of the Dead remains a deeply meaningful celebration for many Mexicans and people of Mexican heritage. It continues to serve as a way to remember and honor deceased loved ones, blending ancient traditions with contemporary practices in a unique and colorful celebration of life and death.
+
+You are encouraged to expand on this information, so long as the information is factual. Do write anything that is not factually true. Do not extrapolate of imagine anything, regardless of factual foundation.</code></pre>
+</section>
+</section>
+<section id="article-scores" class="level2">
+<h2 class="anchored" data-anchor-id="article-scores">Article Scores</h2>
+<ul>
+<li>DD-GPT.md: C=8.60, G=6.98, Avg=7.79</li>
+<li>DD-C.md: C=8.15, G=6.88, Avg=7.52</li>
+<li>DD-PR-C.md: C=8.10, G=5.57, Avg=6.84</li>
+<li>DD-PR-GPT.md: C=8.50, G=6.25, Avg=7.38</li>
+<li>DD-AP-C.md: C=8.20, G=8.10, Avg=8.15</li>
+<li>DD-AP-GPT.md: C=8.05, G=7.18, Avg=7.62</li>
+<li>DD-Info-C.md: C=8.25, G=8.02, Avg=8.14</li>
+<li>DD-Info-GPT.md: C=8.65, G=7.62, Avg=8.14</li>
+<li>DD-PR-Info-C.md: C=8.30, G=7.00, Avg=7.65</li>
+<li>DD-PR-Info-GPT.md: C=8.80, G=7.65, Avg=8.23</li>
+<li>DD-AP-Info-GPT.md: C=8.70, G=6.72, Avg=7.71</li>
+<li>DD-AP-Info-C.md: C=8.35, G=5.55, Avg=6.95</li>
+<li>DD-AP-BR-Info-C.md: C=8.40, G=6.55, Avg=7.48</li>
+<li>DD-AP-CR-Info-C.md: C=8.45, G=5.78, Avg=7.12</li>
+<li>DD-AP-BR-Info-GPT.md: C=8.85, G=7.70, Avg=8.28</li>
+<li>DD-AP-CR-Info-GPT.md: C=8.75, G=7.40, Avg=8.08</li>
+<li>DD-AP-CR-T-Info-C.md: C=8.55, G=6.42, Avg=7.49</li>
+<li>DD-AP-CR-T-Info-GPT.md: C=8.95, G=8.45, Avg=8.70</li>
+</ul>
+<p><u></u></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/syntaxandempathy\.github\.io");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© {date:YYYY} Syntax &amp; Empathy</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
