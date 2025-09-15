@@ -1,10 +1,10 @@
 project:
   type: website
   render:
-    - index.qmd
-    - about.qmd
-    - articles/**.{qmd,md,ipynb}
-    - resources/**.{qmd,md,ipynb}
+    - index.md
+    - about.md
+    - articles/**.{md,md,ipynb}
+    - resources/**.{md,md,ipynb}
   resources:
     - assets/**            # ensure local fonts, icons, images are copied
     - resources/**         # optional: keep downloads/attachments
@@ -14,13 +14,13 @@ website:
   site-url: "https://syntax-and-empathy.github.io/s-and-e-hub"
   navbar:
     left:
-      - href: index.qmd
+      - href: index.md
         text: Home
       - href: articles/
         text: Articles
       - href: resources/
         text: Resources
-      - href: about.qmd
+      - href: about.md
         text: About
   search: true
   page-footer:
