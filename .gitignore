@@ -26,6 +26,7 @@ raw/
 .pxd
 .zip
 .bak
+.m4a
 
 # Quarto files
 /.quarto/
