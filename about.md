@@ -1,7 +1,5 @@
 # Seeking Signal in AI Static
 
-![](https://ik.imagekit.io/typeai/tr:w-1200,c-at_max/img_hEP6AlTBZ6h2Gixeou.jpg){ width=480px }
-
 ## Making Sense of AI Beyond the Hype
 
 By mid-2023, the noise around artificial intelligence (AI) had become as common as Facebook ads and Twitter trolls. Swarms of LinkedIn posts screamed that “99% of people are using ChatGPT wrong!” while clickbait articles promised “Just add this role, tone, or your favorite candy bar, and you’ll master AI overnight and retire by lunchtime!”
