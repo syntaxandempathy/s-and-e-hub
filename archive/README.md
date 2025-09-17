@@ -1,32 +1,58 @@
 # AI Content Generation Trials Archive
 
-*This directory contains a collection of Markdown files documenting a year-long experiment in using AI to generate content about global holiday traditions.*
+*This directory contains a year-long archive of experiments using AI to generate content about global holiday traditions.*
 
 **Overview**
 
-This archive stores the results of a year-long project exploring the capabilities of various AI models in creating informative and engaging content about diverse cultural holidays.  The project involved iterative experimentation with different prompting techniques, AI models, and evaluation methods.  Each Markdown file represents a distinct phase of the experiment, detailing the methodologies, challenges, and outcomes.  The data can be used to analyze the evolution of AI content generation capabilities and the effectiveness of various prompting strategies. The files are organized chronologically by month and then by part within each month.
+This repository archives the results of a year-long project exploring the capabilities of various AI models (Bard, Claude, Copilot, ChatGPT-4, and LLaMA) in creating content about holiday traditions worldwide.  The archive consists of markdown files documenting individual experiments, detailing prompts, AI responses, and analysis of results.  Each file represents a specific experiment or set of experiments conducted during a particular month.  The data provides insights into the evolution of AI content generation capabilities and the effectiveness of different prompting techniques.  Researchers can use this archive to understand the challenges and successes encountered in using AI for content creation.
 
 **Contents**
 
-* `2024-article-index.md`:  Index summarizing the entire year's AI content generation trials.
-* `ai-trials-january-pt-1.md` - `ai-trials-january-pt-4.md`:  Four articles detailing January's experiments focusing on AI performance in generating content about global holiday traditions.
-* `ai-trials-february-pt-1.md` - `ai-trials-february-pt-8.md`: Eight articles documenting February's experiments with specialized AI roles for content creation.
-* `ai-trials-march-pt-1.md` - `ai-trials-march-pt-2.md`: Two articles describing March's experiments incorporating image generation AIs.
-* `ai-trials-april-pt-1.md` - `ai-trials-april-pt-2-d76.md`: Three articles detailing April's experiments with an updated role-making GPT.
-* `ai-trials-may-pt-1.md` - `ai-trials-may-pt-3.md`: Three articles documenting May's experiments with different writing tones.
-* `ai-trials-june-pt-1.md` - `ai-trials-june-pt-3.md`: Three articles detailing June's experiments with AI tone selection and a new role-making GPT.
-* `ai-trials-july-pt-1.md` - `ai-trials-july-pt-2.md`: Two articles describing July's experiments testing roles with recent model updates.
-* `ai-trials-august-pt-1.md` - `ai-trials-august-pt-3.md`: Three articles documenting August's experiments with JSON-formatted roles and Chain of Thought prompting.
-* `ai-trials-september-pt-1.md` - `ai-trials-september-pt-4.md`: Four articles detailing September's experiments focused on refining Chain of Thought prompting and article templates.
-* `ai-trials-october-pt-1.md` - `ai-trials-october-pt-3.md`: Three articles describing October's experiments refining article templates and exploring Halloween's historical perspectives.
-* `ai-trials-november-pt-1.md` - `ai-trials-november-pt-3.md`: Three articles documenting November's experiments with prompt specificity and role definition.
-* `ai-trials-december-pt-1.md` - `ai-trials-december-pt-2.md`: Two articles detailing December's experiments on prompt complexity and element combinations.
+* `2024-article-index.md`: Index summarizing the year's AI content generation trials.
+* `ai-trials-april-pt-1.md`: April experiments, part 1.
+* `ai-trials-april-pt-2.md`: April experiments, part 2.
+* `ai-trials-april-pt-2-d76.md`: April experiments, part 2 (revision).
+* `ai-trials-august-pt-1.md`: August experiments, part 1.
+* `ai-trials-august-pt-2.md`: August experiments, part 2.
+* `ai-trials-august-pt-3.md`: August experiments, part 3.
+* `ai-trials-december-pt-1.md`: December experiments, part 1.
+* `ai-trials-december-pt-2.md`: December experiments, part 2.
+* `ai-trials-february-pt-1.md`: February experiments, part 1.
+* `ai-trials-february-pt-2.md`: February experiments, part 2.
+* `ai-trials-february-pt-3.md`: February experiments, part 3.
+* `ai-trials-february-pt-4.md`: February experiments, part 4.
+* `ai-trials-february-pt-5.md`: February experiments, part 5.
+* `ai-trials-february-pt-6.md`: February experiments, part 6.
+* `ai-trials-february-pt-7.md`: February experiments, part 7.
+* `ai-trials-february-pt-8.md`: February experiments, part 8.
+* `ai-trials-january-pt-3.md`: January experiments, part 3.
+* `ai-trials-january-pt-4.md`: January experiments, part 4.
+* `ai-trials-july-pt-1.md`: July experiments, part 1.
+* `ai-trials-july-pt-2.md`: July experiments, part 2.
+* `ai-trials-june-pt-1.md`: June experiments, part 1.
+* `ai-trials-june-pt-2.md`: June experiments, part 2.
+* `ai-trials-june-pt-3.md`: June experiments, part 3.
+* `ai-trials-march-pt-1.md`: March experiments, part 1.
+* `ai-trials-march-pt-2.md`: March experiments, part 2.
+* `ai-trials-may-pt-1.md`: May experiments, part 1.
+* `ai-trials-may-pt-2.md`: May experiments, part 2.
+* `ai-trials-may-pt-3.md`: May experiments, part 3.
+* `ai-trials-november-pt-1.md`: November experiments, part 1.
+* `ai-trials-november-pt-2.md`: November experiments, part 2.
+* `ai-trials-november-pt-3.md`: November experiments, part 3.
+* `ai-trials-october-pt-1.md`: October experiments, part 1.
+* `ai-trials-october-pt-2.md`: October experiments, part 2.
+* `ai-trials-october-pt-3.md`: October experiments, part 3.
+* `ai-trials-sept-pt-1.md`: September experiments, part 1.
+* `ai-trials-sept-pt-2.md`: September experiments, part 2.
+* `ai-trials-sept-pt-3.md`: September experiments, part 3.
+* `ai-trials-sept-pt-4.md`: September experiments, part 4.
 
 
 **Structure**
 
-Each monthly section contains multiple `.md` files, each labeled as "Pt 1," "Pt 2," etc., representing parts of the monthly experiment.  Each file follows a consistent structure:  a preface describing the month's goals, a TL;DR summary, and detailed experiment results.
+Files are organized chronologically by month and then by part number. Each file follows a consistent structure, including a preface, a summary (TL;DR), and detailed descriptions of the experiments conducted.
 
 **Changelog**
 
-Last updated: 2025-09-15
+Last updated: 2025-09-16
