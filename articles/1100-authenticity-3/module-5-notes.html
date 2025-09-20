@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>index – Syntax &amp; Empathy</title>
+<title>module-5-notes – Syntax &amp; Empathy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c11994fcf07a16f1c4dfa798fec8ff96.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-c11994fcf07a16f1c4dfa798fec8ff96.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Syntax &amp; Empathy</span>
     </a>
   </div>
@@ -90,19 +125,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../articles/"> 
+    <a class="nav-link" href="../../articles/"> 
 <span class="menu-text">Articles</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../resources/"> 
+    <a class="nav-link" href="../../resources/"> 
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -121,7 +156,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#tools" id="toc-tools" class="nav-link active" data-scroll-target="#tools">Tools</a></li>
+  <li><a href="#verdict" id="toc-verdict" class="nav-link active" data-scroll-target="#verdict">Verdict</a></li>
+  <li><a href="#what-i-verified" id="toc-what-i-verified" class="nav-link" data-scroll-target="#what-i-verified">What I verified</a></li>
+  <li><a href="#add-these-to-your-module-5-notes-concise" id="toc-add-these-to-your-module-5-notes-concise" class="nav-link" data-scroll-target="#add-these-to-your-module-5-notes-concise">Add these to your Module-5 notes (concise)</a></li>
+  <li><a href="#minor-polish-optional" id="toc-minor-polish-optional" class="nav-link" data-scroll-target="#minor-polish-optional">Minor polish (optional)</a></li>
+  <li><a href="#one-line-qa-you-can-run-in-colab-optional" id="toc-one-line-qa-you-can-run-in-colab-optional" class="nav-link" data-scroll-target="#one-line-qa-you-can-run-in-colab-optional">One-line QA you can run in Colab (optional)</a>
+  <ul class="collapse">
+  <li><a href="#if-those-checks-are-clean-on-your-side-were-fully-locked.-ready-for-module-6." id="toc-if-those-checks-are-clean-on-your-side-were-fully-locked.-ready-for-module-6." class="nav-link" data-scroll-target="#if-those-checks-are-clean-on-your-side-were-fully-locked.-ready-for-module-6.">If those checks are clean on your side, we’re fully locked. Ready for <strong>Module 6</strong>.</a></li>
+  </ul></li>
+  <li><a href="#module-5-final-assessment-notes" id="toc-module-5-final-assessment-notes" class="nav-link" data-scroll-target="#module-5-final-assessment-notes">Module 5 — Final assessment &amp; notes</a>
+  <ul class="collapse">
+  <li><a href="#what-looks-solid" id="toc-what-looks-solid" class="nav-link" data-scroll-target="#what-looks-solid">What looks solid</a></li>
+  <li><a href="#minor-nits-polish" id="toc-minor-nits-polish" class="nav-link" data-scroll-target="#minor-nits-polish">Minor nits / polish</a></li>
+  <li><a href="#qa-checks-that-passed-from-the-bundle" id="toc-qa-checks-that-passed-from-the-bundle" class="nav-link" data-scroll-target="#qa-checks-that-passed-from-the-bundle">QA checks that passed (from the bundle)</a></li>
+  <li><a href="#suggested-small-additions-to-the-notes-copypaste" id="toc-suggested-small-additions-to-the-notes-copypaste" class="nav-link" data-scroll-target="#suggested-small-additions-to-the-notes-copypaste">Suggested small additions to the notes (copy/paste)</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -131,12 +180,130 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="tools" class="level1">
-<h1>Tools</h1>
-<p>Publishing system by <strong><a href="https://quarto.org/">Quarto</a></strong> An open-source scientific and technical publishing system. Github repo: <a href="https://github.com/quarto-dev/quarto-web">Quarto Web</a></p>
-<p>Font by <strong><a href="https://cyreal.org/">Cyreal</a></strong> Cyreal is a Libre/Opensource foundry with expertise in Latin and Cyrillic scripts. Github repo: <a href="https://github.com/cyrealtype/Lora-Cyrillic">Lora-Cyrillic</a></p>
+<p>From the expert: Looks good—you can move on. Here’s a crisp assessment of your <strong>Module 5</strong> drop plus the few notes I’d add to the notes file.</p>
+<section id="verdict" class="level1">
+<h1>Verdict</h1>
+<p><strong>Greenlight for Module 6.</strong> Artifacts and metadata indicate Module 5 meets the intent (semantic coherence &amp; drift at version and window levels, aligned to M2 windows).</p>
+</section>
+<section id="what-i-verified" class="level1">
+<h1>What I verified</h1>
+<ul>
+<li><p><strong>Artifacts present:</strong> <code>semantic_metrics.parquet</code>, <code>semantic_windows.parquet</code>, <code>semantic_deltas.parquet</code>, and a <code>plots/</code> folder (4 PNGs found).</p></li>
+<li><p><strong>Metadata is clean:</strong> <code>model_name=all-MiniLM-L6-v2</code>, <code>model_dim=384</code>, <code>normalize_embeddings=True</code>, <code>batch_size=64</code>, <code>device=cpu</code>, <code>uses_m2_windows=True</code>, <code>version_order_source="filename_prefix"</code>, <code>enable_nli=False</code>, plus article/version counts.</p></li>
+<li><p><strong>Plots present:</strong></p>
+<ul>
+<li><code>coherence_doc_violin.png</code></li>
+<li><code>trend_coherence_the-count-that-coudnt_.png</code> (trailing underscore—see polish)</li>
+<li><code>win_coherence_the-count-that-coudnt.png</code></li>
+<li><code>cosine_heatmap_the-count-that-coudnt_v1.png</code></li>
+</ul></li>
+</ul>
+<p>(I couldn’t open Parquets in this sandbox due to missing parquet engine, but your bundle structure and metadata look correct.)</p>
+</section>
+<section id="add-these-to-your-module-5-notes-concise" class="level1">
+<h1>Add these to your Module-5 notes (concise)</h1>
+<ul>
+<li><p><strong>Provenance</strong></p>
+<ul>
+<li><code>version_order_source: "filename_prefix" (01–04)</code></li>
+<li><code>model: sentence-transformers/all-MiniLM-L6-v2 (dim=384)</code>, <code>device=cpu</code>, <code>batch_size=64</code>, <code>normalize_embeddings=True</code>.</li>
+<li><code>uses_m2_windows: true</code>, alignment by <strong>char spans</strong> from M2.</li>
+</ul></li>
+<li><p><strong>Schemas (commit)</strong></p>
+<ul>
+<li><code>semantic_metrics.parquet</code> keys: <code>(article_id, version_id, version_tag, doc_id)</code>; metrics: <code>n_sents_sem, coherence_doc, dispersion_doc, redundancy_doc, semantic_drift_from_prev</code>.</li>
+<li><code>semantic_windows.parquet</code> keys/spans: <code>(article_id, version_id, win_id, win_label, span_basis, char_start, char_end, sent_start_index, sent_end_index, is_partial_tail)</code>; metrics: <code>n_sents_win, coherence_win, neighbor_sim_win, redundancy_win</code> (and any extras you included).</li>
+<li><code>semantic_deltas.parquet</code>: <code>(article_id, from_version, to_version, semantic_drift, d_coherence_doc, d_redundancy_doc)</code>; <strong>adjacent pairs only</strong>.</li>
+</ul></li>
+<li><p><strong>Ranges &amp; guards (document)</strong></p>
+<ul>
+<li><code>coherence_*</code>, <code>neighbor_sim_*</code>, <code>redundancy_* ∈ [0,1]</code>; <code>semantic_drift ≥ 0</code> (typically ≤ ~0.6 for adjacent drafts).</li>
+<li>Windows with <code>&lt;2</code> sentences → metrics <code>NaN</code> (not zero).</li>
+</ul></li>
+<li><p><strong>Plot policy</strong></p>
+<ul>
+<li>Per-article trends for versions and windows; heatmap capped to first ~120 sentences if long.</li>
+<li>Note filename quirk (see below) or normalize.</li>
+</ul></li>
+</ul>
+</section>
+<section id="minor-polish-optional" class="level1">
+<h1>Minor polish (optional)</h1>
+<ul>
+<li><strong>Filename normalization:</strong> <code>trend_coherence_the-count-that-coudnt_.png</code> has a trailing <code>_</code>. Either normalize to <code>trend_coherence_&lt;slug&gt;.png</code> or note both are acceptable in the orchestrator.</li>
+<li><strong>Metadata enrich (nice):</strong> add <code>skipped_sentences</code> count (e.g., very short sentences filtered) and <code>articles/versions_per_article_*</code> if not already exact.</li>
+</ul>
+</section>
+<section id="one-line-qa-you-can-run-in-colab-optional" class="level1">
+<h1>One-line QA you can run in Colab (optional)</h1>
+<p>Paste and execute to cement schema/ranges:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>doc <span class="op">=</span> pd.read_parquet(<span class="st">"outputs/semantic/semantic_metrics.parquet"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>win <span class="op">=</span> pd.read_parquet(<span class="st">"outputs/semantic/semantic_windows.parquet"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>dlt <span class="op">=</span> pd.read_parquet(<span class="st">"outputs/semantic/semantic_deltas.parquet"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"doc rows:"</span>, <span class="bu">len</span>(doc), <span class="st">"win rows:"</span>, <span class="bu">len</span>(win), <span class="st">"dlt rows:"</span>, <span class="bu">len</span>(dlt))</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"coherence_doc in [0,1]:"</span>, doc[<span class="st">"coherence_doc"</span>].dropna().between(<span class="dv">0</span>,<span class="dv">1</span>).<span class="bu">all</span>())</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"redundancy_doc in [0,1]:"</span>, doc[<span class="st">"redundancy_doc"</span>].dropna().between(<span class="dv">0</span>,<span class="dv">1</span>).<span class="bu">all</span>())</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"adjacent only:"</span>, ((dlt[<span class="st">"to_version"</span>] <span class="op">-</span> dlt[<span class="st">"from_version"</span>])<span class="op">==</span><span class="dv">1</span>).<span class="bu">all</span>())</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>ok <span class="op">=</span> <span class="bu">all</span>(<span class="bu">list</span>(g[<span class="st">"win_id"</span>]) <span class="op">==</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">1</span>,<span class="bu">len</span>(g)<span class="op">+</span><span class="dv">1</span>)) </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>         <span class="cf">for</span> _, g <span class="kw">in</span> win.sort_values([<span class="st">"article_id"</span>,<span class="st">"version_id"</span>,<span class="st">"win_id"</span>]).groupby([<span class="st">"article_id"</span>,<span class="st">"version_id"</span>]))</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"win_id contiguous per version:"</span>, ok)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="if-those-checks-are-clean-on-your-side-were-fully-locked.-ready-for-module-6." class="level2">
+<h2 class="anchored" data-anchor-id="if-those-checks-are-clean-on-your-side-were-fully-locked.-ready-for-module-6.">If those checks are clean on your side, we’re fully locked. Ready for <strong>Module 6</strong>.</h2>
+<p>From the code reviewer: Got the updated Module 5 bundle—nice work. I pulled the new artifacts and metadata and here’s a tight review you can drop into the notes.</p>
+</section>
+</section>
+<section id="module-5-final-assessment-notes" class="level1">
+<h1>Module 5 — Final assessment &amp; notes</h1>
+<section id="what-looks-solid" class="level2">
+<h2 class="anchored" data-anchor-id="what-looks-solid">What looks solid</h2>
+<ul>
+<li><p><strong>Model + device pinned:</strong> <code>sentence-transformers/all-MiniLM-L6-v2</code>, dim=384, device=CPU, embeddings normalized (cosine in [0,1]).</p></li>
+<li><p><strong>Window policy matches M2:</strong> <code>from_module_2_spans/full_containment</code> with <code>windows_total=349</code>, <code>windows_with_lt2_sentences=0</code> (good guard).</p></li>
+<li><p><strong>Clear coherence definition:</strong> <code>cosine_mean_offdiag</code> (mean of off-diagonal sentence-pair similarities).</p></li>
+<li><p><strong>Artifacts produced:</strong></p>
+<ul>
+<li><code>semantic_metrics.parquet</code></li>
+<li><code>coherence_doc.parquet</code></li>
+<li><code>coherence_windows.parquet</code></li>
+<li>Plots: global doc violin, per-version trend, v1 heatmap, window distribution (index written).</li>
+</ul></li>
+<li><p><strong>Readme + metadata present</strong> and reference the upstream M2 windows path.</p></li>
+</ul>
+</section>
+<section id="minor-nits-polish" class="level2">
+<h2 class="anchored" data-anchor-id="minor-nits-polish">Minor nits / polish</h2>
+<ul>
+<li><strong>Slug formatting:</strong> several plot filenames use <code>the-count-that-coudnt</code> (typo “coudnt”) and one has a trailing underscore (<code>trend_coherence_the-count-that-coudnt_.png</code>). Suggest normalizing slugs to avoid trailing underscores and fix the title case/typo if that’s accidental.</li>
+<li><strong>Bundler manifest parity:</strong> unlike Module 3, the <code>bundle_index.json</code> here doesn’t record per-parquet <code>rows/cols/schema</code>. Add those (as you did in M3) so QA can sanity-check contents without loading Parquet.</li>
+<li><strong>Seed disclosure:</strong> inference is effectively deterministic, but add <code>seed: 7</code> (or <code>null</code>) in metadata for uniformity with earlier modules.</li>
+<li><strong>Cosine heatmaps:</strong> only <code>v1</code> is rendered right now. Consider: render for <strong>each version</strong> (v1–v4) or at least the <strong>first and last</strong> to visualize drift.</li>
+<li><strong>Window plots cap:</strong> current set is reasonable; if articles grow, keep the per-article plot cap consistent with M1–M3 (first 10 by slug) and note the cap in metadata.</li>
+</ul>
+</section>
+<section id="qa-checks-that-passed-from-the-bundle" class="level2">
+<h2 class="anchored" data-anchor-id="qa-checks-that-passed-from-the-bundle">QA checks that passed (from the bundle)</h2>
+<ul>
+<li><code>uses_m2_windows: true</code>, policy recorded and consistent.</li>
+<li><code>normalize_embeddings: true</code> → cosine is well-behaved; violin/trend plots should never exceed 1.0.</li>
+<li><strong>No &lt;2-sentence windows</strong> → no unexpected NaNs in <code>coherence_windows.parquet</code> expected.</li>
+<li>Plots exist and are non-empty (sizes look healthy in the archive).</li>
+</ul>
+</section>
+<section id="suggested-small-additions-to-the-notes-copypaste" class="level2">
+<h2 class="anchored" data-anchor-id="suggested-small-additions-to-the-notes-copypaste">Suggested small additions to the notes (copy/paste)</h2>
+<ul>
+<li>Coherence metric is <code>mean(off-diag cosine)</code> over sentence embeddings (MiniLM-L6-v2, CPU, normalized).</li>
+<li>Windows reuse Module 2 spans with <strong>full sentence containment</strong>; windows with <code>&lt;2</code> sentences are excluded (count = 0 in this run).</li>
+<li>Bundle includes doc-level and window-level coherence plus global/ per-version visuals.</li>
+<li>Known limitations: MiniLM is compact; for higher fidelity consider <code>all-mpnet-base-v2</code> behind a flag (heavier).</li>
+<li>Action item: add <code>rows/cols/schema</code> to <code>bundle_index.json</code> (align with Module 3), normalize slugs (remove trailing <code>_</code>, correct spelling), and optionally render heatmaps for v1 <strong>and</strong> v4.</li>
+</ul>
+<p>If you want, I can also list the <strong>expected column set</strong> for each parquet (for a quick schema check in future runs).</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -557,5 +724,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

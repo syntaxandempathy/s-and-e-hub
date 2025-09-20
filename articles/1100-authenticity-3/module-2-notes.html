@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.33">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Module 2 Notes – Syntax &amp; Empathy</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-c11994fcf07a16f1c4dfa798fec8ff96.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Syntax &amp; Empathy</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../articles/"> 
+<span class="menu-text">Articles</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../resources/"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#release-notes-module-2" id="toc-release-notes-module-2" class="nav-link active" data-scroll-target="#release-notes-module-2">Release Notes — Module 2</a>
+  <ul class="collapse">
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#decisions-captured" id="toc-decisions-captured" class="nav-link" data-scroll-target="#decisions-captured">Decisions captured</a></li>
+  <li><a href="#delivered-artifacts-for-the-orchestrator" id="toc-delivered-artifacts-for-the-orchestrator" class="nav-link" data-scroll-target="#delivered-artifacts-for-the-orchestrator">Delivered artifacts (for the orchestrator)</a></li>
+  <li><a href="#known-deviations-small-deltas-to-spec-non-blocking" id="toc-known-deviations-small-deltas-to-spec-non-blocking" class="nav-link" data-scroll-target="#known-deviations-small-deltas-to-spec-non-blocking">Known deviations / small deltas to spec (non-blocking)</a></li>
+  <li><a href="#guardrails-observedexpected" id="toc-guardrails-observedexpected" class="nav-link" data-scroll-target="#guardrails-observedexpected">Guardrails (observed/expected)</a></li>
+  <li><a href="#downstream-consumption-contract-for-module-3" id="toc-downstream-consumption-contract-for-module-3" class="nav-link" data-scroll-target="#downstream-consumption-contract-for-module-3">Downstream consumption contract (for Module 3+)</a></li>
+  <li><a href="#optional-backlog-keep-as-nice-to-have" id="toc-optional-backlog-keep-as-nice-to-have" class="nav-link" data-scroll-target="#optional-backlog-keep-as-nice-to-have">Optional backlog (keep as “nice-to-have”)</a></li>
+  <li><a href="#if-you-paste-the-above-into-your-module-2-notes-it-will-be-enough-context-for-anyone-picking-up-module-3-spacy-syntax-discourse-to-integrate-smoothly." id="toc-if-you-paste-the-above-into-your-module-2-notes-it-will-be-enough-context-for-anyone-picking-up-module-3-spacy-syntax-discourse-to-integrate-smoothly." class="nav-link" data-scroll-target="#if-you-paste-the-above-into-your-module-2-notes-it-will-be-enough-context-for-anyone-picking-up-module-3-spacy-syntax-discourse-to-integrate-smoothly.">If you paste the above into your Module-2 notes, it will be enough context for anyone picking up Module 3 (spaCy syntax &amp; discourse) to integrate smoothly.</a></li>
+  </ul></li>
+  <li><a href="#module-2-close-out-notes-nltk-lexical-features-windows-visuals" id="toc-module-2-close-out-notes-nltk-lexical-features-windows-visuals" class="nav-link" data-scroll-target="#module-2-close-out-notes-nltk-lexical-features-windows-visuals">Module 2 — Close-out Notes (NLTK: lexical features + windows + visuals)</a>
+  <ul class="collapse">
+  <li><a href="#scope-deliverables" id="toc-scope-deliverables" class="nav-link" data-scroll-target="#scope-deliverables">Scope &amp; deliverables</a></li>
+  <li><a href="#artifacts-canonical-paths" id="toc-artifacts-canonical-paths" class="nav-link" data-scroll-target="#artifacts-canonical-paths">Artifacts (canonical paths)</a></li>
+  <li><a href="#determinism-environment" id="toc-determinism-environment" class="nav-link" data-scroll-target="#determinism-environment">Determinism &amp; environment</a></li>
+  <li><a href="#implementation-choices-callouts" id="toc-implementation-choices-callouts" class="nav-link" data-scroll-target="#implementation-choices-callouts">Implementation choices (callouts)</a></li>
+  <li><a href="#qa-checks-we-perform" id="toc-qa-checks-we-perform" class="nav-link" data-scroll-target="#qa-checks-we-perform">QA checks we perform</a></li>
+  <li><a href="#known-limitations-documented" id="toc-known-limitations-documented" class="nav-link" data-scroll-target="#known-limitations-documented">Known limitations (documented)</a></li>
+  <li><a href="#performance-notes" id="toc-performance-notes" class="nav-link" data-scroll-target="#performance-notes">Performance notes</a></li>
+  <li><a href="#hand-off-to-module-3-whats-ready" id="toc-hand-off-to-module-3-whats-ready" class="nav-link" data-scroll-target="#hand-off-to-module-3-whats-ready">Hand-off to Module 3 (what’s ready)</a></li>
+  <li><a href="#small-later-improvements-non-blocking" id="toc-small-later-improvements-non-blocking" class="nav-link" data-scroll-target="#small-later-improvements-non-blocking">Small “later” improvements (non-blocking)</a></li>
+  <li><a href="#one-liner-reproducibility" id="toc-one-liner-reproducibility" class="nav-link" data-scroll-target="#one-liner-reproducibility">One-liner reproducibility</a></li>
+  <li><a href="#if-you-want-this-distilled-into-a-short-readme-paragraph-for-the-repo-say-the-word-and-ill-condense-the-above-into-6-sentences." id="toc-if-you-want-this-distilled-into-a-short-readme-paragraph-for-the-repo-say-the-word-and-ill-condense-the-above-into-6-sentences." class="nav-link" data-scroll-target="#if-you-want-this-distilled-into-a-short-readme-paragraph-for-the-repo-say-the-word-and-ill-condense-the-above-into-6-sentences.">If you want this distilled into a short README paragraph for the repo, say the word and I’ll condense the above into ~6 sentences.</a></li>
+  </ul></li>
+  <li><a href="#module-2-final-notes-addendum" id="toc-module-2-final-notes-addendum" class="nav-link" data-scroll-target="#module-2-final-notes-addendum">Module 2 – Final Notes (addendum)</a>
+  <ul class="collapse">
+  <li><a href="#what-this-module-does-one-liner" id="toc-what-this-module-does-one-liner" class="nav-link" data-scroll-target="#what-this-module-does-one-liner">What this module does (one-liner)</a></li>
+  <li><a href="#data-contract-assumptions" id="toc-data-contract-assumptions" class="nav-link" data-scroll-target="#data-contract-assumptions">Data contract &amp; assumptions</a></li>
+  <li><a href="#feature-definitions-clarity-for-reviewers" id="toc-feature-definitions-clarity-for-reviewers" class="nav-link" data-scroll-target="#feature-definitions-clarity-for-reviewers">Feature definitions (clarity for reviewers)</a></li>
+  <li><a href="#visuals-produced" id="toc-visuals-produced" class="nav-link" data-scroll-target="#visuals-produced">Visuals produced</a></li>
+  <li><a href="#guardrails-edge-cases" id="toc-guardrails-edge-cases" class="nav-link" data-scroll-target="#guardrails-edge-cases">Guardrails &amp; edge cases</a></li>
+  <li><a href="#language-handling-known-limitation" id="toc-language-handling-known-limitation" class="nav-link" data-scroll-target="#language-handling-known-limitation">Language handling (known limitation)</a></li>
+  <li><a href="#performance-characteristics" id="toc-performance-characteristics" class="nav-link" data-scroll-target="#performance-characteristics">Performance characteristics</a></li>
+  <li><a href="#qa-checklist-quick-invariants" id="toc-qa-checklist-quick-invariants" class="nav-link" data-scroll-target="#qa-checklist-quick-invariants">QA checklist (quick invariants)</a></li>
+  <li><a href="#tiny-follow-ups-non-blocking" id="toc-tiny-follow-ups-non-blocking" class="nav-link" data-scroll-target="#tiny-follow-ups-non-blocking">Tiny follow-ups (non-blocking)</a></li>
+  <li><a href="#why-these-choices" id="toc-why-these-choices" class="nav-link" data-scroll-target="#why-these-choices">Why these choices</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Module 2 Notes</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>User: I’m calling module 2 complete. There are some outstanding items, but I feel we’ve more than met what I had hoped for. This is the final state of the notebook for module 2, if you have any thoughts to add to the notes I’ll need to collect them now. Expert: Here are the notes I recommend you capture for <strong>Module 2 (NLTK stopwords &amp; burstiness)</strong> before we move on.</p>
+<section id="release-notes-module-2" class="level1">
+<h1>Release Notes — Module 2</h1>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<ul>
+<li><p>Implements NLTK-based tokenization (Punkt sentences + Treebank words).</p></li>
+<li><p>Adds <strong>sliding-window</strong> analysis with sentence windows (observed defaults: <code>window_sents=3</code>, <code>stride_sents=1</code>, <code>keep_tail=False</code>).</p></li>
+<li><p>Produces global and per-article visualizations for stopword ratio and burstiness.</p></li>
+<li><p>Artifacts confirmed in the bundle:</p>
+<ul>
+<li><code>fw_burstiness_windows.parquet</code></li>
+<li><code>plots/global_burstiness_violin.png</code></li>
+<li><code>plots/trend_stopword_ratio_&lt;slug&gt;.png</code></li>
+<li><code>plots/trend_burstiness_cv_&lt;slug&gt;.png</code></li>
+<li><code>plots/radar_overlay_&lt;slug&gt;.png</code> (naming note below)</li>
+<li><code>metadata.json</code> (records window/tokenizer settings)</li>
+</ul></li>
+</ul>
+</section>
+<section id="decisions-captured" class="level2">
+<h2 class="anchored" data-anchor-id="decisions-captured">Decisions captured</h2>
+<ul>
+<li><strong>Version order source:</strong> Filename prefix (<code>01–04</code>) as the canonical order (consistent with Module 1).</li>
+<li><strong>Tokenizers:</strong> Sentence = NLTK Punkt (en); Word = NLTK Treebank.</li>
+<li><strong>Windowing:</strong> Over sentences (not tokens), overlapping windows via stride; windows carry <strong>char_start/char_end</strong> spans (relative to tokenization basis).</li>
+<li><strong>Compute scope:</strong> Module-2 metrics only (stopword, content, hapax, sentence-length stats, burstiness).</li>
+</ul>
+</section>
+<section id="delivered-artifacts-for-the-orchestrator" class="level2">
+<h2 class="anchored" data-anchor-id="delivered-artifacts-for-the-orchestrator">Delivered artifacts (for the orchestrator)</h2>
+<ul>
+<li><p><strong>Window-level parquet:</strong> <code>fw_burstiness_windows.parquet</code> Expected keys per row:</p>
+<ul>
+<li><code>article_id, version_id, version_tag, doc_id</code></li>
+<li><code>win_id, win_label</code></li>
+<li><code>span_basis, char_start, char_end, sent_start_index, sent_end_index, is_partial_tail</code></li>
+<li><code>n_sents_win, n_tokens_win</code></li>
+<li><code>stopword_rate_win, content_rate_win, hapax_rate_win, function_word_rate_nltk_win</code></li>
+<li><code>mean_sent_len_tok_win, std_sent_len_tok_win</code></li>
+<li><code>burstiness_token_cv_win, burstiness_topk_mean_cv_win</code></li>
+</ul></li>
+<li><p><strong>Plots:</strong></p>
+<ul>
+<li>Global: <code>global_burstiness_violin.png</code></li>
+<li>Per-article: <code>trend_stopword_ratio_&lt;slug&gt;.png</code>, <code>trend_burstiness_cv_&lt;slug&gt;.png</code>, <code>radar_overlay_&lt;slug&gt;.png</code></li>
+</ul></li>
+<li><p><strong>Metadata:</strong> <code>metadata.json</code> (confirmed to include <code>window_sents/stride_sents/keep_tail</code> and tokenizer names)</p></li>
+</ul>
+</section>
+<section id="known-deviations-small-deltas-to-spec-non-blocking" class="level2">
+<h2 class="anchored" data-anchor-id="known-deviations-small-deltas-to-spec-non-blocking">Known deviations / small deltas to spec (non-blocking)</h2>
+<ul>
+<li><p><strong>Doc-level tables &amp; deltas</strong> (spec’d as <code>fw_burstiness.parquet</code> and <code>fw_burstiness_deltas.parquet</code>) were not included in the bundle. You elected to proceed without them—fine. Downstream modules should <strong>not</strong> rely on them.</p></li>
+<li><p><strong>Plot naming:</strong> spec suggested <code>stopword_radar_&lt;slug&gt;.png</code>; current uses <code>radar_overlay_&lt;slug&gt;.png</code>. Either standardize here or have the orchestrator accept both.</p></li>
+<li><p><strong>Metadata breadth:</strong> current metadata is window/tokenizer focused. If convenient later, add:</p>
+<ul>
+<li><code>version_order_source: "filename_prefix"</code>, <code>source_dir</code>, <code>articles</code>, <code>versions_per_article_min/max</code>, <code>expected_versions: 4</code>, <code>notes</code>, <code>seed</code>, <code>library_versions</code>. (Optional; Module 1 already records most of this.)</li>
+</ul></li>
+</ul>
+</section>
+<section id="guardrails-observedexpected" class="level2">
+<h2 class="anchored" data-anchor-id="guardrails-observedexpected">Guardrails (observed/expected)</h2>
+<ul>
+<li><strong>Determinism:</strong> logic is deterministic (seed remains 7; windowing has no RNG).</li>
+<li><strong>Safety on short texts:</strong> if <code>n_sents_win &lt; 2</code> or <code>n_tokens_win &lt; 10</code>, burstiness metrics should be <code>NaN</code> (no crash).</li>
+<li><strong>Span integrity:</strong> <code>char_start/char_end</code> should be monotonic within each <code>(article_id, version_id)</code>.</li>
+<li><strong>No forbidden tech:</strong> stayed within NLTK + stdlib/NumPy/Pandas/Matplotlib.</li>
+</ul>
+</section>
+<section id="downstream-consumption-contract-for-module-3" class="level2">
+<h2 class="anchored" data-anchor-id="downstream-consumption-contract-for-module-3">Downstream consumption contract (for Module 3+)</h2>
+<ul>
+<li>Use <strong>(article_id, version_id, win_id)</strong> as the join key into window-level features.</li>
+<li>Treat <code>char_start/char_end</code> as authoritative for mapping windows back to text for evidence snippets.</li>
+<li>If the orchestrator needs doc-level NLTK features later, derive them by aggregating the window file (e.g., per-version means/medians), rather than backfilling new Module-2 outputs.</li>
+</ul>
+</section>
+<section id="optional-backlog-keep-as-nice-to-have" class="level2">
+<h2 class="anchored" data-anchor-id="optional-backlog-keep-as-nice-to-have">Optional backlog (keep as “nice-to-have”)</h2>
+<ul>
+<li>Add doc-level <code>fw_burstiness.parquet</code> and adjacent-pair <code>fw_burstiness_deltas.parquet</code> (simple aggregation + diffs).</li>
+<li>Enrich metadata as noted above.</li>
+<li>Standardize radar plot filename to <code>stopword_radar_&lt;slug&gt;.png</code> (or accept both in the orchestrator).</li>
+</ul>
+<hr>
+</section>
+<section id="if-you-paste-the-above-into-your-module-2-notes-it-will-be-enough-context-for-anyone-picking-up-module-3-spacy-syntax-discourse-to-integrate-smoothly." class="level2">
+<h2 class="anchored" data-anchor-id="if-you-paste-the-above-into-your-module-2-notes-it-will-be-enough-context-for-anyone-picking-up-module-3-spacy-syntax-discourse-to-integrate-smoothly.">If you paste the above into your Module-2 notes, it will be enough context for anyone picking up Module 3 (spaCy syntax &amp; discourse) to integrate smoothly.</h2>
+<p>Engineer: awesome—congrats on getting Module 2 over the line. here’s a tight, copy-pasteable note set to close it out and tee up Module 3.</p>
+</section>
+</section>
+<section id="module-2-close-out-notes-nltk-lexical-features-windows-visuals" class="level1">
+<h1>Module 2 — Close-out Notes (NLTK: lexical features + windows + visuals)</h1>
+<section id="scope-deliverables" class="level2">
+<h2 class="anchored" data-anchor-id="scope-deliverables">Scope &amp; deliverables</h2>
+<ul>
+<li><strong>Tokenization</strong>: NLTK Punkt (sentences) + Treebank (words). English-biased by design.</li>
+<li><strong>Doc-level features</strong> (per <code>(article_id, version_id)</code>): token/sentence counts, stopword/content rates, hapax rate, mean/std sentence length, burstiness (CV), top-K content dispersion mean CV.</li>
+<li><strong>Window-level features</strong> (sliding over sentences): same family of rates + burstiness within windows, with precise char spans and sentence indices.</li>
+<li><strong>Deltas</strong>: adjacent version deltas (1→2, 2→3, 3→4) for all numeric doc features.</li>
+<li><strong>Visuals</strong>: cohort global burstiness violin; per-article radar overlay (v1..v4); per-article trends (stopword ratio, burstiness).</li>
+<li><strong>Packaging</strong>: single 2.Z bundler writes README, manifest (row/col counts + checksums), and a zip.</li>
+</ul>
+</section>
+<section id="artifacts-canonical-paths" class="level2">
+<h2 class="anchored" data-anchor-id="artifacts-canonical-paths">Artifacts (canonical paths)</h2>
+<ul>
+<li><p><code>outputs/nltk/fw_burstiness.parquet</code></p></li>
+<li><p><code>outputs/nltk/fw_burstiness_deltas.parquet</code></p></li>
+<li><p><code>outputs/nltk/fw_burstiness_windows.parquet</code></p></li>
+<li><p><code>outputs/nltk/metadata.json</code></p></li>
+<li><p><code>outputs/nltk/plots/</code></p>
+<ul>
+<li><code>global_burstiness_violin.png</code></li>
+<li><code>stopword_radar_&lt;slug&gt;.png</code></li>
+<li><code>trend_stopword_ratio_&lt;slug&gt;.png</code></li>
+<li><code>trend_burstiness_cv_&lt;slug&gt;.png</code></li>
+<li><code>plots_index.json</code></li>
+</ul></li>
+<li><p><code>outputs/nltk/bundles/module2_artifacts_*.zip</code></p></li>
+<li><p><code>outputs/nltk/bundle_index.json</code> (rich manifest written next to outputs)</p></li>
+</ul>
+</section>
+<section id="determinism-environment" class="level2">
+<h2 class="anchored" data-anchor-id="determinism-environment">Determinism &amp; environment</h2>
+<ul>
+<li>Deterministic seeding inherited from Module 0; no stochastic ops in M2.</li>
+<li>Wheel-only installs; NLTK corpora check + fail-fast if missing.</li>
+<li>Thread caps respected (no surprise parallelism).</li>
+</ul>
+</section>
+<section id="implementation-choices-callouts" class="level2">
+<h2 class="anchored" data-anchor-id="implementation-choices-callouts">Implementation choices (callouts)</h2>
+<ul>
+<li><strong>Function-word proxy</strong>: English NLTK stopwords, normalized by <em>stopword total</em> (not all tokens). This keeps function-word profile length-robust.</li>
+<li><strong>Short-text policy</strong>: if <code>&lt;2</code> sentences or <code>&lt;10</code> tokens, burstiness metrics → <code>NaN</code> (avoid false “stable” signals).</li>
+<li><strong>Percentile normalization</strong>: radars use 5–95th cohort percentiles with guards for all-NaN/constant columns.</li>
+<li><strong>Filename hygiene</strong>: plot filenames sanitize <code>article_id</code> to <code>[-_.A-Za-z0-9]</code>.</li>
+</ul>
+</section>
+<section id="qa-checks-we-perform" class="level2">
+<h2 class="anchored" data-anchor-id="qa-checks-we-perform">QA checks we perform</h2>
+<ul>
+<li><strong>Windows</strong>: spans/indices monotonic within <code>(article_id, version_id)</code>; correct <code>win_id</code> sequencing.</li>
+<li><strong>Deltas</strong>: assert adjacency (<code>to_version − from_version == 1</code>) per article.</li>
+<li><strong>Bundler</strong>: manifest includes rows/cols for Parquets, checksums for every file, and flags any missing core artifact.</li>
+</ul>
+</section>
+<section id="known-limitations-documented" class="level2">
+<h2 class="anchored" data-anchor-id="known-limitations-documented">Known limitations (documented)</h2>
+<ul>
+<li><strong>Language bias</strong>: Treebank/Punkt tuned for English. Non-EN text may skew rates and segment boundaries.</li>
+<li><strong>Tokenization parity</strong>: Module 1 vs 2 tokenization may differ if M1 used a Unicode <code>regex</code> tokenizer. Absolute levels (stopword rate, type stats) can shift; relative deltas remain informative.</li>
+<li><strong>Style imitation</strong>: High-quality edits or copy-editing can dampen lexical signals; M2 reports probabilities/uncertainties in later stages (Modules 3–5) to mitigate over-certainty.</li>
+</ul>
+</section>
+<section id="performance-notes" class="level2">
+<h2 class="anchored" data-anchor-id="performance-notes">Performance notes</h2>
+<ul>
+<li>Linear in tokens; typical small-to-medium corpora run comfortably in notebook contexts.</li>
+<li>Memory kept flat by closing figures; plotting capped per ~10 articles by default where applicable.</li>
+</ul>
+</section>
+<section id="hand-off-to-module-3-whats-ready" class="level2">
+<h2 class="anchored" data-anchor-id="hand-off-to-module-3-whats-ready">Hand-off to Module 3 (what’s ready)</h2>
+<ul>
+<li><p><strong>Inputs for change-point fusion / classifiers</strong>:</p>
+<ul>
+<li><code>fw_burstiness.parquet</code> (doc features)</li>
+<li><code>fw_burstiness_deltas.parquet</code> (adjacent diffs)</li>
+<li><code>fw_burstiness_windows.parquet</code> (window series + spans)</li>
+</ul></li>
+<li><p><strong>Offsets</strong>: windows include <code>char_start/char_end</code> tied to the exact text basis used for tokenization—ready for evidence snippets and seam highlighting.</p></li>
+</ul>
+</section>
+<section id="small-later-improvements-non-blocking" class="level2">
+<h2 class="anchored" data-anchor-id="small-later-improvements-non-blocking">Small “later” improvements (non-blocking)</h2>
+<ul>
+<li>Decide and <strong>lock a single tokenization story</strong> across modules (Treebank everywhere vs.&nbsp;M1 regex everywhere). Add a one-liner to <code>metadata.json</code> when decided.</li>
+<li>Optional curated function-word list (swap for NLTK stopwords to reduce topical noise).</li>
+<li>Add a “non-EN suspected” flag per article (from M1) to annotate or skip radars for those cases.</li>
+</ul>
+</section>
+<section id="one-liner-reproducibility" class="level2">
+<h2 class="anchored" data-anchor-id="one-liner-reproducibility">One-liner reproducibility</h2>
+<p>Run cells 2.1 → 2.2 → 2.3 → 2.4 → <strong>2.3b-min</strong> → <strong>2.4fix</strong> → <strong>2.Z</strong>. The zip manifest will confirm row/col counts and checksums for audit.</p>
+</section>
+<section id="if-you-want-this-distilled-into-a-short-readme-paragraph-for-the-repo-say-the-word-and-ill-condense-the-above-into-6-sentences." class="level2">
+<h2 class="anchored" data-anchor-id="if-you-want-this-distilled-into-a-short-readme-paragraph-for-the-repo-say-the-word-and-ill-condense-the-above-into-6-sentences.">If you want this distilled into a short README paragraph for the repo, say the word and I’ll condense the above into ~6 sentences.</h2>
+<p>Code Reviewer: Love it—Module 2 is in a good place. Here are crisp, “drop into notes” additions that capture decisions, caveats, and tiny follow-ups for future you/QA.</p>
+</section>
+</section>
+<section id="module-2-final-notes-addendum" class="level1">
+<h1>Module 2 – Final Notes (addendum)</h1>
+<section id="what-this-module-does-one-liner" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-module-does-one-liner">What this module does (one-liner)</h2>
+<p>Computes NLTK-based lexical signals—stopword/function-word proxies, hapax rate, sentence-length stats, and “burstiness” (CV of tokens per sentence)—and emits per-doc features + adjacent version deltas with matplotlib visuals.</p>
+</section>
+<section id="data-contract-assumptions" class="level2">
+<h2 class="anchored" data-anchor-id="data-contract-assumptions">Data contract &amp; assumptions</h2>
+<ul>
+<li><strong>Inputs:</strong> Uses <code>DOCS</code> discovered by filename prefix <code>01–04</code> (or passed in), with fields at least <code>{doc_id, text}</code>; optional <code>{article_id, version_id, version_tag, filename, path}</code> are respected.</li>
+<li><strong>Foundations required:</strong> <code>np</code>, <code>pd</code>, <code>plt</code> from Module 0. <code>pyarrow</code> is required to write Parquet (provided earlier in Module 1). If running Module 2 standalone, ensure <code>pyarrow</code> is present.</li>
+<li><strong>Language:</strong> Tokenization is English-centric (NLTK punkt + English stopwords). Non-EN text will degrade metrics; see “Language” below.</li>
+</ul>
+</section>
+<section id="feature-definitions-clarity-for-reviewers" class="level2">
+<h2 class="anchored" data-anchor-id="feature-definitions-clarity-for-reviewers">Feature definitions (clarity for reviewers)</h2>
+<ul>
+<li><strong>Stopword proxy for “function words”:</strong> <code>function_word_rate_nltk ≡ stopword_rate</code> using NLTK’s English stoplist.</li>
+<li><strong>Content rate:</strong> <code>1.0 – stopword_rate</code>.</li>
+<li><strong>Hapax rate (type-based):</strong> share of lowercased alphabetic token <em>types</em> appearing once.</li>
+<li><strong>Sentence stats:</strong> tokenized with NLTK Treebank tokens per sentence (mean/std/count).</li>
+<li><strong>Burstiness (CV):</strong> <code>std(tokens_per_sentence) / mean(tokens_per_sentence)</code>; NaN if mean = 0 or not enough sentences.</li>
+<li><strong>Top-K burstiness (content):</strong> mean CV across per-sentence counts for the K most frequent <strong>content</strong> tokens (K≤20); NaN if insufficient data.</li>
+<li><strong>Deltas:</strong> Adjacent versions only (1→2, 2→3, 3→4) per article; includes token-set Jaccard and numeric deltas. <code>zipf_jsd</code> intentionally <strong>NaN</strong> (defined in Module 1 to avoid duplication).</li>
+</ul>
+</section>
+<section id="visuals-produced" class="level2">
+<h2 class="anchored" data-anchor-id="visuals-produced">Visuals produced</h2>
+<ul>
+<li><strong>Global violin:</strong> distribution of <code>burstiness_token_cv</code> across all docs.</li>
+<li><strong>Per-article radar:</strong> normalized snapshot (latest version) across <code>[stopword_ratio, sent_len_mean, burstiness_token_cv]</code>.</li>
+<li><strong>Per-article trends:</strong> lines for stopword ratio and burstiness vs <code>version_id</code>.</li>
+</ul>
+</section>
+<section id="guardrails-edge-cases" class="level2">
+<h2 class="anchored" data-anchor-id="guardrails-edge-cases">Guardrails &amp; edge cases</h2>
+<ul>
+<li><strong>Short docs:</strong> If <code>&lt;2</code> sentences or <code>&lt;10</code> tokens, burstiness metrics are NaN (or 0 where defined); this is expected—document won’t block the run.</li>
+<li><strong>Percentile normalization (radar):</strong> Normalize per feature using 5–95th percentiles. If a column is constant or all-NaN, normalization falls back to a safe range—no crash, but radar will be flat.</li>
+<li><strong>Filenames for plots:</strong> Article IDs are used in filenames; we sanitize path-like characters to underscores to avoid OS issues.</li>
+<li><strong>Memory hygiene:</strong> Figures are closed after save to prevent memory growth during many-article runs.</li>
+<li><strong>Determinism:</strong> Seeds are set (<code>np</code>, <code>random</code>) and no sampling is used in features; visuals only reflect input order/values.</li>
+</ul>
+</section>
+<section id="language-handling-known-limitation" class="level2">
+<h2 class="anchored" data-anchor-id="language-handling-known-limitation">Language handling (known limitation)</h2>
+<ul>
+<li>Metrics and stopword sets are <strong>English-specific</strong>. If Module 1’s <code>lang_guess == "non_en_possible"</code>, Module 2 will still run but values (esp.&nbsp;stopword/content) can mislead. Recommended future behavior: warn &amp; tag those articles or skip radars for them.</li>
+</ul>
+</section>
+<section id="performance-characteristics" class="level2">
+<h2 class="anchored" data-anchor-id="performance-characteristics">Performance characteristics</h2>
+<ul>
+<li>Linear in text length; Treebank and punkt are fast on CPU. Per-article radar/trend generation is capped (first N, currently 10 in prior rev) to avoid UI spam; all plots are still written to disk.</li>
+</ul>
+</section>
+<section id="qa-checklist-quick-invariants" class="level2">
+<h2 class="anchored" data-anchor-id="qa-checklist-quick-invariants">QA checklist (quick invariants)</h2>
+<ul>
+<li><strong>Parquet present:</strong> <code>outputs/nltk/fw_burstiness.parquet</code> and <code>outputs/nltk/fw_burstiness_deltas.parquet</code> exist; <code>df_nltk.rows == DOCS count</code>.</li>
+<li><strong>Schema spot-check:</strong> <code>df_nltk</code> must include <code>["doc_id","article_id","version_id","version_tag","n_tokens_nltk","n_sents_nltk","mean_sent_len_tok_nltk","std_sent_len_tok_nltk","stopword_rate","content_rate","hapax_rate","function_word_rate_nltk","burstiness_token_cv","burstiness_topk_mean_cv"]</code> (plus <code>fw::…</code> wide columns).</li>
+<li><strong>Deltas adjacent only:</strong> For an article with versions <code>[1,3,4]</code>, deltas include <code>1→?</code> none, <code>3→4</code> yes; <code>2→4</code> is intentionally omitted.</li>
+<li><strong>Plots:</strong> <code>global_burstiness_violin.png</code> present, and for each article: <code>radar_{article}.png</code>, <code>trend_stopword_ratio_{article}.png</code>, <code>trend_burstiness_cv_{article}.png</code>.</li>
+</ul>
+</section>
+<section id="tiny-follow-ups-non-blocking" class="level2">
+<h2 class="anchored" data-anchor-id="tiny-follow-ups-non-blocking">Tiny follow-ups (non-blocking)</h2>
+<ol type="1">
+<li><strong>Percentile guard:</strong> Before <code>np.nanpercentile</code>, check <code>df_nltk[c].notna().any()</code>; fallback to <code>(0,1)</code> if empty.</li>
+<li><strong>Sanitize plot filenames:</strong> Replace non-<code>[A-Za-z0-9_.-]</code> chars in <code>article_id</code> with <code>_</code> when composing paths.</li>
+<li><strong>Remove dead code in deltas:</strong> Lines computing sentence tokens that are immediately re-computed can be dropped (small speedup).</li>
+<li><strong>Manifest (nice-to-have):</strong> Write <code>outputs/nltk/manifest.json</code> with row counts and plot filenames to simplify audits.</li>
+</ol>
+</section>
+<section id="why-these-choices" class="level2">
+<h2 class="anchored" data-anchor-id="why-these-choices">Why these choices</h2>
+<ul>
+<li><strong>Stopwords as function-word proxy:</strong> Portable and language-agnostic enough for now; swap in curated function-word lists later without changing the interface.</li>
+<li><strong>JSD left to Module 1:</strong> Avoids recomputation/duplication; Module 2 focuses on NLTK-derived signals only.</li>
+<li><strong>Matplotlib-only visuals:</strong> Keeps dependency surface minimal and consistent with earlier modules.</li>
+</ul>
+<p>That’s everything I’d add to the notes. Congrats—Module 2 is clean and shippable.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/syntax-and-empathy\.github\.io\/s-and-e-hub");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© 2025 Syntax &amp; Empathy — <a href="https://creativecommons.org/licenses/by/4.0/">Licensed under CC BY 4.0</a></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
