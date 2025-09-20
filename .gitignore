@@ -31,3 +31,4 @@ raw/
 # Quarto files
 /.quarto/
 **/*.quarto_ipynb
+*.m4a

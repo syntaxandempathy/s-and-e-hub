@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.24">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>module-0-notes – Syntax &amp; Empathy</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-13248260e068f249478c827b84d311c7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Syntax &amp; Empathy</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../articles/"> 
+<span class="menu-text">Articles</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../resources/"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#whats-good" id="toc-whats-good" class="nav-link active" data-scroll-target="#whats-good">What’s good</a></li>
+  <li><a href="#gaps-to-close-actionable" id="toc-gaps-to-close-actionable" class="nav-link" data-scroll-target="#gaps-to-close-actionable">Gaps to close (actionable)</a>
+  <ul class="collapse">
+  <li><a href="#cell-id-completeness-must-fix" id="toc-cell-id-completeness-must-fix" class="nav-link" data-scroll-target="#cell-id-completeness-must-fix">1) Cell ID completeness (must fix)</a></li>
+  <li><a href="#module-0-scope-boundaries-guardrails" id="toc-module-0-scope-boundaries-guardrails" class="nav-link" data-scroll-target="#module-0-scope-boundaries-guardrails">2) Module 0 scope boundaries (guardrails)</a></li>
+  <li><a href="#input-handshake-stub-lightweight-no-tech" id="toc-input-handshake-stub-lightweight-no-tech" class="nav-link" data-scroll-target="#input-handshake-stub-lightweight-no-tech">3) Input handshake stub (lightweight; no tech)</a></li>
+  <li><a href="#directory-logging-hygiene" id="toc-directory-logging-hygiene" class="nav-link" data-scroll-target="#directory-logging-hygiene">4) Directory &amp; logging hygiene</a></li>
+  <li><a href="#version-capture-environment-detection" id="toc-version-capture-environment-detection" class="nav-link" data-scroll-target="#version-capture-environment-detection">5) Version capture &amp; environment detection</a></li>
+  <li><a href="#visualization-smoke-test-robustness" id="toc-visualization-smoke-test-robustness" class="nav-link" data-scroll-target="#visualization-smoke-test-robustness">6) Visualization smoke test robustness</a></li>
+  <li><a href="#sentencewindowing-helpers-regex-only-optional" id="toc-sentencewindowing-helpers-regex-only-optional" class="nav-link" data-scroll-target="#sentencewindowing-helpers-regex-only-optional">7) Sentence/windowing helpers (regex only, optional)</a></li>
+  <li><a href="#side-effects-keep-them-minimal" id="toc-side-effects-keep-them-minimal" class="nav-link" data-scroll-target="#side-effects-keep-them-minimal">8) Side-effects: keep them minimal</a></li>
+  </ul></li>
+  <li><a href="#minimal-acceptance-checklist-module-0" id="toc-minimal-acceptance-checklist-module-0" class="nav-link" data-scroll-target="#minimal-acceptance-checklist-module-0">Minimal acceptance checklist (Module 0)</a></li>
+  <li><a href="#suggested-cell-map-if-you-need-labels" id="toc-suggested-cell-map-if-you-need-labels" class="nav-link" data-scroll-target="#suggested-cell-map-if-you-need-labels">Suggested cell map (if you need labels)</a></li>
+  <li><a href="#why-this-matters-before-module-1" id="toc-why-this-matters-before-module-1" class="nav-link" data-scroll-target="#why-this-matters-before-module-1">Why this matters before Module 1</a>
+  <ul class="collapse">
+  <li><a href="#cell-0.0-helpers" id="toc-cell-0.0-helpers" class="nav-link" data-scroll-target="#cell-0.0-helpers">cell 0.0 — helpers</a></li>
+  <li><a href="#cell-0.1-minimal-installs-only-if-missing-wheels-only" id="toc-cell-0.1-minimal-installs-only-if-missing-wheels-only" class="nav-link" data-scroll-target="#cell-0.1-minimal-installs-only-if-missing-wheels-only">cell 0.1 — minimal installs (only-if-missing; wheels-only)</a></li>
+  <li><a href="#cell-0.2-imports-determinism-version-capture" id="toc-cell-0.2-imports-determinism-version-capture" class="nav-link" data-scroll-target="#cell-0.2-imports-determinism-version-capture">cell 0.2 — imports, determinism, version capture</a></li>
+  <li><a href="#cell-0.3-configuration-directories" id="toc-cell-0.3-configuration-directories" class="nav-link" data-scroll-target="#cell-0.3-configuration-directories">cell 0.3 — configuration &amp; directories</a></li>
+  <li><a href="#cell-0.4-status-logging-self-report" id="toc-cell-0.4-status-logging-self-report" class="nav-link" data-scroll-target="#cell-0.4-status-logging-self-report">cell 0.4 — status logging &amp; self-report</a></li>
+  <li><a href="#cell-0.5-offset-preserving-normalization" id="toc-cell-0.5-offset-preserving-normalization" class="nav-link" data-scroll-target="#cell-0.5-offset-preserving-normalization">cell 0.5 — offset-preserving normalization</a></li>
+  <li><a href="#cell-0.6-sentence-segmentation-windowing" id="toc-cell-0.6-sentence-segmentation-windowing" class="nav-link" data-scroll-target="#cell-0.6-sentence-segmentation-windowing">cell 0.6 — sentence segmentation &amp; windowing</a></li>
+  <li><a href="#cell-0.7-visualization-smoke-test" id="toc-cell-0.7-visualization-smoke-test" class="nav-link" data-scroll-target="#cell-0.7-visualization-smoke-test">cell 0.7 — visualization smoke test</a></li>
+  <li><a href="#cross-cell-policy-checks-important-to-keep" id="toc-cross-cell-policy-checks-important-to-keep" class="nav-link" data-scroll-target="#cross-cell-policy-checks-important-to-keep">Cross-cell policy checks (important to keep)</a></li>
+  <li><a href="#what-to-watch-as-we-proceed-to-module-1" id="toc-what-to-watch-as-we-proceed-to-module-1" class="nav-link" data-scroll-target="#what-to-watch-as-we-proceed-to-module-1">What to watch as we proceed to Module 1</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<p>Module 0 Feedback: Thanks for sharing <code>module-0.ipynb</code>. I reviewed it against our roadmap rules (tech-scoped, dependency discipline, cell IDs, local scope, Colab-friendliness). Here’s a precise, developer-oriented handoff to tighten Module 0 before we start Module 1.</p>
+<section id="whats-good" class="level1">
+<h1>What’s good</h1>
+<ul>
+<li>Clear <strong>foundations-only</strong> scope: helpers, determinism, paths, light sanity checks. No tech installs — ✅ aligns with “Module 0 is not a technology module.”</li>
+<li><strong>Determinism</strong>: seeds set — good.</li>
+<li><strong>Matplotlib smoke test</strong> present — good signal that plotting works in Colab.</li>
+<li><strong>Config/dataclass</strong> present — useful for later orchestration.</li>
+</ul>
+</section>
+<section id="gaps-to-close-actionable" class="level1">
+<h1>Gaps to close (actionable)</h1>
+<section id="cell-id-completeness-must-fix" class="level2">
+<h2 class="anchored" data-anchor-id="cell-id-completeness-must-fix">1) Cell ID completeness (must fix)</h2>
+<ul>
+<li><p>One code cell lacks a <code>cell &lt;major.minor&gt;: ...</code> header. <strong>Action:</strong> Add an ID so <strong>all</strong> code cells match the format.</p>
+<ul>
+<li>Recommended label: <code>cell 0.1: foundations: environment verification &amp; core imports</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="module-0-scope-boundaries-guardrails" class="level2">
+<h2 class="anchored" data-anchor-id="module-0-scope-boundaries-guardrails">2) Module 0 scope boundaries (guardrails)</h2>
+<ul>
+<li><p>Ensure Module 0 <strong>never</strong> installs or imports technology packages (e.g., <code>textstat</code>, <code>wordfreq</code>, <code>nltk</code>, <code>spacy</code>, <code>transformers</code>, SBERT, BERTopic, rapidfuzz, ruptures, sklearn). <strong>Action:</strong> In the helper(s) that auto-import, <strong>explicitly block</strong> the above tech names with a comment:</p>
+<ul>
+<li>“Technology imports are deferred to their modules; raise if requested here.”</li>
+</ul></li>
+</ul>
+</section>
+<section id="input-handshake-stub-lightweight-no-tech" class="level2">
+<h2 class="anchored" data-anchor-id="input-handshake-stub-lightweight-no-tech">3) Input handshake stub (lightweight; no tech)</h2>
+<ul>
+<li><p>Current file doesn’t expose a minimal interface for later modules. <strong>Action:</strong> Provide a tiny <strong>non-invasive</strong> handshake that <strong>does not</strong> tokenize or segment, but asserts input presence and type:</p>
+<ul>
+<li>Accept either <code>TEXT: str</code> or <code>DOCS: List[{'doc_id', 'text'}]</code>.</li>
+<li>If only <code>TEXT</code>, wrap into <code>DOCS=[{'doc_id': 'doc_0001', 'text': TEXT}]</code>.</li>
+<li>Do <strong>not</strong> do stopwording/segmentation here. Save that for Module 1/2.</li>
+<li>If neither present, raise a <strong>clear</strong> <code>ValueError("Module 1 requires DOCS or TEXT.")</code> — this message is for the next module to catch.</li>
+</ul></li>
+</ul>
+</section>
+<section id="directory-logging-hygiene" class="level2">
+<h2 class="anchored" data-anchor-id="directory-logging-hygiene">4) Directory &amp; logging hygiene</h2>
+<ul>
+<li><p>I didn’t see any <code>outputs/</code> scaffolding created. <strong>Action:</strong> In Module 0, create just the <strong>root</strong> output dir (not tech-specific subdirs):</p>
+<ul>
+<li><p><code>Path("outputs").mkdir(exist_ok=True)</code></p></li>
+<li><p>Emit a small <code>outputs/_env.json</code> capturing:</p>
+<ul>
+<li><code>python_version</code>, <code>platform</code>, <code>is_colab</code>, <code>timestamp_utc</code></li>
+<li><code>rng_seed</code> (used in this run)</li>
+<li><code>matplotlib_backend</code> This will help debugging without stepping into tech territory.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="version-capture-environment-detection" class="level2">
+<h2 class="anchored" data-anchor-id="version-capture-environment-detection">5) Version capture &amp; environment detection</h2>
+<ul>
+<li><p>You’re capturing versions (good), but make it explicit and Colab-aware. <strong>Action:</strong> Log:</p>
+<ul>
+<li><code>sys.version</code>, <code>sys.platform</code>, <code>os.environ.get('COLAB_GPU','0')</code> or <code>"COLAB_RELEASE_TAG" in os.environ</code> as <code>is_colab</code></li>
+<li><code>pip list --format=json</code> <em>optional</em> (write to <code>outputs/_pip_list.json</code>) — keep size in mind.</li>
+</ul></li>
+</ul>
+</section>
+<section id="visualization-smoke-test-robustness" class="level2">
+<h2 class="anchored" data-anchor-id="visualization-smoke-test-robustness">6) Visualization smoke test robustness</h2>
+<ul>
+<li>The current smoke test is fine, but <strong>failures should not crash downstream</strong>. <strong>Action:</strong> Wrap with try/except (it already is), and record pass/fail into a simple in-memory status registry (e.g., <code>FOUNDATION_STATUS = {...}</code>) and mirror to <code>outputs/_foundation_status.json</code>.</li>
+</ul>
+</section>
+<section id="sentencewindowing-helpers-regex-only-optional" class="level2">
+<h2 class="anchored" data-anchor-id="sentencewindowing-helpers-regex-only-optional">7) Sentence/windowing helpers (regex only, optional)</h2>
+<ul>
+<li>You included a regex splitter/windowing stub — good. Make sure it’s clearly labeled as <strong>heuristic</strong> and <strong>not used by Module 1</strong> for metrics (Module 1 uses its own minimal regex splitter for its viz). <strong>Action:</strong> Add a comment: “Heuristic; authoritative tokenization/segmentation deferred to Module 2+.”</li>
+</ul>
+</section>
+<section id="side-effects-keep-them-minimal" class="level2">
+<h2 class="anchored" data-anchor-id="side-effects-keep-them-minimal">8) Side-effects: keep them minimal</h2>
+<ul>
+<li>No tech installs in Module 0 — keep it that way. Avoid populating any <code>outputs/textstat_lex/...</code> paths; those belong to Module 1.</li>
+</ul>
+</section>
+</section>
+<section id="minimal-acceptance-checklist-module-0" class="level1">
+<h1>Minimal acceptance checklist (Module 0)</h1>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>Every code cell</strong> starts with a correct ID header (<code>cell 0.x: ...</code>).</label></li>
+<li><label><input type="checkbox">No imports/installs of technology packages (listed above).</label></li>
+<li><label><input type="checkbox">Creates <code>outputs/</code> (root) only.</label></li>
+<li><label><input type="checkbox">Writes <code>outputs/_env.json</code> and <code>outputs/_foundation_status.json</code>.</label></li>
+<li><label><input type="checkbox">Exposes a <strong>non-tokenizing</strong> input handshake function that the Module 1 “imports &amp; sanity checks” cell can call (e.g., <code>ensure_docs(TEXT, DOCS)</code>), raising a clear <code>ValueError</code> if neither is present.</label></li>
+<li><label><input type="checkbox">Matplotlib smoke test result recorded; failure <strong>does not</strong> stop the notebook.</label></li>
+</ul>
+</section>
+<section id="suggested-cell-map-if-you-need-labels" class="level1">
+<h1>Suggested cell map (if you need labels)</h1>
+<ul>
+<li><code>cell 0.0: foundations: helpers (no installs, no heavy imports)</code> ✅ (present)</li>
+<li><code>cell 0.1: foundations: environment verification &amp; core imports</code> ⚠️ add ID</li>
+<li><code>cell 0.2: foundations: imports, determinism, version capture</code> ✅ (present)</li>
+<li><code>cell 0.3: foundations: outputs/ root &amp; environment logs</code> (create <code>outputs/</code>, write <code>_env.json</code>)</li>
+<li><code>cell 0.4: foundations: input handshake (ensure_docs)</code> (TEXT/DOCS wrapper, no tokenization)</li>
+<li><code>cell 0.5: foundations: path utilities &amp; status reporter</code> (writes <code>_foundation_status.json</code>)</li>
+<li><code>cell 0.6: foundations: sentence segmentation &amp; windowing (regex heuristic)</code> ✅ (present; document “heuristic only”)</li>
+<li><code>cell 0.7: foundations: visualization smoke test (matplotlib only)</code> ✅ (present)</li>
+</ul>
+</section>
+<section id="why-this-matters-before-module-1" class="level1">
+<h1>Why this matters before Module 1</h1>
+<ul>
+<li><p>Module 1 will rely on:</p>
+<ul>
+<li><code>ensure_docs(TEXT, DOCS)</code> (no NLP work)</li>
+<li><code>outputs/</code> root existing</li>
+<li>deterministic seeds &amp; environment logs (for reproducibility)</li>
+</ul></li>
+<li><p>Keeping Module 0 <strong>tech-free</strong> prevents dependency bleed and ensures our “technology-scoped module” rule holds.</p></li>
+</ul>
+<p>If you ship these fixes, Module 1 can proceed cleanly with its own installs/imports, features, and visuals without retrofitting Module 0 later.</p>
+<p>““”</p>
+<p>Module 0 Triage:</p>
+<p>Awesome—thanks for locking the cell IDs. Here’s a straight, code-free review of the <strong>0.# Foundations</strong> you now have, with keep/why and a couple of narrowly-scoped risks to watch as we move into Module 1. I’ll only call out action items if they’re essential; otherwise “keep as-is.”</p>
+<hr>
+<section id="cell-0.0-helpers" class="level3">
+<h3 class="anchored" data-anchor-id="cell-0.0-helpers">cell 0.0 — helpers</h3>
+<p><strong>Status:</strong> ✅ keep as-is. <strong>Why:</strong> Centralizes admin utilities (<code>_pip</code>, <code>try_import</code>, version helpers) without touching heavy libs. That aligns with the “single imports cell” rule and keeps later cells clean.</p>
+<hr>
+</section>
+<section id="cell-0.1-minimal-installs-only-if-missing-wheels-only" class="level3">
+<h3 class="anchored" data-anchor-id="cell-0.1-minimal-installs-only-if-missing-wheels-only">cell 0.1 — minimal installs (only-if-missing; wheels-only)</h3>
+<p><strong>Status:</strong> ✅ keep as-is. <strong>What’s good:</strong></p>
+<ul>
+<li>Explicit ABI order (NumPy → SciPy → scikit-learn → pandas → matplotlib).</li>
+<li>Wheels-only (<code>--only-binary=:all:</code>) avoids slow/fragile source builds.</li>
+<li>“Only if missing” respects Colab’s baseline and avoids the upgrade churn we saw in the logs. </li>
+</ul>
+<p><strong>Heads-up for later modules (no change here):</strong> If a technology later <em>requires</em> a newer base (e.g., <code>umap-learn</code> pulling sklearn ≥1.6), we must either (a) pin that tech to a compatible version or (b) explicitly bump base in <strong>that</strong> module with a clear fail-fast message. Do <strong>not</strong> casually re-install base packages in random modules—this is exactly what caused the silent drift noted in the log (NumPy 2.3.2, sklearn 1.5.2 vs 1.6.x). </p>
+<hr>
+</section>
+<section id="cell-0.2-imports-determinism-version-capture" class="level3">
+<h3 class="anchored" data-anchor-id="cell-0.2-imports-determinism-version-capture">cell 0.2 — imports, determinism, version capture</h3>
+<p><strong>Status:</strong> ✅ keep as-is. <strong>What’s good:</strong></p>
+<ul>
+<li>Single place importing heavy libs (NumPy/Pandas/Matplotlib/SciPy/sklearn).</li>
+<li>Determinism covered (seed + thread caps), with <strong>opt-in</strong> hash guard via <code>LSA_HASH_GUARD</code>.</li>
+<li>Thread override via <code>LSA_THREADS</code> is practical for CPU-only runs.</li>
+</ul>
+<p><strong>Tiny suggestion (no change required):</strong> If a later module spawns subprocesses, call out that <code>PYTHONHASHSEED</code> influences <em>new</em> interpreters only; we already document that.</p>
+<hr>
+</section>
+<section id="cell-0.3-configuration-directories" class="level3">
+<h3 class="anchored" data-anchor-id="cell-0.3-configuration-directories">cell 0.3 — configuration &amp; directories</h3>
+<p><strong>Status:</strong> ✅ keep as-is. <strong>What’s good:</strong></p>
+<ul>
+<li>Portable defaults (<code>/content</code>) with an env override.</li>
+<li>Minimal, focused config fields that align to the roadmap (language, window size/stride, thresholds).</li>
+</ul>
+<p><strong>Future nicety (optional):</strong> A one-line “schema preview” in the cell output can help reviewers sanity-check types; not required now.</p>
+<hr>
+</section>
+<section id="cell-0.4-status-logging-self-report" class="level3">
+<h3 class="anchored" data-anchor-id="cell-0.4-status-logging-self-report">cell 0.4 — status logging &amp; self-report</h3>
+<p><strong>Status:</strong> ✅ keep as-is (after your appended cell-level JSON). <strong>What’s good:</strong></p>
+<ul>
+<li><code>report_status()</code> gives per-module pass/fail with timestamps.</li>
+<li><code>dump_status_json()</code> writes UTF-8 machine-readable status—useful later when we export consolidated artifacts.</li>
+<li>Cell ends with a single JSON self-report, meeting your rule #9.</li>
+</ul>
+<hr>
+</section>
+<section id="cell-0.5-offset-preserving-normalization" class="level3">
+<h3 class="anchored" data-anchor-id="cell-0.5-offset-preserving-normalization">cell 0.5 — offset-preserving normalization</h3>
+<p><strong>Status:</strong> ✅ keep as-is. <strong>What’s good:</strong></p>
+<ul>
+<li>Correct CRLF→<code>\n</code> collapse with offset maps both directions.</li>
+<li>Idempotent whitespace normalization and Unicode line separators mapped to <code>\n</code>.</li>
+<li>Left-nearest <code>orig_to_norm</code> is consistent; if we need right-nearest later we can add a flag then.</li>
+</ul>
+<hr>
+</section>
+<section id="cell-0.6-sentence-segmentation-windowing" class="level3">
+<h3 class="anchored" data-anchor-id="cell-0.6-sentence-segmentation-windowing">cell 0.6 — sentence segmentation &amp; windowing</h3>
+<p><strong>Status:</strong> ✅ keep with the improved regex. <strong>What’s good:</strong></p>
+<ul>
+<li>Regex now guards against false splits on initials (<code>(?&lt;!\b[A-Z]\.)</code>).</li>
+<li>Windows derived from sentence spans preserve character offsets, which we’ll need for per-segment evidence.</li>
+</ul>
+<p><strong>Scope note:</strong> This is a lightweight heuristic (by design). If the expert later requests language-aware segmentation, we’ll stage that as its own “technology module” so we don’t bloat foundations.</p>
+<hr>
+</section>
+<section id="cell-0.7-visualization-smoke-test" class="level3">
+<h3 class="anchored" data-anchor-id="cell-0.7-visualization-smoke-test">cell 0.7 — visualization smoke test</h3>
+<p><strong>Status:</strong> ✅ keep as-is. <strong>What’s good:</strong></p>
+<ul>
+<li>Uses <code>plt</code> from the imports cell (no duplicate imports).</li>
+<li>Asserts that plotted axes actually contain data → catches silent rendering failures early.</li>
+</ul>
+<hr>
+</section>
+<section id="cross-cell-policy-checks-important-to-keep" class="level2">
+<h2 class="anchored" data-anchor-id="cross-cell-policy-checks-important-to-keep">Cross-cell policy checks (important to keep)</h2>
+<ul>
+<li><strong>No base upgrades in foundations:</strong> We only install core libs if missing; we don’t pin/downgrade Colab’s stack. That prevents the resolver warnings and mid-run kernel restarts your log captured (NumPy 2.3.2, sklearn mismatches, etc.). </li>
+<li><strong>Single heavy-imports cell (0.2):</strong> Preserves reproducibility and makes failures obvious.</li>
+<li><strong>Wheels-only installs:</strong> Cuts off the “tried to build from source” path that often trips Colab.</li>
+<li><strong>Self-reporting:</strong> Every foundations cell now emits concise JSON—good for automation.</li>
+</ul>
+</section>
+<section id="what-to-watch-as-we-proceed-to-module-1" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-watch-as-we-proceed-to-module-1">What to watch as we proceed to Module 1</h2>
+<ul>
+<li><strong>Tech modules must not re-install base packages.</strong> If a technology needs a higher floor (e.g., sklearn ≥1.6), we’ll either pin that tech appropriately or gate the module with a clear error and rationale—no silent changes. Your server log shows exactly why we’re strict here. </li>
+<li><strong>Constraints:</strong> We did not add a global constraints file in foundations (by your direction to keep it lean). If we hit a package that aggressively upgrades bases, we’ll add a <em>module-local</em> install cell that: (1) pins that package’s version; (2) uses <code>--no-deps</code>; and (3) fails fast with guidance if incompatible—keeping foundations untouched.</li>
+</ul>
+<p>If this all reads right to you, I’m ready to apply the same discipline to <strong>Module 1 (Lexical Stylometry &amp; Readability)</strong>: self-contained installs (only tech libs), imports inside the module, and we stop at the first visualization until it renders cleanly.</p>
+<p>““”</p>
+<p>Yes—here are the <strong>additions I recommend you append to the Module 0 notes</strong> so the dev has zero ambiguity going into Module 1:</p>
+<ul>
+<li><p><strong>Run order &amp; re-run rule:</strong> Execute 0.0 → 0.1 → 0.2 → 0.3 → 0.4 → 0.5 → 0.6 → 0.7. It’s safe to re-run from <strong>0.2</strong> onward at any time; re-running <strong>0.1</strong> is only for missing packages.</p></li>
+<li><p><strong>Single-import policy:</strong> Only <strong>0.2</strong> may import <code>numpy/pandas/matplotlib/scipy/sklearn</code>. Later cells must use those bindings—no re-imports.</p></li>
+<li><p><strong>Thread determinism:</strong> Set <code>LSA_THREADS=1</code> by default (in 0.2); allow overrides via env var for profiling, but record the value in the self-report.</p></li>
+<li><p><strong>Seeding policy:</strong> Use <code>LSA_SEED</code> (default 12345) to seed <code>random</code> and <code>numpy</code>; note that <code>PYTHONHASHSEED</code> affects only new processes.</p></li>
+<li><p><strong>Installs policy (0.#):</strong> <strong>Only-if-missing</strong>, wheels-only (<code>--only-binary=:all:</code>), ABI order: NumPy → SciPy → scikit-learn → pandas → matplotlib. Never upgrade bases in foundations.</p></li>
+<li><p><strong>Installs policy (modules):</strong> Any technology install must (a) avoid base libs, (b) include an explicit version/range, and (c) fail fast if it would force a base upgrade. (Document that upgrades require an explicit, reviewed deviation.)</p></li>
+<li><p><strong>Self-report contract:</strong> Every cell prints one JSON object: <code>{"cell_id", "status": "pass|fail", "checks": {...}}</code>. Visual cells must assert <strong>non-empty</strong> plots.</p></li>
+<li><p><strong>Offset mapping semantics:</strong> 0.5 uses <strong>left-nearest</strong> <code>orig_to_norm</code>. Note the invariant: <code>len(norm_to_orig) == len(text)</code> and <code>orig_to_norm[j] ≤ orig_to_norm[j+1]</code>. Call out that grapheme clusters (emoji, ZWJ) are normalized via NFKC and may change display width.</p></li>
+<li><p><strong>Sentence splitter limits:</strong> 0.6’s regex reduces false splits on initials but will still miss edge cases (e.g., abbreviations lists, quotes, multilingual). Future modules may replace it with a tokenizer (e.g., spaCy/BLingFire) when that technology module is in scope.</p></li>
+<li><p><strong>Paths &amp; portability:</strong> <code>LSA_BASE_DIR</code> overrides default <code>/content</code>. All artifacts live under <code>lsa_outputs/</code>. No raw corpus persists beyond what’s needed for the module.</p></li>
+<li><p><strong>Hygiene checks:</strong> Notebook must restart &amp; <strong>Run all</strong> clean on a fresh Colab VM. No cell should depend on side effects outside its declared inputs/outputs.</p></li>
+<li><p><strong>Acceptance checklist (Module 0):</strong></p>
+<ol type="1">
+<li>0.1 installs nothing on a typical Colab runtime;</li>
+<li>0.2 prints versions + seed + threads;</li>
+<li>0.5/0.6 smoke tests pass;</li>
+<li>0.7 renders a non-empty plot;</li>
+<li>0.4 can write <code>module_status.json</code> without error.</li>
+</ol></li>
+</ul>
+<p>If you want, I can also add a short <strong>“pip guard note”</strong>: all module <code>%pip</code> cells must include explicit versions and must not reference base packages; any deviation is a blocker until reviewed.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/syntax-and-empathy\.github\.io\/s-and-e-hub");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© 2025 Syntax &amp; Empathy — <a href="https://creativecommons.org/licenses/by/4.0/">Licensed under CC BY 4.0</a></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

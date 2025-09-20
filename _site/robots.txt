@@ -1,1 +1,1 @@
-Sitemap: https://syntaxandempathy.github.io/sitemap.xml
+Sitemap: https://syntax-and-empathy.github.io/s-and-e-hub/sitemap.xml

@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.24">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>gpt-3-nyt-ia-02 – Syntax &amp; Empathy</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-13248260e068f249478c827b84d311c7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Syntax &amp; Empathy</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../articles/"> 
+<span class="menu-text">Articles</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../resources/"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#u.s." id="toc-u.s." class="nav-link active" data-scroll-target="#u.s.">U.S.</a></li>
+  <li><a href="#world" id="toc-world" class="nav-link" data-scroll-target="#world">World</a></li>
+  <li><a href="#business" id="toc-business" class="nav-link" data-scroll-target="#business">Business</a></li>
+  <li><a href="#arts" id="toc-arts" class="nav-link" data-scroll-target="#arts">Arts</a></li>
+  <li><a href="#lifestyle" id="toc-lifestyle" class="nav-link" data-scroll-target="#lifestyle">Lifestyle</a></li>
+  <li><a href="#opinion" id="toc-opinion" class="nav-link" data-scroll-target="#opinion">Opinion</a></li>
+  <li><a href="#audio" id="toc-audio" class="nav-link" data-scroll-target="#audio">Audio</a></li>
+  <li><a href="#games" id="toc-games" class="nav-link" data-scroll-target="#games">Games</a></li>
+  <li><a href="#cooking" id="toc-cooking" class="nav-link" data-scroll-target="#cooking">Cooking</a></li>
+  <li><a href="#wirecutter" id="toc-wirecutter" class="nav-link" data-scroll-target="#wirecutter">Wirecutter</a>
+  <ul class="collapse">
+  <li><a href="#inconsistencies-vs.-your-earlier-ia-summary" id="toc-inconsistencies-vs.-your-earlier-ia-summary" class="nav-link" data-scroll-target="#inconsistencies-vs.-your-earlier-ia-summary">Inconsistencies vs.&nbsp;your earlier IA summary</a></li>
+  </ul></li>
+  <li><a href="#structured-information-architecture" id="toc-structured-information-architecture" class="nav-link" data-scroll-target="#structured-information-architecture">📑 Structured Information Architecture</a>
+  <ul class="collapse">
+  <li><a href="#u.s.-1" id="toc-u.s.-1" class="nav-link" data-scroll-target="#u.s.-1">U.S.</a>
+  <ul class="collapse">
+  <li><a href="#subsections" id="toc-subsections" class="nav-link" data-scroll-target="#subsections">Subsections</a></li>
+  <li><a href="#tertiary" id="toc-tertiary" class="nav-link" data-scroll-target="#tertiary">Tertiary</a></li>
+  </ul></li>
+  <li><a href="#world-1" id="toc-world-1" class="nav-link" data-scroll-target="#world-1">World</a>
+  <ul class="collapse">
+  <li><a href="#subsections-1" id="toc-subsections-1" class="nav-link" data-scroll-target="#subsections-1">Subsections</a></li>
+  <li><a href="#tertiary-1" id="toc-tertiary-1" class="nav-link" data-scroll-target="#tertiary-1">Tertiary</a></li>
+  </ul></li>
+  <li><a href="#business-1" id="toc-business-1" class="nav-link" data-scroll-target="#business-1">Business</a>
+  <ul class="collapse">
+  <li><a href="#subsections-2" id="toc-subsections-2" class="nav-link" data-scroll-target="#subsections-2">Subsections</a></li>
+  <li><a href="#tertiary-2" id="toc-tertiary-2" class="nav-link" data-scroll-target="#tertiary-2">Tertiary</a></li>
+  </ul></li>
+  <li><a href="#arts-1" id="toc-arts-1" class="nav-link" data-scroll-target="#arts-1">Arts</a>
+  <ul class="collapse">
+  <li><a href="#subsections-3" id="toc-subsections-3" class="nav-link" data-scroll-target="#subsections-3">Subsections</a></li>
+  <li><a href="#tertiary-3" id="toc-tertiary-3" class="nav-link" data-scroll-target="#tertiary-3">Tertiary</a></li>
+  </ul></li>
+  <li><a href="#lifestyle-1" id="toc-lifestyle-1" class="nav-link" data-scroll-target="#lifestyle-1">Lifestyle</a>
+  <ul class="collapse">
+  <li><a href="#subsections-4" id="toc-subsections-4" class="nav-link" data-scroll-target="#subsections-4">Subsections</a></li>
+  <li><a href="#tertiary-4" id="toc-tertiary-4" class="nav-link" data-scroll-target="#tertiary-4">Tertiary</a></li>
+  </ul></li>
+  <li><a href="#opinion-1" id="toc-opinion-1" class="nav-link" data-scroll-target="#opinion-1">Opinion</a>
+  <ul class="collapse">
+  <li><a href="#subsections-5" id="toc-subsections-5" class="nav-link" data-scroll-target="#subsections-5">Subsections</a></li>
+  <li><a href="#tertiary-5" id="toc-tertiary-5" class="nav-link" data-scroll-target="#tertiary-5">Tertiary</a></li>
+  </ul></li>
+  <li><a href="#audio-1" id="toc-audio-1" class="nav-link" data-scroll-target="#audio-1">Audio</a>
+  <ul class="collapse">
+  <li><a href="#subsections-6" id="toc-subsections-6" class="nav-link" data-scroll-target="#subsections-6">Subsections</a></li>
+  <li><a href="#tertiary-6" id="toc-tertiary-6" class="nav-link" data-scroll-target="#tertiary-6">Tertiary</a></li>
+  </ul></li>
+  <li><a href="#games-1" id="toc-games-1" class="nav-link" data-scroll-target="#games-1">Games</a>
+  <ul class="collapse">
+  <li><a href="#subsections-7" id="toc-subsections-7" class="nav-link" data-scroll-target="#subsections-7">Subsections</a></li>
+  <li><a href="#tertiary-7" id="toc-tertiary-7" class="nav-link" data-scroll-target="#tertiary-7">Tertiary</a></li>
+  </ul></li>
+  <li><a href="#cooking-1" id="toc-cooking-1" class="nav-link" data-scroll-target="#cooking-1">Cooking</a>
+  <ul class="collapse">
+  <li><a href="#subsections-8" id="toc-subsections-8" class="nav-link" data-scroll-target="#subsections-8">Subsections</a></li>
+  <li><a href="#tertiary-8" id="toc-tertiary-8" class="nav-link" data-scroll-target="#tertiary-8">Tertiary</a></li>
+  </ul></li>
+  <li><a href="#wirecutter-1" id="toc-wirecutter-1" class="nav-link" data-scroll-target="#wirecutter-1">Wirecutter</a>
+  <ul class="collapse">
+  <li><a href="#subsections-9" id="toc-subsections-9" class="nav-link" data-scroll-target="#subsections-9">Subsections</a></li>
+  <li><a href="#tertiary-9" id="toc-tertiary-9" class="nav-link" data-scroll-target="#tertiary-9">Tertiary</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#visualization-mermaid-diagram" id="toc-visualization-mermaid-diagram" class="nav-link" data-scroll-target="#visualization-mermaid-diagram">📊 Visualization (Mermaid Diagram)</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="u.s." class="level1">
+<h1>U.S.</h1>
+<p><strong>Sections</strong></p>
+<ul>
+<li>U.S. <strong>[Verified]</strong></li>
+<li>Politics <strong>[Verified]</strong></li>
+<li>New York <strong>[Verified]</strong></li>
+<li>California <strong>[Verified]</strong></li>
+<li>Education <strong>[Verified]</strong></li>
+<li>Health <strong>[Verified]</strong></li>
+<li>Obituaries <strong>[Verified]</strong></li>
+<li>Science <strong>[Verified]</strong></li>
+<li>Climate <strong>[Verified]</strong></li>
+<li>Weather <strong>[Verified]</strong></li>
+<li>Sports <strong>[Verified]</strong></li>
+<li>Business <strong>[Verified]</strong></li>
+<li>Tech <strong>[Verified]</strong></li>
+<li>The Upshot <strong>[Verified]</strong></li>
+<li>The Magazine <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Top Stories</strong></p>
+<ul>
+<li>Donald Trump <strong>[Verified]</strong></li>
+<li>Supreme Court <strong>[Verified]</strong></li>
+<li>Congress <strong>[Verified]</strong></li>
+<li>Immigration <strong>[Verified]</strong></li>
+<li>Abortion <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Newsletters</strong></p>
+<ul>
+<li>The Morning <strong>[Verified]</strong></li>
+<li>The Evening <strong>[Verified]</strong></li>
+<li>“See all newsletters” link <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Podcasts</strong></p>
+<ul>
+<li>The Daily <strong>[Verified]</strong></li>
+<li>“See all podcasts” link <strong>[Verified]</strong></li>
+</ul>
+<hr>
+</section>
+<section id="world" class="level1">
+<h1>World</h1>
+<p><strong>Sections</strong></p>
+<ul>
+<li>World <strong>[Verified]</strong></li>
+<li>Africa <strong>[Verified]</strong></li>
+<li>Americas <strong>[Verified]</strong></li>
+<li>Asia <strong>[Verified]</strong></li>
+<li>Australia <strong>[Verified]</strong></li>
+<li>Canada <strong>[Verified]</strong></li>
+<li>Europe <strong>[Verified]</strong></li>
+<li>Middle East <strong>[Verified]</strong></li>
+<li>Science <strong>[Verified]</strong></li>
+<li>Climate <strong>[Verified]</strong></li>
+<li>Health <strong>[Verified]</strong></li>
+<li>Obituaries <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Top Stories</strong></p>
+<ul>
+<li>Middle East Crisis <strong>[Verified]</strong></li>
+<li>Russia-Ukraine War <strong>[Verified]</strong></li>
+<li>China (International relations) <strong>[Verified]</strong></li>
+<li>The Global Profile <strong>[Verified]</strong></li>
+<li>Leer en Español <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Newsletters</strong></p>
+<ul>
+<li>Morning Briefing: Europe <strong>[Verified]</strong></li>
+<li>The Interpreter <strong>[Verified]</strong></li>
+<li>Your Places: Global Update <strong>[Verified]</strong></li>
+<li>Canada Letter <strong>[Verified]</strong></li>
+<li>“See all newsletters” link <strong>[Verified]</strong></li>
+</ul>
+<hr>
+</section>
+<section id="business" class="level1">
+<h1>Business</h1>
+<p><strong>Sections</strong></p>
+<ul>
+<li>Business <strong>[Verified]</strong></li>
+<li>Tech <strong>[Verified]</strong></li>
+<li>Economy <strong>[Verified]</strong></li>
+<li>Media <strong>[Verified]</strong></li>
+<li>Finance and Markets <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Topics</strong></p>
+<ul>
+<li>DealBook <strong>[Verified]</strong></li>
+<li>Personal Tech <strong>[Verified]</strong></li>
+<li>Energy Transition <strong>[Verified]</strong></li>
+<li>Your Money <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Top Stories</strong></p>
+<ul>
+<li>U.S. Economy <strong>[Verified]</strong></li>
+<li>Stock Market <strong>[Verified]</strong></li>
+<li>Artificial Intelligence <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Newsletters</strong></p>
+<ul>
+<li>DealBook <strong>[Verified]</strong></li>
+<li>On Tech <strong>[Verified]</strong></li>
+<li>“See all newsletters” link <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Podcasts</strong></p>
+<ul>
+<li>Hard Fork <strong>[Verified]</strong></li>
+<li>“See all podcasts” link <strong>[Verified]</strong></li>
+</ul>
+<hr>
+</section>
+<section id="arts" class="level1">
+<h1>Arts</h1>
+<p><strong>Sections</strong></p>
+<ul>
+<li>Today’s Arts <strong>[Verified]</strong></li>
+<li>Book Review <strong>[Verified]</strong></li>
+<li>Best Sellers <strong>[Verified]</strong></li>
+<li>Dance <strong>[Verified]</strong></li>
+<li>Movies <strong>[Verified]</strong></li>
+<li>Music <strong>[Verified]</strong></li>
+<li>Television <strong>[Verified]</strong></li>
+<li>Theater <strong>[Verified]</strong></li>
+<li>Pop Culture <strong>[Verified]</strong></li>
+<li>T Magazine <strong>[Verified]</strong></li>
+<li>Visual Arts <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Recommendations</strong></p>
+<ul>
+<li>100 Best Movies of the 21st Century <strong>[Verified]</strong></li>
+<li>Critics Picks <strong>[Verified]</strong></li>
+<li>What to Read <strong>[Verified]</strong></li>
+<li>What to Watch <strong>[Verified]</strong></li>
+<li>What to Listen To <strong>[Verified]</strong></li>
+<li>5 Minutes to Make You Love Music <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Newsletters</strong></p>
+<ul>
+<li>Books <strong>[Verified]</strong></li>
+<li>Watching <strong>[Verified]</strong></li>
+<li>“See all newsletters” link <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Podcasts</strong></p>
+<ul>
+<li>Book Review <strong>[Verified]</strong></li>
+<li>Popcast <strong>[Verified]</strong></li>
+<li>“See all podcasts” link <strong>[Verified]</strong></li>
+</ul>
+<hr>
+</section>
+<section id="lifestyle" class="level1">
+<h1>Lifestyle</h1>
+<p><strong>Sections</strong></p>
+<ul>
+<li>All Lifestyle <strong>[Verified]</strong></li>
+<li>Well <strong>[Verified]</strong></li>
+<li>Travel <strong>[Verified]</strong></li>
+<li>Style <strong>[Verified]</strong></li>
+<li>Real Estate <strong>[Verified]</strong></li>
+<li>Food <strong>[Verified]</strong></li>
+<li>Personal Tech <strong>[Verified]</strong></li>
+<li>T Magazine <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Columns</strong></p>
+<ul>
+<li>36 Hours <strong>[Verified]</strong></li>
+<li>Ask Well <strong>[Verified]</strong></li>
+<li>The Hunt <strong>[Verified]</strong></li>
+<li>Modern Love <strong>[Verified]</strong></li>
+<li>Where to Eat <strong>[Verified]</strong></li>
+<li>Social Q’s <strong>[Verified]</strong></li>
+<li>The Ethicist <strong>[Verified]</strong></li>
+<li>Ask the Therapist <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Newsletters</strong></p>
+<ul>
+<li>The Weekender <strong>[Verified]</strong></li>
+<li>Well <strong>[Verified]</strong></li>
+<li>“See all newsletters” link <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Podcasts</strong></p>
+<ul>
+<li>Modern Love <strong>[Verified]</strong></li>
+<li>“See all podcasts” link <strong>[Verified]</strong></li>
+</ul>
+<hr>
+</section>
+<section id="opinion" class="level1">
+<h1>Opinion</h1>
+<p><strong>Sections</strong></p>
+<ul>
+<li>Opinion <strong>[Verified]</strong></li>
+<li>Guest Essays <strong>[Verified]</strong></li>
+<li>Editorials <strong>[Verified]</strong></li>
+<li>Op-Docs <strong>[Verified]</strong></li>
+<li>Videos <strong>[Verified]</strong></li>
+<li>Letters <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Topics</strong></p>
+<ul>
+<li>Politics <strong>[Verified]</strong></li>
+<li>World <strong>[Verified]</strong></li>
+<li>Business <strong>[Verified]</strong></li>
+<li>Tech <strong>[Verified]</strong></li>
+<li>Climate <strong>[Verified]</strong></li>
+<li>Health <strong>[Verified]</strong></li>
+<li>Culture <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Columnists</strong></p>
+<ul>
+<li>Jamelle Bouie <strong>[Verified]</strong></li>
+<li>David Brooks <strong>[Verified]</strong></li>
+<li>Gail Collins <strong>[Verified]</strong></li>
+<li>Maureen Dowd <strong>[Verified]</strong></li>
+<li>David French <strong>[Verified]</strong></li>
+<li>Thomas L. Friedman <strong>[Verified]</strong></li>
+<li>Michelle Goldberg <strong>[Verified]</strong></li>
+<li>Ezra Klein <strong>[Verified]</strong></li>
+<li>Nicholas Kristof <strong>[Verified]</strong></li>
+<li>Carlos Lozada <strong>[Verified]</strong></li>
+<li>Tressie McMillan Cottom <strong>[Verified]</strong></li>
+<li>Lydia Polgreen <strong>[Verified]</strong></li>
+<li>Bret Stephens <strong>[Verified]</strong></li>
+<li>Zeynep Tufekci <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Podcasts</strong></p>
+<ul>
+<li>Interesting Times with Ross Douthat <strong>[Verified]</strong></li>
+<li>The Opinions <strong>[Verified]</strong></li>
+<li>The Ezra Klein Show <strong>[Verified]</strong></li>
+<li>“See all podcasts” link <strong>[Verified]</strong></li>
+</ul>
+<hr>
+</section>
+<section id="audio" class="level1">
+<h1>Audio</h1>
+<p><strong>Description</strong></p>
+<ul>
+<li>Audio — “Podcasts and narrated articles…” <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Listen</strong></p>
+<ul>
+<li>The Headlines <strong>[Verified]</strong></li>
+<li>The Daily <strong>[Verified]</strong></li>
+<li>Hard Fork <strong>[Verified]</strong></li>
+<li>The Ezra Klein Show <strong>[Verified]</strong></li>
+<li>Interesting Times <strong>[Verified]</strong></li>
+<li>The Opinions <strong>[Verified]</strong></li>
+<li>Serial Productions <strong>[Verified]</strong></li>
+<li>The Book Review Podcast <strong>[Verified]</strong></li>
+<li>Modern Love <strong>[Verified]</strong></li>
+<li>Popcast <strong>[Verified]</strong></li>
+<li>Reporter Reads <strong>[Verified]</strong></li>
+<li>Cannonball <strong>[Verified]</strong></li>
+<li>The Interview <strong>[Verified]</strong></li>
+<li>“See all audio” link <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Featured</strong></p>
+<ul>
+<li>Cannonball with Wesley Morris <strong>[Verified]</strong></li>
+<li>The Headlines <strong>[Verified]</strong></li>
+<li>Serial: The Retrivals (season note) <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Newsletters</strong></p>
+<ul>
+<li>Audio <strong>[Verified]</strong></li>
+<li>Serial <strong>[Verified]</strong></li>
+<li>“See all newsletters” link <strong>[Verified]</strong></li>
+</ul>
+<hr>
+</section>
+<section id="games" class="level1">
+<h1>Games</h1>
+<p><strong>Description</strong></p>
+<ul>
+<li>“Word games, logic puzzles and crosswords…” <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Play</strong></p>
+<ul>
+<li>Spelling Bee <strong>[Verified]</strong></li>
+<li>The Mini Crossword <strong>[Verified]</strong></li>
+<li>Wordle <strong>[Verified]</strong></li>
+<li>The Crossword <strong>[Verified]</strong></li>
+<li>Sudoku <strong>[Verified]</strong></li>
+<li>Letter Boxed <strong>[Verified]</strong></li>
+<li>Tiles <strong>[Verified]</strong></li>
+<li>Connections <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Community</strong></p>
+<ul>
+<li>Spelling Bee Forum <strong>[Verified]</strong></li>
+<li>Wordplay Column <strong>[Verified]</strong></li>
+<li>Wordle Review <strong>[Verified]</strong></li>
+<li>Submit a Crossword <strong>[Verified]</strong></li>
+<li>Meet Our Crossword Constructors <strong>[Verified]</strong></li>
+<li>Mini to Maestro <strong>[Verified]</strong></li>
+<li>Wordlebot <strong>[Verified]</strong></li>
+<li>Take the Puzzle Personality Quiz <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Newsletters</strong></p>
+<ul>
+<li>Gameplay <strong>[Verified]</strong></li>
+<li>Easy Mode <strong>[Verified]</strong></li>
+<li>“See all newsletters” link <strong>[Verified]</strong></li>
+</ul>
+<hr>
+</section>
+<section id="cooking" class="level1">
+<h1>Cooking</h1>
+<p><strong>Description</strong></p>
+<ul>
+<li>“Recipes, advice and inspiration…” <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Recipes</strong></p>
+<ul>
+<li>Easy <strong>[Verified]</strong></li>
+<li>Dinner <strong>[Verified]</strong></li>
+<li>Quick <strong>[Verified]</strong></li>
+<li>Healthy <strong>[Verified]</strong></li>
+<li>Breakfast <strong>[Verified]</strong></li>
+<li>Vegetarian <strong>[Verified]</strong></li>
+<li>Vegan <strong>[Verified]</strong></li>
+<li>Chicken <strong>[Verified]</strong></li>
+<li>Pasta <strong>[Verified]</strong></li>
+<li>Dessert <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Editors’ Picks</strong></p>
+<ul>
+<li>Easy Salmon Recipes <strong>[Verified]</strong></li>
+<li>Grilling Recipes <strong>[Verified]</strong></li>
+<li>Easy Weeknight <strong>[Verified]</strong></li>
+<li>Newest Recipes <strong>[Verified]</strong></li>
+<li>Cheap and Easy Dinner Ideas <strong>[Verified]</strong></li>
+<li>Slow Cooker Recipes <strong>[Verified]</strong></li>
+<li>Healthy Breakfast Ideas <strong>[Verified]</strong></li>
+<li>Fourth of July Recipes <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Newsletters</strong></p>
+<ul>
+<li>The Cooking Newsletter <strong>[Verified]</strong></li>
+<li>Five Weeknight Dishes <strong>[Verified]</strong></li>
+<li>The Veggie <strong>[Verified]</strong></li>
+<li>“See all newsletters” link <strong>[Verified]</strong></li>
+</ul>
+<hr>
+</section>
+<section id="wirecutter" class="level1">
+<h1>Wirecutter</h1>
+<p><strong>Description</strong></p>
+<ul>
+<li>“Reviews and recommendations for thousands of products.” <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Reviews</strong></p>
+<ul>
+<li>Kitchen <strong>[Verified]</strong></li>
+<li>Tech <strong>[Verified]</strong></li>
+<li>Sleep <strong>[Verified]</strong></li>
+<li>Appliances <strong>[Verified]</strong></li>
+<li>Home and Garden <strong>[Verified]</strong></li>
+<li>Moving <strong>[Verified]</strong></li>
+<li>Travel <strong>[Verified]</strong></li>
+<li>Gifts <strong>[Verified]</strong></li>
+<li>Baby and Kid <strong>[Verified]</strong></li>
+<li>Health and Fitness <strong>[Verified]</strong></li>
+</ul>
+<p><strong>The Best…</strong></p>
+<ul>
+<li>Air Purifier <strong>[Verified]</strong></li>
+<li>Electric Toothbrush <strong>[Verified]</strong></li>
+<li>Pressure Washer <strong>[Verified]</strong></li>
+<li>Cordless Stick Vacuum <strong>[Verified]</strong></li>
+<li>Office Chair <strong>[Verified]</strong></li>
+<li>Robot Vacuum <strong>[Verified]</strong></li>
+</ul>
+<p><strong>Newsletters</strong></p>
+<ul>
+<li>The Recommendation <strong>[Verified]</strong></li>
+<li>Clean Everything <strong>[Verified]</strong></li>
+<li>“See all newsletters” link <strong>[Verified]</strong></li>
+</ul>
+<hr>
+<section id="inconsistencies-vs.-your-earlier-ia-summary" class="level2">
+<h2 class="anchored" data-anchor-id="inconsistencies-vs.-your-earlier-ia-summary">Inconsistencies vs.&nbsp;your earlier IA summary</h2>
+<ul>
+<li>None detected. The flyout menus reinforce the earlier high-level IA: global sections at the top; each flyout groups <strong>Sections / Topics (or Top Stories) / Newsletters / Podcasts (or Community/Featured)</strong>. <strong>[Verified]</strong></li>
+</ul>
+</section>
+</section>
+<section id="structured-information-architecture" class="level1">
+<h1>📑 Structured Information Architecture</h1>
+<section id="u.s.-1" class="level2">
+<h2 class="anchored" data-anchor-id="u.s.-1">U.S.</h2>
+<section id="subsections" class="level3">
+<h3 class="anchored" data-anchor-id="subsections">Subsections</h3>
+<ul>
+<li>Politics</li>
+<li>New York</li>
+<li>California</li>
+<li>Education</li>
+<li>Health</li>
+<li>Obituaries</li>
+<li>Science</li>
+<li>Climate</li>
+<li>Weather</li>
+<li>Sports</li>
+<li>Business</li>
+<li>Tech</li>
+<li>The Upshot</li>
+<li>The Magazine</li>
+</ul>
+</section>
+<section id="tertiary" class="level3">
+<h3 class="anchored" data-anchor-id="tertiary">Tertiary</h3>
+<ul>
+<li><strong>Top Stories</strong>: Donald Trump, Supreme Court, Congress, Immigration, Abortion</li>
+<li><strong>Newsletters</strong>: The Morning, The Evening</li>
+<li><strong>Podcasts</strong>: The Daily</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="world-1" class="level2">
+<h2 class="anchored" data-anchor-id="world-1">World</h2>
+<section id="subsections-1" class="level3">
+<h3 class="anchored" data-anchor-id="subsections-1">Subsections</h3>
+<ul>
+<li>Africa</li>
+<li>Americas</li>
+<li>Asia</li>
+<li>Australia</li>
+<li>Canada</li>
+<li>Europe</li>
+<li>Middle East</li>
+<li>Science</li>
+<li>Climate</li>
+<li>Health</li>
+<li>Obituaries</li>
+</ul>
+</section>
+<section id="tertiary-1" class="level3">
+<h3 class="anchored" data-anchor-id="tertiary-1">Tertiary</h3>
+<ul>
+<li><strong>Top Stories</strong>: Middle East Crisis, Russia-Ukraine War, China International Relations, The Global Profile, Leer en Español</li>
+<li><strong>Newsletters</strong>: Morning Briefing: Europe, The Interpreter, Your Places: Global Update, Canada Letter</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="business-1" class="level2">
+<h2 class="anchored" data-anchor-id="business-1">Business</h2>
+<section id="subsections-2" class="level3">
+<h3 class="anchored" data-anchor-id="subsections-2">Subsections</h3>
+<ul>
+<li>Economy</li>
+<li>Media</li>
+<li>Tech</li>
+<li>Finance and Markets</li>
+</ul>
+</section>
+<section id="tertiary-2" class="level3">
+<h3 class="anchored" data-anchor-id="tertiary-2">Tertiary</h3>
+<ul>
+<li><strong>Topics</strong>: DealBook, Personal Tech, Energy Transition, Your Money</li>
+<li><strong>Top Stories</strong>: U.S. Economy, Stock Market, Artificial Intelligence</li>
+<li><strong>Newsletters</strong>: DealBook, On Tech</li>
+<li><strong>Podcasts</strong>: Hard Fork</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="arts-1" class="level2">
+<h2 class="anchored" data-anchor-id="arts-1">Arts</h2>
+<section id="subsections-3" class="level3">
+<h3 class="anchored" data-anchor-id="subsections-3">Subsections</h3>
+<ul>
+<li>Today’s Arts</li>
+<li>Book Review</li>
+<li>Best Sellers</li>
+<li>Dance</li>
+<li>Movies</li>
+<li>Music</li>
+<li>Television</li>
+<li>Theater</li>
+<li>Pop Culture</li>
+<li>T Magazine</li>
+<li>Visual Arts</li>
+</ul>
+</section>
+<section id="tertiary-3" class="level3">
+<h3 class="anchored" data-anchor-id="tertiary-3">Tertiary</h3>
+<ul>
+<li><strong>Recommendations</strong>: 100 Best Movies, Critics Picks, What to Read, What to Watch, What to Listen To, 5 Minutes to Make You Love Music</li>
+<li><strong>Newsletters</strong>: Books, Watching</li>
+<li><strong>Podcasts</strong>: Book Review, Popcast</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="lifestyle-1" class="level2">
+<h2 class="anchored" data-anchor-id="lifestyle-1">Lifestyle</h2>
+<section id="subsections-4" class="level3">
+<h3 class="anchored" data-anchor-id="subsections-4">Subsections</h3>
+<ul>
+<li>All Lifestyle</li>
+<li>Well</li>
+<li>Travel</li>
+<li>Style</li>
+<li>Real Estate</li>
+<li>Food</li>
+<li>Personal Tech</li>
+<li>T Magazine</li>
+</ul>
+</section>
+<section id="tertiary-4" class="level3">
+<h3 class="anchored" data-anchor-id="tertiary-4">Tertiary</h3>
+<ul>
+<li><strong>Columns</strong>: 36 Hours, Ask Well, The Hunt, Modern Love, Where to Eat, Social Q’s, The Ethicist, Ask the Therapist</li>
+<li><strong>Newsletters</strong>: The Weekender, Well</li>
+<li><strong>Podcasts</strong>: Modern Love</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="opinion-1" class="level2">
+<h2 class="anchored" data-anchor-id="opinion-1">Opinion</h2>
+<section id="subsections-5" class="level3">
+<h3 class="anchored" data-anchor-id="subsections-5">Subsections</h3>
+<ul>
+<li>Opinion</li>
+<li>Guest Essays</li>
+<li>Editorials</li>
+<li>Op-Docs</li>
+<li>Videos</li>
+<li>Letters</li>
+</ul>
+</section>
+<section id="tertiary-5" class="level3">
+<h3 class="anchored" data-anchor-id="tertiary-5">Tertiary</h3>
+<ul>
+<li><strong>Topics</strong>: Politics, World, Business, Tech, Climate, Health, Culture</li>
+<li><strong>Columnists</strong>: Jamelle Bouie, David Brooks, Gail Collins, Maureen Dowd, David French, Thomas L. Friedman, Michelle Goldberg, Ezra Klein, Nicholas Kristof, Carlos Lozada, Tressie McMillan Cottom, Lydia Polgreen, Bret Stephens, Zeynep Tufekci</li>
+<li><strong>Podcasts</strong>: Interesting Times (Ross Douthat), The Opinions, The Ezra Klein Show</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="audio-1" class="level2">
+<h2 class="anchored" data-anchor-id="audio-1">Audio</h2>
+<section id="subsections-6" class="level3">
+<h3 class="anchored" data-anchor-id="subsections-6">Subsections</h3>
+<ul>
+<li>Audio (general hub)</li>
+</ul>
+</section>
+<section id="tertiary-6" class="level3">
+<h3 class="anchored" data-anchor-id="tertiary-6">Tertiary</h3>
+<ul>
+<li><strong>Listen</strong>: The Headlines, The Daily, Hard Fork, The Ezra Klein Show, Interesting Times, The Opinions, Serial Productions, The Book Review Podcast, Modern Love, Popcast, Reporter Reads, Cannonball, The Interview</li>
+<li><strong>Featured</strong>: Cannonball with Wesley Morris, The Headlines, Serial: The Retrivals</li>
+<li><strong>Newsletters</strong>: Audio, Serial</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="games-1" class="level2">
+<h2 class="anchored" data-anchor-id="games-1">Games</h2>
+<section id="subsections-7" class="level3">
+<h3 class="anchored" data-anchor-id="subsections-7">Subsections</h3>
+<ul>
+<li>Games (general hub)</li>
+</ul>
+</section>
+<section id="tertiary-7" class="level3">
+<h3 class="anchored" data-anchor-id="tertiary-7">Tertiary</h3>
+<ul>
+<li><strong>Play</strong>: Spelling Bee, Mini Crossword, Wordle, Crossword, Sudoku, Letter Boxed, Tiles, Connections</li>
+<li><strong>Community</strong>: Spelling Bee Forum, Wordplay Column, Wordle Review, Submit a Crossword, Meet Our Constructors, Mini to Maestro, Wordlebot, Puzzle Personality Quiz</li>
+<li><strong>Newsletters</strong>: Gameplay, Easy Mode</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="cooking-1" class="level2">
+<h2 class="anchored" data-anchor-id="cooking-1">Cooking</h2>
+<section id="subsections-8" class="level3">
+<h3 class="anchored" data-anchor-id="subsections-8">Subsections</h3>
+<ul>
+<li>Cooking (general hub)</li>
+</ul>
+</section>
+<section id="tertiary-8" class="level3">
+<h3 class="anchored" data-anchor-id="tertiary-8">Tertiary</h3>
+<ul>
+<li><strong>Recipes</strong>: Easy, Dinner, Quick, Healthy, Breakfast, Vegetarian, Vegan, Chicken, Pasta, Dessert</li>
+<li><strong>Editors’ Picks</strong>: Easy Salmon Recipes, Grilling Recipes, Easy Weeknight, Newest Recipes, Cheap &amp; Easy Dinner Ideas, Slow Cooker Recipes, Healthy Breakfast Ideas, Fourth of July Recipes</li>
+<li><strong>Newsletters</strong>: Cooking Newsletter, Five Weeknight Dishes, The Veggie</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="wirecutter-1" class="level2">
+<h2 class="anchored" data-anchor-id="wirecutter-1">Wirecutter</h2>
+<section id="subsections-9" class="level3">
+<h3 class="anchored" data-anchor-id="subsections-9">Subsections</h3>
+<ul>
+<li>Wirecutter (general hub)</li>
+</ul>
+</section>
+<section id="tertiary-9" class="level3">
+<h3 class="anchored" data-anchor-id="tertiary-9">Tertiary</h3>
+<ul>
+<li><strong>Reviews</strong>: Kitchen, Tech, Sleep, Appliances, Home &amp; Garden, Moving, Travel, Gifts, Baby &amp; Kid, Health &amp; Fitness</li>
+<li><strong>The Best…</strong>: Air Purifier, Electric Toothbrush, Pressure Washer, Cordless Stick Vacuum, Office Chair, Robot Vacuum</li>
+<li><strong>Newsletters</strong>: The Recommendation, Clean Everything</li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="visualization-mermaid-diagram" class="level1">
+<h1>📊 Visualization (Mermaid Diagram)</h1>
+<p>I’ll use <strong>Mermaid</strong> because it’s supported here, clean, and allows hierarchical visualization in a readable tree.</p>
+<pre class="mermaid"><code>mindmap
+  root((NYT Homepage Navigation))
+    U.S.
+      Subsections
+        Politics
+        New York
+        California
+        Education
+        Health
+        Obituaries
+        Science
+        Climate
+        Weather
+        Sports
+        Business
+        Tech
+        The Upshot
+        The Magazine
+      Top Stories
+        Donald Trump
+        Supreme Court
+        Congress
+        Immigration
+        Abortion
+      Newsletters
+        The Morning
+        The Evening
+      Podcasts
+        The Daily
+    World
+      Subsections
+        Africa
+        Americas
+        Asia
+        Australia
+        Canada
+        Europe
+        Middle East
+        Science
+        Climate
+        Health
+        Obituaries
+      Top Stories
+        Middle East Crisis
+        Russia-Ukraine War
+        China Relations
+        The Global Profile
+        Leer en Español
+      Newsletters
+        Morning Briefing: Europe
+        The Interpreter
+        Your Places: Global Update
+        Canada Letter
+    Business
+      Subsections
+        Economy
+        Media
+        Tech
+        Finance and Markets
+      Topics
+        DealBook
+        Personal Tech
+        Energy Transition
+        Your Money
+      Top Stories
+        U.S. Economy
+        Stock Market
+        AI
+      Newsletters
+        DealBook
+        On Tech
+      Podcasts
+        Hard Fork
+    Arts
+      Subsections
+        Today's Arts
+        Book Review
+        Best Sellers
+        Dance
+        Movies
+        Music
+        Television
+        Theater
+        Pop Culture
+        T Magazine
+        Visual Arts
+      Recommendations
+        100 Best Movies
+        Critics Picks
+        What to Read
+        What to Watch
+        What to Listen To
+        5 Min Love Music
+      Newsletters
+        Books
+        Watching
+      Podcasts
+        Book Review
+        Popcast
+    Lifestyle
+      Subsections
+        All Lifestyle
+        Well
+        Travel
+        Style
+        Real Estate
+        Food
+        Personal Tech
+        T Magazine
+      Columns
+        36 Hours
+        Ask Well
+        The Hunt
+        Modern Love
+        Where to Eat
+        Social Q's
+        The Ethicist
+        Ask the Therapist
+      Newsletters
+        The Weekender
+        Well
+      Podcasts
+        Modern Love
+    Opinion
+      Subsections
+        Opinion
+        Guest Essays
+        Editorials
+        Op-Docs
+        Videos
+        Letters
+      Topics
+        Politics
+        World
+        Business
+        Tech
+        Climate
+        Health
+        Culture
+      Columnists
+        Jamelle Bouie
+        David Brooks
+        Gail Collins
+        Maureen Dowd
+        David French
+        Thomas L. Friedman
+        Michelle Goldberg
+        Ezra Klein
+        Nicholas Kristof
+        Carlos Lozada
+        Tressie McMillan Cottom
+        Lydia Polgreen
+        Bret Stephens
+        Zeynep Tufekci
+      Podcasts
+        Interesting Times
+        The Opinions
+        Ezra Klein Show
+    Audio
+      Listen
+        The Headlines
+        The Daily
+        Hard Fork
+        Ezra Klein Show
+        Interesting Times
+        The Opinions
+        Serial Productions
+        Book Review Podcast
+        Modern Love
+        Popcast
+        Reporter Reads
+        Cannonball
+        The Interview
+      Featured
+        Cannonball w/ Wesley Morris
+        The Headlines
+        Serial: The Retrivals
+      Newsletters
+        Audio
+        Serial
+    Games
+      Play
+        Spelling Bee
+        Mini Crossword
+        Wordle
+        Crossword
+        Sudoku
+        Letter Boxed
+        Tiles
+        Connections
+      Community
+        Spelling Bee Forum
+        Wordplay Column
+        Wordle Review
+        Submit Crossword
+        Meet Constructors
+        Mini to Maestro
+        Wordlebot
+        Puzzle Personality Quiz
+      Newsletters
+        Gameplay
+        Easy Mode
+    Cooking
+      Recipes
+        Easy
+        Dinner
+        Quick
+        Healthy
+        Breakfast
+        Vegetarian
+        Vegan
+        Chicken
+        Pasta
+        Dessert
+      Editors' Picks
+        Salmon Recipes
+        Grilling Recipes
+        Easy Weeknight
+        Newest Recipes
+        Cheap &amp; Easy Dinner
+        Slow Cooker Recipes
+        Healthy Breakfast
+        Fourth of July Recipes
+      Newsletters
+        Cooking Newsletter
+        Five Weeknight Dishes
+        The Veggie
+    Wirecutter
+      Reviews
+        Kitchen
+        Tech
+        Sleep
+        Appliances
+        Home &amp; Garden
+        Moving
+        Travel
+        Gifts
+        Baby &amp; Kid
+        Health &amp; Fitness
+      The Best
+        Air Purifier
+        Electric Toothbrush
+        Pressure Washer
+        Cordless Vacuum
+        Office Chair
+        Robot Vacuum
+      Newsletters
+        The Recommendation
+        Clean Everything</code></pre>
+<hr>
+<p>✅ <strong>Why Mermaid?</strong> I chose <strong>Mermaid mindmap</strong> because it clearly shows parent-child relationships in a <strong>collapsible hierarchy</strong>. It’s more readable than ASCII trees for this many nodes, and it matches the structured nature of NYT’s IA.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/syntax-and-empathy\.github\.io\/s-and-e-hub");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© 2025 Syntax &amp; Empathy — <a href="https://creativecommons.org/licenses/by/4.0/">Licensed under CC BY 4.0</a></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
